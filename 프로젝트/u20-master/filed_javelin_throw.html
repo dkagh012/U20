@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/xeicon.min.css">
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>창 던지기</title>
+</head>
+
+<body>
+  <div class="schedule_container">
+    <div class="result_tit">
+      <div class="result_list2">
+        <p class=" tit_left_blue hide">창 던지기 예선전</p>
+        <p class=" tit_left_blue">창던지기 준결승전</p>
+        <p class="tit_left_blue  hide">창던지기 결승전</p>
+      </div>
+      <div class="result_list">
+        <p class="defaultBtn BTN_yellow ">대기중</p>
+        <p class="defaultBtn BTN_Blue hide">진행중</p>
+        <p class="defaultBtn BTN_DarkBlue hide">마감중</p>
+      </div>
+    </div>
+    <div class="schedule schedule_flex filed_high_flex">
+      <div class="schedule_filed filed_list_item filed_container">
+        <div>
+          <div class="schedule_filed_tit">
+            <p class="tit_left_yellow">1조</p>
+            <span class="defaultBtn BTN_green hide">Start List</span>
+            <span class="defaultBtn BTN_yellow hide">Live Result</span>
+            <span class="defaultBtn BTN_Orange">Official Result</span>
+          </div>
+          <!-- filed_throw 접어서 삭제한 후 테이블 삽입하시면 됩니다. -->
+          <div class="filed_throw">
+            <table class="box_table">
+              <!-- 창던지기 테이블  -->
+              <colgroup>
+                <col width="4%">
+                <col width="4%">
+                <col width="4%">
+                <col width="14%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+                <col width="8%">
+                <col width="17%">
+              </colgroup>
+              <thead class=" result_table entry_table">
+                <tr>
+                  <th scope="col" colspan="1">등수</th>
+                  <th scope="col" colspan="1">순서</th>
+                  <th scope="col" colspan="1">BIB</th>
+                  <th scope="col" colspan="1">이름</th>
+                  <th scope="col" colspan="1">1차시기</th>
+                  <th scope="col" colspan="1">2차시기</th>
+                  <th scope="col" colspan="1">3차시기</th>
+                  <th scope="col" colspan="1">4차시기</th>
+                  <th scope="col" colspan="1">5차시기</th>
+                  <th scope="col" colspan="1">6차시기</th>
+                  <th scope="col" colspan="1">기록</th>
+                  <th scope="col" colspan="1">비고</th>
+                  <th scope="col" colspan="1">신기록</th>
+                </tr>
+                <tr class="filed2_bottom">
+                </tr>
+              </thead>
+              <tbody class=" table_tbody De_tbody entry_table">
+                <tr>
+                  <td rowspan="1" scope="col"><input type="text" value="1" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="1" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="1" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="Haruka Kita" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="12" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="12" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="12" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="12" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="12" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="12" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="12" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="비고" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="아시아 U20신기록" readonly></td>
+                </tr>
+                <tr class="Ranklist_Background">
+                  <td rowspan="1" scope="col"><input type="text" value="1" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="1" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="1" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="Haruka Kita" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="12" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="12" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="12" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="12" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="12" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="12" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="12" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="비고" readonly></td>
+                  <td rowspan="1" scope="col"><input type="text" value="아시아 U20신기록" readonly></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="filed_BTN">
+          <div>
+            <button type="button" class="defaultBtn BIG_btn BTN_DarkBlue filedBTN"
+              onclick="window.open('/award_ceremony.html')">전광판 보기</button>
+            <button type="button" class="defaultBtn BIG_btn BTN_purple filedBTN"
+              onclick="window.open('/electronic_display.html')">시상식 보기</button>
+            <button type="button" class="defaultBtn BIG_btn BTN_Red filedBTN">PDF 출력</button>
+            <button type="button" class="defaultBtn BIG_btn excel_Print filedBTN">엑셀 출력</button>
+          </div>
+          <div>
+            <button type="button" class="defaultBtn BIG_btn BTN_blue3 filedBTN">기록 전환</button>
+            <button type="button" class="defaultBtn BIG_btn BTN_Blue filedBTN">기록 입력</button>
+          </div>
+        </div>
+      </div>
+      <div class="schedule_filed changefiled">
+        <div class="profile_logo">
+          <img src="./assets/images/logo.png">
+        </div>
+        <div class="schedule_filed_tit schedule_Orange">
+          <p class="tit_left_Orange">조 구성원 변경</p>
+        </div>
+        <table cellspacing="0" cellpadding="0" class="team_table">
+          <tbody>
+            <tr class="filed_change">
+              <th></th>
+              <th>1조</th>
+              <th>2조</th>
+              <th>3조</th>
+              <th>4조</th>
+            </tr>
+            <tr>
+              <td>1레인</td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">LBN</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">UZB</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">TJK</a>
+              </td>
+            </tr>
+            <tr>
+              <td>2레인</td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">BHR</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">MNG</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">MYS</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">AFG</a>
+              </td>
+            </tr>
+            <tr>
+              <td>3레인</td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">KOR</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">SAU</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">IDN</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">TKM</a>
+              </td>
+            </tr>
+            <tr>
+              <td>4레인</td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">LKA</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">MDV</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">KOR</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">LBN</a>
+              </td>
+            </tr>
+            <tr>
+              <td>5레인</td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">NPL</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">IRN</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">CHN</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">JOR</a>
+              </td>
+            </tr>
+            <tr>
+              <td>6레인</td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">MYS</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">PHL</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">BTN</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">BRN</a>
+              </td>
+            </tr>
+            <tr>
+              <td>7레인</td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">MAC</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">TJK</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">HKG</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">AFG</a>
+              </td>
+            </tr>
+            <tr>
+              <td>8레인</td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">ARE</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">BHR</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">BHR</a>
+              </td>
+              <td><a
+                  onclick="window.open('/change_member.html', 'window_name', 'width=1100, height=400, location=no, status=no, scrollbars=yes')">MDV</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="BTNform">
+      <button type="button" class="nextBTN BTN_blue2 defaultBtn"
+        onclick="window.open('/forming_group.html', 'window_name', 'width=800, height=750, location=no, status=no, scrollbars=yes')">다음
+        조 편성</button>
+      <button type="button" class="resetBTN BTN_Orange2 defaultBtn">모든 조 초기화</button>
+    </div>
+    <button type="button" class="changePwBtn defaultBtn">확인</button>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

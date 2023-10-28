@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/animate.css">
+  <link rel="stylesheet" href="./assets/css/award_reset.css">
+  <link rel="stylesheet" href="./assets/css/award_ceremony.css">
+  <style>
+    .flag-container.first .flag-element {
+      background-image: url(./assets/images/u20_national_flag/korea.png);
+    }
+
+    .flag-container.second .flag-element {
+      background-image: url(./assets/images/u20_national_flag/malaysia.png);
+    }
+
+    .flag-container.third .flag-element {
+      background-image: url(./assets/images/u20_national_flag/cambodia.png);
+    }
+  </style>
+  <title>award ceremony</title>
+</head>
+
+<body>
+  <div class="awardCeremony">
+
+    <div class="flag-container first">
+      <div class="flag"></div>
+    </div>
+
+    <div class="flag-container second">
+      <div class="flag"></div>
+    </div>
+
+    <div class="flag-container third">
+      <div class="flag"></div>
+    </div>
+
+    <div class="banner-container">
+      <div class="banner"></div>
+      <div class="bannerLogoContainer">
+        <div class="bannerLogo"></div>
+      </div>
+    </div>
+
+    <video loop="" autoplay="" muted="">
+      <source src="./assets/images/background_1.mp4" type="video/ogg">
+    </video>
+  </div>
+
+  <script src="./assets/js/juqery.js"></script>
+  <script>
+    var bannerWidth = $('.banner').width();
+    for (var i = 0; i < bannerWidth; i++) {
+      var bannerElement = $("<div class='banner-element'>");
+      bannerElement.css('background-position', -i + "px");
+      bannerElement.css('animation-delay', i * 10 + 'ms');
+      $('.banner').append(bannerElement);
+    }
+  </script>
+  <script>
+    var flagWidth = $('.flag').width();
+    for (var i = 0; i < flagWidth; i++) {
+      var flagElement = $("<div class='flag-element'>");
+      flagElement.css('background-position', -i + "px");
+      flagElement.css('animation-delay', i * 10 + 'ms');
+      $('.flag').append(flagElement);
+    }
+  </script>
+  <script src="./assets/js/award.js"></script>
+</body>
+
+</html>

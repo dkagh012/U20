@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="./assets/js/jquery-1.12.4.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/xeicon.min.css">
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/select2.min.css">
+  <script type="text/javascript" src="./assets/js/select2.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <title>임원 정보 등록</title>
+</head>
+
+<body>
+  <div class="schedule_container">
+    <form action="action/sport/schedule_manual_update.php" method="post" class="form">
+      <div class="schedule schedule_flex">
+        <!-- n조 -->
+        <div class="schedule_filed filed_list_item grouping_table" id="group_table">
+          <div class="profile_logo">
+            <img src="./assets/images/logo.png">
+          </div>
+          <div class="schedule_filed_tit schedule_green">
+            <p class="tit_left_yellow">1조</p>
+          </div>
+          <div class="filed2_form">
+            <table cellspacing="0" cellpadding="0" class="entry_table filed2_swap" id="changeTable" name="table_name[]">
+              <thead class="filed_list filed2_list result_table ">
+                <tr>
+                  <th>순서</th>
+                  <th>선수 이름</th>
+                  <th>삭제</th>
+                </tr>
+                <tr class="filed2_bottom">
+                </tr>
+              </thead>
+              <!-- m명 -->
+
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="2">
+                    <input type="text" class="number" value="1" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22278">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="87" selected="">정수목(KOR)(삼성중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="2">
+                    <input type="text" class="number" value="1" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22278">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="87" selected="">정수목(KOR)(삼성중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="2">
+                    <input type="text" class="number" value="1" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22278">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="87" selected="">정수목(KOR)(삼성중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="87" selected="">정수목(KOR)(삼성중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="87" selected="">정수목(KOR)(삼성중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="87" selected="">정수목(KOR)(삼성중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="3">
+                    <input type="text" class="number" value="2" name="lane[]">
+                  </td>
+                  <td>
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="88" selected="">박천범(KOR)(청송중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="4">
+                    <input type="text" class="number" value="4" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22273">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="83" selected="">김우현(KOR)(계림중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="2">
+                    <input type="text" class="number" value="1" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22278">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="87" selected="">정수목(KOR)(삼성중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="3">
+                    <input type="text" class="number" value="2" name="lane[]">
+                  </td>
+                  <td>
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="88" selected="">박천범(KOR)(청송중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="4">
+                    <input type="text" class="number" value="4" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22273">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="83" selected="">김우현(KOR)(계림중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="2">
+                    <input type="text" class="number" value="1" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22278">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="87" selected="">정수목(KOR)(삼성중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="3">
+                    <input type="text" class="number" value="2" name="lane[]">
+                  </td>
+                  <td>
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="88" selected="">박천범(KOR)(청송중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="4">
+                    <input type="text" class="number" value="4" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22273">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="83" selected="">김우현(KOR)(계림중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="2">
+                    <input type="text" class="number" value="1" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22278">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="87" selected="">정수목(KOR)(삼성중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="3">
+                    <input type="text" class="number" value="2" name="lane[]">
+                  </td>
+                  <td>
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="88" selected="">박천범(KOR)(청송중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="4">
+                    <input type="text" class="number" value="4" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22273">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="83" selected="">김우현(KOR)(계림중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="5">
+                    <input type="text" class="number" value="5" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22255">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="8" selected="">노승재(KOR)(김천중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="6">
+                    <input type="text" class="number" value="6" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22525">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="84" selected="">윤준혁(KOR)(계림중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="8">
+                    <input type="text" class="number" value="8" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22260">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="85" selected="">김사빈(KOR)(김천중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+        <div class="schedule_filed filed_list_item grouping_table" id="group_table">
+          <div class="profile_logo">
+            <img src="./assets/images/logo.png">
+          </div>
+          <div class="schedule_filed_tit schedule_green">
+            <p class="tit_left_yellow">1조</p>
+          </div>
+          <div class="filed2_form">
+            <table cellspacing="0" cellpadding="0" class="entry_table filed2_swap" id="changeTable" name="table_name[]">
+              <thead class="filed_list filed2_list result_table ">
+                <tr>
+                  <th>순서</th>
+                  <th>선수 이름</th>
+                  <th>삭제</th>
+                </tr>
+                <tr class="filed2_bottom">
+                </tr>
+              </thead>
+              <!-- m명 -->
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="2">
+                    <input type="text" class="number" value="2" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22278">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="92" selected="">김무진(KOR)(삼성중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="3">
+                    <input type="text" class="number" value="3" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22263">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="86" selected="">박현수(KOR)(점촌중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="2">
+                    <input type="text" class="number" value="1" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22278">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="87" selected="">정수목(KOR)(삼성중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="3">
+                    <input type="text" class="number" value="2" name="lane[]">
+                  </td>
+                  <td>
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="88" selected="">박천범(KOR)(청송중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="4">
+                    <input type="text" class="number" value="4" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22273">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="83" selected="">김우현(KOR)(계림중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="5">
+                    <input type="text" class="number" value="5" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22255">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="8" selected="">노승재(KOR)(김천중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="6">
+                    <input type="text" class="number" value="6" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22525">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="84" selected="">윤준혁(KOR)(계림중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="8">
+                    <input type="text" class="number" value="8" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22260">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="85" selected="">김사빈(KOR)(김천중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+        <div class="schedule_filed filed_list_item grouping_table" id="group_table">
+          <div class="profile_logo">
+            <img src="./assets/images/logo.png">
+          </div>
+          <div class="schedule_filed_tit schedule_green">
+            <p class="tit_left_yellow">1조</p>
+          </div>
+          <div class="filed2_form">
+            <table cellspacing="0" cellpadding="0" class="entry_table filed2_swap" id="changeTable" name="table_name[]">
+              <thead class="filed_list filed2_list result_table ">
+                <tr>
+                  <th>순서</th>
+                  <th>선수 이름</th>
+                  <th>삭제</th>
+                </tr>
+                <tr class="filed2_bottom">
+                </tr>
+              </thead>
+              <!-- m명 -->
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="2">
+                    <input type="text" class="number" value="1" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22278">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="87" selected="">정수목(KOR)(삼성중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="3">
+                    <input type="text" class="number" value="2" name="lane[]">
+                  </td>
+                  <td>
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="88" selected="">박천범(KOR)(청송중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="schedule_filed filed_list_item grouping_table" id="group_table">
+          <div class="profile_logo">
+            <img src="./assets/images/logo.png">
+          </div>
+          <div class="schedule_filed_tit schedule_green">
+            <p class="tit_left_yellow">1조</p>
+          </div>
+          <div class="filed2_form">
+            <table cellspacing="0" cellpadding="0" class="entry_table filed2_swap" id="changeTable" name="table_name[]">
+              <thead class="filed_list filed2_list result_table ">
+                <tr>
+                  <th>순서</th>
+                  <th>선수 이름</th>
+                  <th>삭제</th>
+                </tr>
+                <tr class="filed2_bottom">
+                </tr>
+              </thead>
+              <!-- m명 -->
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="2">
+                    <input type="text" class="number" value="1" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22278">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="87" selected="">정수목(KOR)(삼성중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="3">
+                    <input type="text" class="number" value="2" name="lane[]">
+                  </td>
+                  <td>
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="88" selected="">박천범(KOR)(청송중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="schedule_filed filed_list_item grouping_table" id="group_table">
+          <div class="profile_logo">
+            <img src="./assets/images/logo.png">
+          </div>
+          <div class="schedule_filed_tit schedule_green">
+            <p class="tit_left_yellow">1조</p>
+          </div>
+          <div class="filed2_form">
+            <table cellspacing="0" cellpadding="0" class="entry_table filed2_swap" id="changeTable" name="table_name[]">
+              <thead class="filed_list filed2_list result_table ">
+                <tr>
+                  <th>순서</th>
+                  <th>선수 이름</th>
+                  <th>삭제</th>
+                </tr>
+                <tr class="filed2_bottom">
+                </tr>
+              </thead>
+              <!-- m명 -->
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="2">
+                    <input type="text" class="number" value="1" name="lane[]">
+                  </td>
+                  <td>
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22278">
+                    <!-- 선수 이름 -->
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="87" selected="">정수목(KOR)(삼성중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="grouping_body entry_table group_test">
+                <tr>
+                  <td>
+                    <!-- 조 :: record_group -->
+                    <input type="hidden" name="group[]" id="group[]" value="1">
+                    <!-- 순서 :: record_order -->
+                    <input type="hidden" name="order[]" id="order[]" value="3">
+                    <input type="text" class="number" value="2" name="lane[]">
+                  </td>
+                  <td>
+                    <div id="copy-value">
+                      <select class="select-box select2-hidden-accessible" name="athlete" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="88" selected="">박천범(KOR)(청송중학교)</option>
+                        <option value="">선수 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <!-- 삭제 버튼 -->
+                    <div class="filed_BTN2">
+                      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                        id="deleteBtn1"><i class="xi-minus"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="schedule_filed filed_list_item grouping_table">
+          <div class="profile_logo">
+            <img src="./assets/images/logo.png">
+          </div>
+          <div class="schedule_filed_tit schedule_green">
+            <p class="tit_left_yellow">제외된 선수</p>
+          </div>
+          <div class="filed2_form">
+            <table cellspacing="0" cellpadding="0" class="entry_table filed2_swap" id="targetTable" name="table_name[]">
+              <thead class="filed_list filed2_list result_table ">
+                <tr>
+                  <th>순서</th>
+                  <th>선수 이름</th>
+                  <th>삭제</th>
+                </tr>
+                <tr class="filed2_bottom">
+                </tr>
+              </thead>
+              <!-- m명 -->
+            </table>
+          </div>
+        </div>
+        <button type="button" class="changePwBtn defaultBtn" onclick="changeMember()">순서 재 정렬</button>
+        <button type="submit" class="changePwBtn defaultBtn">만들기</button>
+      </div>
+    </form>
+  </div>
+  <script>
+
+    $("select[name=athlete]").select2();
+  </script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/main_dh.js"></script>
+
+</body>
+
+</html>

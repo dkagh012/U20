@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="./assets/js/jquery-1.12.4.min.js"
+    ></script>
+    <link rel="stylesheet" href="./assets/css/xeicon.min.css" />
+    <link rel="stylesheet" href="./assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/select2.min.css" />
+    <script type="text/javascript" src="./assets/js/select2.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>임원 정보 등록</title>
+  </head>
+
+  <body>
+    <div class="schedule_container">
+      <form
+        action="action/sport/schedule_manual_update.php"
+        method="post"
+        class="form"
+      >
+        <div class="schedule schedule_flex">
+          <!-- n조 -->
+          <div class="schedule_filed filed_list_item grouping_table">
+            <div class="profile_logo">
+              <img src="./assets/images/logo.png" />
+            </div>
+            <div class="schedule_filed_tit schedule_green">
+              <p class="tit_left_yellow">1조</p>
+            </div>
+            <div class="filed2_form">
+              <table
+                cellspacing="0"
+                cellpadding="0"
+                class="filed2_Table entry_table filed2_swap"
+                id="dataTable1"
+                name="table_name[]"
+              >
+                <colgroup>
+                  <col width="10%" />
+                  <col width="10%" />
+                  <col width="70%" />
+                  <col width="10%" />
+                </colgroup>
+                <thead class="filed_list filed2_list result_table">
+                  <tr>
+                    <th>순서</th>
+                    <th>국가</th>
+                    <th>선수 이름</th>
+                    <th>삭제</th>
+                  </tr>
+                  <tr class="filed2_bottom"></tr>
+                </thead>
+                <tbody class="grouping_body entry_table Relay_Tbody_1">
+                  <tr>
+                    <td>
+                      <!-- 조 :: record_group -->
+                      <input
+                        type="hidden"
+                        name="group[]"
+                        id="group[]"
+                        value="1"
+                      />
+                      <input
+                        type="hidden"
+                        name="order[]"
+                        id="order[]"
+                        value="3"
+                      />
+                      <!-- 순서 :: record_order -->
+                      <input
+                        type="text"
+                        class="number"
+                        value="3"
+                        name="lane[]"
+                        disabled="disabled"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        class="number"
+                        value="THA"
+                        disabled="disabled"
+                      />
+                    </td>
+                    <td>
+                      <div id="copy-value">
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="357"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="354">
+                              (304) (M) Nattapon Sookkasem (THA)
+                            </option>
+                            <option value="355">
+                              (305) (M) Puripol Boonson (THA)
+                            </option>
+                            <option value="356">
+                              (306) (M) Sarawut Nuansi (THA)
+                            </option>
+                            <option value="357" selected="">
+                              (307) (M) Supckon Sinzup (THA)
+                            </option>
+                            <option value="358">
+                              (308) (M) Thawatchai Himaiad (THA)
+                            </option>
+                            <option value="360">
+                              (310) (M) Watchaphol Thanthong (THA)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="360"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="354">
+                              (304) (M) Nattapon Sookkasem (THA)
+                            </option>
+                            <option value="355">
+                              (305) (M) Puripol Boonson (THA)
+                            </option>
+                            <option value="356">
+                              (306) (M) Sarawut Nuansi (THA)
+                            </option>
+                            <option value="357">
+                              (307) (M) Supckon Sinzup (THA)
+                            </option>
+                            <option value="358">
+                              (308) (M) Thawatchai Himaiad (THA)
+                            </option>
+                            <option value="360" selected="">
+                              (310) (M) Watchaphol Thanthong (THA)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="354"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="354" selected="">
+                              (304) (M) Nattapon Sookkasem (THA)
+                            </option>
+                            <option value="355">
+                              (305) (M) Puripol Boonson (THA)
+                            </option>
+                            <option value="356">
+                              (306) (M) Sarawut Nuansi (THA)
+                            </option>
+                            <option value="357">
+                              (307) (M) Supckon Sinzup (THA)
+                            </option>
+                            <option value="358">
+                              (308) (M) Thawatchai Himaiad (THA)
+                            </option>
+                            <option value="360">
+                              (310) (M) Watchaphol Thanthong (THA)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="358"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="354">
+                              (304) (M) Nattapon Sookkasem (THA)
+                            </option>
+                            <option value="355">
+                              (305) (M) Puripol Boonson (THA)
+                            </option>
+                            <option value="356">
+                              (306) (M) Sarawut Nuansi (THA)
+                            </option>
+                            <option value="357">
+                              (307) (M) Supckon Sinzup (THA)
+                            </option>
+                            <option value="358" selected="">
+                              (308) (M) Thawatchai Himaiad (THA)
+                            </option>
+                            <option value="360">
+                              (310) (M) Watchaphol Thanthong (THA)
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <button
+                        class="BTN_Blue swapBtn defaultBtn BIG_btn"
+                        id="swapBtn"
+                        type="button"
+                      >
+                        <i class="xi-check"></i>
+                      </button>
+                      <button
+                        type="button"
+                        name="delete_each_row"
+                        class="defaultBtn BIG_btn BTN_Blue"
+                        id="deleteBtn1"
+                      >
+                        <i class="xi-minus"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <!-- 조 :: record_group -->
+                      <input
+                        type="hidden"
+                        name="group[]"
+                        id="group[]"
+                        value="1"
+                      />
+                      <input
+                        type="hidden"
+                        name="order[]"
+                        id="order[]"
+                        value="4"
+                      />
+                      <!-- 순서 :: record_order -->
+                      <input
+                        type="text"
+                        class="number"
+                        value="4"
+                        name="lane[]"
+                        disabled="disabled"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        class="number"
+                        value="HKG"
+                        disabled="disabled"
+                      />
+                    </td>
+                    <td>
+                      <div id="copy-value">
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="34"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="31">
+                              (113) (M) Chan Ting Fong James (HKG)
+                            </option>
+                            <option value="34" selected="">
+                              (114) (M) Chan Yat Lok (HKG)
+                            </option>
+                            <option value="39">
+                              (116) (M) Chau Long Yat (HKG)
+                            </option>
+                            <option value="41">
+                              (117) (M) Cheung Cheung Hung (HKG)
+                            </option>
+                            <option value="47">
+                              (120) (M) Chung Tsz Sing (HKG)
+                            </option>
+                            <option value="50">
+                              (121) (M) Johannsson Magnus Prostur (HKG)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="41"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="31">
+                              (113) (M) Chan Ting Fong James (HKG)
+                            </option>
+                            <option value="34">
+                              (114) (M) Chan Yat Lok (HKG)
+                            </option>
+                            <option value="39">
+                              (116) (M) Chau Long Yat (HKG)
+                            </option>
+                            <option value="41" selected="">
+                              (117) (M) Cheung Cheung Hung (HKG)
+                            </option>
+                            <option value="47">
+                              (120) (M) Chung Tsz Sing (HKG)
+                            </option>
+                            <option value="50">
+                              (121) (M) Johannsson Magnus Prostur (HKG)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="47"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="31">
+                              (113) (M) Chan Ting Fong James (HKG)
+                            </option>
+                            <option value="34">
+                              (114) (M) Chan Yat Lok (HKG)
+                            </option>
+                            <option value="39">
+                              (116) (M) Chau Long Yat (HKG)
+                            </option>
+                            <option value="41">
+                              (117) (M) Cheung Cheung Hung (HKG)
+                            </option>
+                            <option value="47" selected="">
+                              (120) (M) Chung Tsz Sing (HKG)
+                            </option>
+                            <option value="50">
+                              (121) (M) Johannsson Magnus Prostur (HKG)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="50"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="31">
+                              (113) (M) Chan Ting Fong James (HKG)
+                            </option>
+                            <option value="34">
+                              (114) (M) Chan Yat Lok (HKG)
+                            </option>
+                            <option value="39">
+                              (116) (M) Chau Long Yat (HKG)
+                            </option>
+                            <option value="41">
+                              (117) (M) Cheung Cheung Hung (HKG)
+                            </option>
+                            <option value="47">
+                              (120) (M) Chung Tsz Sing (HKG)
+                            </option>
+                            <option value="50" selected="">
+                              (121) (M) Johannsson Magnus Prostur (HKG)
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <button
+                        class="BTN_Blue swapBtn defaultBtn BIG_btn"
+                        id="swapBtn"
+                        type="button"
+                      >
+                        <i class="xi-check"></i>
+                      </button>
+                      <button
+                        type="button"
+                        name="delete_each_row"
+                        class="defaultBtn BIG_btn BTN_Blue"
+                        id="deleteBtn1"
+                      >
+                        <i class="xi-minus"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <!-- 조 :: record_group -->
+                      <input
+                        type="hidden"
+                        name="group[]"
+                        id="group[]"
+                        value="1"
+                      />
+                      <input
+                        type="hidden"
+                        name="order[]"
+                        id="order[]"
+                        value="5"
+                      />
+                      <!-- 순서 :: record_order -->
+                      <input
+                        type="text"
+                        class="number"
+                        value="5"
+                        name="lane[]"
+                        disabled="disabled"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        class="number"
+                        value="KOR"
+                        disabled="disabled"
+                      />
+                    </td>
+                    <td>
+                      <div id="copy-value">
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="225"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="204">
+                              (206) (M) Bae Geonyul (KOR)
+                            </option>
+                            <option value="209">
+                              (211) (M) Hur Jeonghyun (KOR)
+                            </option>
+                            <option value="210">
+                              (212) (M) Hwang Euichan (KOR)
+                            </option>
+                            <option value="225" selected="">
+                              (219) (M) Kim Dongjin (KOR)
+                            </option>
+                            <option value="232">
+                              (222) (M) Kim Jeongyoon (KOR)
+                            </option>
+                            <option value="250">
+                              (232) (M) Nwamadi Joeljin (KOR)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="204"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="204" selected="">
+                              (206) (M) Bae Geonyul (KOR)
+                            </option>
+                            <option value="209">
+                              (211) (M) Hur Jeonghyun (KOR)
+                            </option>
+                            <option value="210">
+                              (212) (M) Hwang Euichan (KOR)
+                            </option>
+                            <option value="225">
+                              (219) (M) Kim Dongjin (KOR)
+                            </option>
+                            <option value="232">
+                              (222) (M) Kim Jeongyoon (KOR)
+                            </option>
+                            <option value="250">
+                              (232) (M) Nwamadi Joeljin (KOR)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="232"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="204">
+                              (206) (M) Bae Geonyul (KOR)
+                            </option>
+                            <option value="209">
+                              (211) (M) Hur Jeonghyun (KOR)
+                            </option>
+                            <option value="210">
+                              (212) (M) Hwang Euichan (KOR)
+                            </option>
+                            <option value="225">
+                              (219) (M) Kim Dongjin (KOR)
+                            </option>
+                            <option value="232" selected="">
+                              (222) (M) Kim Jeongyoon (KOR)
+                            </option>
+                            <option value="250">
+                              (232) (M) Nwamadi Joeljin (KOR)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="250"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="204">
+                              (206) (M) Bae Geonyul (KOR)
+                            </option>
+                            <option value="209">
+                              (211) (M) Hur Jeonghyun (KOR)
+                            </option>
+                            <option value="210">
+                              (212) (M) Hwang Euichan (KOR)
+                            </option>
+                            <option value="225">
+                              (219) (M) Kim Dongjin (KOR)
+                            </option>
+                            <option value="232">
+                              (222) (M) Kim Jeongyoon (KOR)
+                            </option>
+                            <option value="250" selected="">
+                              (232) (M) Nwamadi Joeljin (KOR)
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <button
+                        class="BTN_Blue swapBtn defaultBtn BIG_btn"
+                        id="swapBtn"
+                        type="button"
+                      >
+                        <i class="xi-check"></i>
+                      </button>
+                      <button
+                        type="button"
+                        name="delete_each_row"
+                        class="defaultBtn BIG_btn BTN_Blue"
+                        id="deleteBtn1"
+                      >
+                        <i class="xi-minus"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <!-- 조 :: record_group -->
+                      <input
+                        type="hidden"
+                        name="group[]"
+                        id="group[]"
+                        value="1"
+                      />
+                      <input
+                        type="hidden"
+                        name="order[]"
+                        id="order[]"
+                        value="6"
+                      />
+                      <!-- 순서 :: record_order -->
+                      <input
+                        type="text"
+                        class="number"
+                        value="6"
+                        name="lane[]"
+                        disabled="disabled"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        class="number"
+                        value="IND"
+                        disabled="disabled"
+                      />
+                    </td>
+                    <td>
+                      <div id="copy-value">
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="69"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="65">
+                              (130) (M) Arijit Rana (IND)
+                            </option>
+                            <option value="69" selected="">
+                              (134) (M) Dondapati Mrutyam Jayaram (IND)
+                            </option>
+                            <option value="73">
+                              (138) (M) Kostubh Dcosta (IND)
+                            </option>
+                            <option value="75">
+                              (140) (M) Mohammad Reyan Basha (IND)
+                            </option>
+                            <option value="110">
+                              (155) (M) Vallipi Hima Teja (IND)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="110"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="65">
+                              (130) (M) Arijit Rana (IND)
+                            </option>
+                            <option value="69">
+                              (134) (M) Dondapati Mrutyam Jayaram (IND)
+                            </option>
+                            <option value="73">
+                              (138) (M) Kostubh Dcosta (IND)
+                            </option>
+                            <option value="75">
+                              (140) (M) Mohammad Reyan Basha (IND)
+                            </option>
+                            <option value="110" selected="">
+                              (155) (M) Vallipi Hima Teja (IND)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="75"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="65">
+                              (130) (M) Arijit Rana (IND)
+                            </option>
+                            <option value="69">
+                              (134) (M) Dondapati Mrutyam Jayaram (IND)
+                            </option>
+                            <option value="73">
+                              (138) (M) Kostubh Dcosta (IND)
+                            </option>
+                            <option value="75" selected="">
+                              (140) (M) Mohammad Reyan Basha (IND)
+                            </option>
+                            <option value="110">
+                              (155) (M) Vallipi Hima Teja (IND)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="65"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="65" selected="">
+                              (130) (M) Arijit Rana (IND)
+                            </option>
+                            <option value="69">
+                              (134) (M) Dondapati Mrutyam Jayaram (IND)
+                            </option>
+                            <option value="73">
+                              (138) (M) Kostubh Dcosta (IND)
+                            </option>
+                            <option value="75">
+                              (140) (M) Mohammad Reyan Basha (IND)
+                            </option>
+                            <option value="110">
+                              (155) (M) Vallipi Hima Teja (IND)
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <button
+                        class="BTN_Blue swapBtn defaultBtn BIG_btn"
+                        id="swapBtn"
+                        type="button"
+                      >
+                        <i class="xi-check"></i>
+                      </button>
+                      <button
+                        type="button"
+                        name="delete_each_row"
+                        class="defaultBtn BIG_btn BTN_Blue"
+                        id="deleteBtn1"
+                      >
+                        <i class="xi-minus"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <!-- 조 :: record_group -->
+                      <input
+                        type="hidden"
+                        name="group[]"
+                        id="group[]"
+                        value="1"
+                      />
+                      <input
+                        type="hidden"
+                        name="order[]"
+                        id="order[]"
+                        value="7"
+                      />
+                      <!-- 순서 :: record_order -->
+                      <input
+                        type="text"
+                        class="number"
+                        value="7"
+                        name="lane[]"
+                        disabled="disabled"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        class="number"
+                        value="CHN"
+                        disabled="disabled"
+                      />
+                    </td>
+                    <td>
+                      <div id="copy-value">
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="6"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="6" selected="">
+                              (103) (M) Chen Jinfeng (CHN)
+                            </option>
+                            <option value="8">(105) (M) Huang Yi (CHN)</option>
+                            <option value="12">
+                              (109) (M) Wang Shuang (CHN)
+                            </option>
+                            <option value="13">
+                              (110) (M) Wang Xinkai (CHN)
+                            </option>
+                            <option value="433">
+                              (346) (M) Liu Hongxi (CHN)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="433"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="6">
+                              (103) (M) Chen Jinfeng (CHN)
+                            </option>
+                            <option value="8">(105) (M) Huang Yi (CHN)</option>
+                            <option value="12">
+                              (109) (M) Wang Shuang (CHN)
+                            </option>
+                            <option value="13">
+                              (110) (M) Wang Xinkai (CHN)
+                            </option>
+                            <option value="433" selected="">
+                              (346) (M) Liu Hongxi (CHN)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="8"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="6">
+                              (103) (M) Chen Jinfeng (CHN)
+                            </option>
+                            <option value="8" selected="">
+                              (105) (M) Huang Yi (CHN)
+                            </option>
+                            <option value="12">
+                              (109) (M) Wang Shuang (CHN)
+                            </option>
+                            <option value="13">
+                              (110) (M) Wang Xinkai (CHN)
+                            </option>
+                            <option value="433">
+                              (346) (M) Liu Hongxi (CHN)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="13"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="6">
+                              (103) (M) Chen Jinfeng (CHN)
+                            </option>
+                            <option value="8">(105) (M) Huang Yi (CHN)</option>
+                            <option value="12">
+                              (109) (M) Wang Shuang (CHN)
+                            </option>
+                            <option value="13" selected="">
+                              (110) (M) Wang Xinkai (CHN)
+                            </option>
+                            <option value="433">
+                              (346) (M) Liu Hongxi (CHN)
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <button
+                        class="BTN_Blue swapBtn defaultBtn BIG_btn"
+                        id="swapBtn"
+                        type="button"
+                      >
+                        <i class="xi-check"></i>
+                      </button>
+                      <button
+                        type="button"
+                        name="delete_each_row"
+                        class="defaultBtn BIG_btn BTN_Blue"
+                        id="deleteBtn1"
+                      >
+                        <i class="xi-minus"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <!-- 조 :: record_group -->
+                      <input
+                        type="hidden"
+                        name="group[]"
+                        id="group[]"
+                        value="1"
+                      />
+                      <input
+                        type="hidden"
+                        name="order[]"
+                        id="order[]"
+                        value="8"
+                      />
+                      <!-- 순서 :: record_order -->
+                      <input
+                        type="text"
+                        class="number"
+                        value="8"
+                        name="lane[]"
+                        disabled="disabled"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        class="number"
+                        value="JPN"
+                        disabled="disabled"
+                      />
+                    </td>
+                    <td>
+                      <div id="copy-value">
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="166"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="145">
+                              (176) (M) Kimura Shunya (JPN)
+                            </option>
+                            <option value="150">
+                              (181) (M) Kuroki Kaito (JPN)
+                            </option>
+                            <option value="160">
+                              (186) (M) Narushima Haruki (JPN)
+                            </option>
+                            <option value="161">
+                              (187) (M) Sekiguchi Yuta (JPN)
+                            </option>
+                            <option value="165">
+                              (191) (M) Takasu Futo (JPN)
+                            </option>
+                            <option value="166" selected="">
+                              (192) (M) Watanabe Eito (JPN)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="161"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="145">
+                              (176) (M) Kimura Shunya (JPN)
+                            </option>
+                            <option value="150">
+                              (181) (M) Kuroki Kaito (JPN)
+                            </option>
+                            <option value="160">
+                              (186) (M) Narushima Haruki (JPN)
+                            </option>
+                            <option value="161" selected="">
+                              (187) (M) Sekiguchi Yuta (JPN)
+                            </option>
+                            <option value="165">
+                              (191) (M) Takasu Futo (JPN)
+                            </option>
+                            <option value="166">
+                              (192) (M) Watanabe Eito (JPN)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="150"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="145">
+                              (176) (M) Kimura Shunya (JPN)
+                            </option>
+                            <option value="150" selected="">
+                              (181) (M) Kuroki Kaito (JPN)
+                            </option>
+                            <option value="160">
+                              (186) (M) Narushima Haruki (JPN)
+                            </option>
+                            <option value="161">
+                              (187) (M) Sekiguchi Yuta (JPN)
+                            </option>
+                            <option value="165">
+                              (191) (M) Takasu Futo (JPN)
+                            </option>
+                            <option value="166">
+                              (192) (M) Watanabe Eito (JPN)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="160"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="name[]"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            id="athlete"
+                            required=""
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="145">
+                              (176) (M) Kimura Shunya (JPN)
+                            </option>
+                            <option value="150">
+                              (181) (M) Kuroki Kaito (JPN)
+                            </option>
+                            <option value="160" selected="">
+                              (186) (M) Narushima Haruki (JPN)
+                            </option>
+                            <option value="161">
+                              (187) (M) Sekiguchi Yuta (JPN)
+                            </option>
+                            <option value="165">
+                              (191) (M) Takasu Futo (JPN)
+                            </option>
+                            <option value="166">
+                              (192) (M) Watanabe Eito (JPN)
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <button
+                        class="BTN_Blue swapBtn defaultBtn BIG_btn"
+                        id="swapBtn"
+                        type="button"
+                      >
+                        <i class="xi-check"></i>
+                      </button>
+                      <button
+                        type="button"
+                        name="delete_each_row"
+                        class="defaultBtn BIG_btn BTN_Blue"
+                        id="deleteBtn1"
+                      >
+                        <i class="xi-minus"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <button
+                class="BTN_Orange defaultBtn BIG_btn Relay_PlusBtn_1"
+                type="button"
+              >
+                <i class="xi-plus"></i>
+              </button>
+              <table class="Relay_Table_1">
+                <colgroup>
+                  <col width="10%" />
+                  <col width="10%" />
+                  <col width="80%" />
+                </colgroup>
+                <thead class="filed_list filed2_list result_table">
+                  <tr>
+                    <th>순서</th>
+                    <th>국가</th>
+                    <th>선수 이름</th>
+                  </tr>
+                </thead>
+                <tbody class="grouping_body entry_table">
+                  <tr>
+                    <td>
+                      <input
+                        type="hidden"
+                        name="group[]"
+                        id="group[]"
+                        value=""
+                      />
+                      <input
+                        type="text"
+                        class="input_text"
+                        value="9"
+                        name="lane[]"
+                      />
+                      <input
+                        type="hidden"
+                        class="input_text"
+                        value=""
+                        name="order[]"
+                      />
+                    </td>
+                    <td>
+                      <input type="text" id="Country" value="CHN" />
+                    </td>
+                    <td>
+                      <div id="copy-value">
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="1"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="athlete_ready[]"
+                            id="athlete"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="6">
+                              (103) (M) Chen Jinfeng (CHN)
+                            </option>
+                            <option value="8">(105) (M) Huang Yi (CHN)</option>
+                            <option value="12">
+                              (109) (M) Wang Shuang (CHN)
+                            </option>
+                            <option value="13">
+                              (110) (M) Wang Xinkai (CHN)
+                            </option>
+                            <option value="433">
+                              (346) (M) Liu Hongxi (CHN)
+                            </option>
+                            <option value="31">
+                              (113) (M) Chan Ting Fong James (HKG)
+                            </option>
+                            <option value="34">
+                              (114) (M) Chan Yat Lok (HKG)
+                            </option>
+                            <option value="39">
+                              (116) (M) Chau Long Yat (HKG)
+                            </option>
+                            <option value="41">
+                              (117) (M) Cheung Cheung Hung (HKG)
+                            </option>
+                            <option value="47">
+                              (120) (M) Chung Tsz Sing (HKG)
+                            </option>
+                            <option value="50">
+                              (121) (M) Johannsson Magnus Prostur (HKG)
+                            </option>
+                            <option value="65">
+                              (130) (M) Arijit Rana (IND)
+                            </option>
+                            <option value="69">
+                              (134) (M) Dondapati Mrutyam Jayaram (IND)
+                            </option>
+                            <option value="73">
+                              (138) (M) Kostubh Dcosta (IND)
+                            </option>
+                            <option value="75">
+                              (140) (M) Mohammad Reyan Basha (IND)
+                            </option>
+                            <option value="110">
+                              (155) (M) Vallipi Hima Teja (IND)
+                            </option>
+                            <option value="145">
+                              (176) (M) Kimura Shunya (JPN)
+                            </option>
+                            <option value="150">
+                              (181) (M) Kuroki Kaito (JPN)
+                            </option>
+                            <option value="160">
+                              (186) (M) Narushima Haruki (JPN)
+                            </option>
+                            <option value="161">
+                              (187) (M) Sekiguchi Yuta (JPN)
+                            </option>
+                            <option value="165">
+                              (191) (M) Takasu Futo (JPN)
+                            </option>
+                            <option value="166">
+                              (192) (M) Watanabe Eito (JPN)
+                            </option>
+                            <option value="204">
+                              (206) (M) Bae Geonyul (KOR)
+                            </option>
+                            <option value="209">
+                              (211) (M) Hur Jeonghyun (KOR)
+                            </option>
+                            <option value="210">
+                              (212) (M) Hwang Euichan (KOR)
+                            </option>
+                            <option value="225">
+                              (219) (M) Kim Dongjin (KOR)
+                            </option>
+                            <option value="232">
+                              (222) (M) Kim Jeongyoon (KOR)
+                            </option>
+                            <option value="250">
+                              (232) (M) Nwamadi Joeljin (KOR)
+                            </option>
+                            <option value="316">
+                              (280) (M) Amir Muhammad A Muhammad (QAT)
+                            </option>
+                            <option value="323">
+                              (287) (M) Mubarak Abdulla S A Al-noubi (QAT)
+                            </option>
+                            <option value="324">
+                              (288) (M) Nayef Mubarak K M Al-rashidi (QAT)
+                            </option>
+                            <option value="325">
+                              (289) (M) Oumar Doudai O Abakar (QAT)
+                            </option>
+                            <option value="327">
+                              (291) (M) Youssef Wissam A Hamed (QAT)
+                            </option>
+                            <option value="354">
+                              (304) (M) Nattapon Sookkasem (THA)
+                            </option>
+                            <option value="355">
+                              (305) (M) Puripol Boonson (THA)
+                            </option>
+                            <option value="356">
+                              (306) (M) Sarawut Nuansi (THA)
+                            </option>
+                            <option value="357">
+                              (307) (M) Supckon Sinzup (THA)
+                            </option>
+                            <option value="358">
+                              (308) (M) Thawatchai Himaiad (THA)
+                            </option>
+                            <option value="360">
+                              (310) (M) Watchaphol Thanthong (THA)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="1"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="athlete_ready[]"
+                            id="athlete"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="6">
+                              (103) (M) Chen Jinfeng (CHN)
+                            </option>
+                            <option value="8">(105) (M) Huang Yi (CHN)</option>
+                            <option value="12">
+                              (109) (M) Wang Shuang (CHN)
+                            </option>
+                            <option value="13">
+                              (110) (M) Wang Xinkai (CHN)
+                            </option>
+                            <option value="433">
+                              (346) (M) Liu Hongxi (CHN)
+                            </option>
+                            <option value="31">
+                              (113) (M) Chan Ting Fong James (HKG)
+                            </option>
+                            <option value="34">
+                              (114) (M) Chan Yat Lok (HKG)
+                            </option>
+                            <option value="39">
+                              (116) (M) Chau Long Yat (HKG)
+                            </option>
+                            <option value="41">
+                              (117) (M) Cheung Cheung Hung (HKG)
+                            </option>
+                            <option value="47">
+                              (120) (M) Chung Tsz Sing (HKG)
+                            </option>
+                            <option value="50">
+                              (121) (M) Johannsson Magnus Prostur (HKG)
+                            </option>
+                            <option value="65">
+                              (130) (M) Arijit Rana (IND)
+                            </option>
+                            <option value="69">
+                              (134) (M) Dondapati Mrutyam Jayaram (IND)
+                            </option>
+                            <option value="73">
+                              (138) (M) Kostubh Dcosta (IND)
+                            </option>
+                            <option value="75">
+                              (140) (M) Mohammad Reyan Basha (IND)
+                            </option>
+                            <option value="110">
+                              (155) (M) Vallipi Hima Teja (IND)
+                            </option>
+                            <option value="145">
+                              (176) (M) Kimura Shunya (JPN)
+                            </option>
+                            <option value="150">
+                              (181) (M) Kuroki Kaito (JPN)
+                            </option>
+                            <option value="160">
+                              (186) (M) Narushima Haruki (JPN)
+                            </option>
+                            <option value="161">
+                              (187) (M) Sekiguchi Yuta (JPN)
+                            </option>
+                            <option value="165">
+                              (191) (M) Takasu Futo (JPN)
+                            </option>
+                            <option value="166">
+                              (192) (M) Watanabe Eito (JPN)
+                            </option>
+                            <option value="204">
+                              (206) (M) Bae Geonyul (KOR)
+                            </option>
+                            <option value="209">
+                              (211) (M) Hur Jeonghyun (KOR)
+                            </option>
+                            <option value="210">
+                              (212) (M) Hwang Euichan (KOR)
+                            </option>
+                            <option value="225">
+                              (219) (M) Kim Dongjin (KOR)
+                            </option>
+                            <option value="232">
+                              (222) (M) Kim Jeongyoon (KOR)
+                            </option>
+                            <option value="250">
+                              (232) (M) Nwamadi Joeljin (KOR)
+                            </option>
+                            <option value="316">
+                              (280) (M) Amir Muhammad A Muhammad (QAT)
+                            </option>
+                            <option value="323">
+                              (287) (M) Mubarak Abdulla S A Al-noubi (QAT)
+                            </option>
+                            <option value="324">
+                              (288) (M) Nayef Mubarak K M Al-rashidi (QAT)
+                            </option>
+                            <option value="325">
+                              (289) (M) Oumar Doudai O Abakar (QAT)
+                            </option>
+                            <option value="327">
+                              (291) (M) Youssef Wissam A Hamed (QAT)
+                            </option>
+                            <option value="354">
+                              (304) (M) Nattapon Sookkasem (THA)
+                            </option>
+                            <option value="355">
+                              (305) (M) Puripol Boonson (THA)
+                            </option>
+                            <option value="356">
+                              (306) (M) Sarawut Nuansi (THA)
+                            </option>
+                            <option value="357">
+                              (307) (M) Supckon Sinzup (THA)
+                            </option>
+                            <option value="358">
+                              (308) (M) Thawatchai Himaiad (THA)
+                            </option>
+                            <option value="360">
+                              (310) (M) Watchaphol Thanthong (THA)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="1"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="athlete_ready[]"
+                            tabindex="-1"
+                            id="athlete"
+                            aria-hidden="true"
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="6">
+                              (103) (M) Chen Jinfeng (CHN)
+                            </option>
+                            <option value="8">(105) (M) Huang Yi (CHN)</option>
+                            <option value="12">
+                              (109) (M) Wang Shuang (CHN)
+                            </option>
+                            <option value="13">
+                              (110) (M) Wang Xinkai (CHN)
+                            </option>
+                            <option value="433">
+                              (346) (M) Liu Hongxi (CHN)
+                            </option>
+                            <option value="31">
+                              (113) (M) Chan Ting Fong James (HKG)
+                            </option>
+                            <option value="34">
+                              (114) (M) Chan Yat Lok (HKG)
+                            </option>
+                            <option value="39">
+                              (116) (M) Chau Long Yat (HKG)
+                            </option>
+                            <option value="41">
+                              (117) (M) Cheung Cheung Hung (HKG)
+                            </option>
+                            <option value="47">
+                              (120) (M) Chung Tsz Sing (HKG)
+                            </option>
+                            <option value="50">
+                              (121) (M) Johannsson Magnus Prostur (HKG)
+                            </option>
+                            <option value="65">
+                              (130) (M) Arijit Rana (IND)
+                            </option>
+                            <option value="69">
+                              (134) (M) Dondapati Mrutyam Jayaram (IND)
+                            </option>
+                            <option value="73">
+                              (138) (M) Kostubh Dcosta (IND)
+                            </option>
+                            <option value="75">
+                              (140) (M) Mohammad Reyan Basha (IND)
+                            </option>
+                            <option value="110">
+                              (155) (M) Vallipi Hima Teja (IND)
+                            </option>
+                            <option value="145">
+                              (176) (M) Kimura Shunya (JPN)
+                            </option>
+                            <option value="150">
+                              (181) (M) Kuroki Kaito (JPN)
+                            </option>
+                            <option value="160">
+                              (186) (M) Narushima Haruki (JPN)
+                            </option>
+                            <option value="161">
+                              (187) (M) Sekiguchi Yuta (JPN)
+                            </option>
+                            <option value="165">
+                              (191) (M) Takasu Futo (JPN)
+                            </option>
+                            <option value="166">
+                              (192) (M) Watanabe Eito (JPN)
+                            </option>
+                            <option value="204">
+                              (206) (M) Bae Geonyul (KOR)
+                            </option>
+                            <option value="209">
+                              (211) (M) Hur Jeonghyun (KOR)
+                            </option>
+                            <option value="210">
+                              (212) (M) Hwang Euichan (KOR)
+                            </option>
+                            <option value="225">
+                              (219) (M) Kim Dongjin (KOR)
+                            </option>
+                            <option value="232">
+                              (222) (M) Kim Jeongyoon (KOR)
+                            </option>
+                            <option value="250">
+                              (232) (M) Nwamadi Joeljin (KOR)
+                            </option>
+                            <option value="316">
+                              (280) (M) Amir Muhammad A Muhammad (QAT)
+                            </option>
+                            <option value="323">
+                              (287) (M) Mubarak Abdulla S A Al-noubi (QAT)
+                            </option>
+                            <option value="324">
+                              (288) (M) Nayef Mubarak K M Al-rashidi (QAT)
+                            </option>
+                            <option value="325">
+                              (289) (M) Oumar Doudai O Abakar (QAT)
+                            </option>
+                            <option value="327">
+                              (291) (M) Youssef Wissam A Hamed (QAT)
+                            </option>
+                            <option value="354">
+                              (304) (M) Nattapon Sookkasem (THA)
+                            </option>
+                            <option value="355">
+                              (305) (M) Puripol Boonson (THA)
+                            </option>
+                            <option value="356">
+                              (306) (M) Sarawut Nuansi (THA)
+                            </option>
+                            <option value="357">
+                              (307) (M) Supckon Sinzup (THA)
+                            </option>
+                            <option value="358">
+                              (308) (M) Thawatchai Himaiad (THA)
+                            </option>
+                            <option value="360">
+                              (310) (M) Watchaphol Thanthong (THA)
+                            </option>
+                          </select>
+                        </div>
+
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="1"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="athlete_ready[]"
+                            tabindex="-1"
+                            id="athlete"
+                            aria-hidden="true"
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="6">
+                              (103) (M) Chen Jinfeng (CHN)
+                            </option>
+                            <option value="8">(105) (M) Huang Yi (CHN)</option>
+                            <option value="12">
+                              (109) (M) Wang Shuang (CHN)
+                            </option>
+                            <option value="13">
+                              (110) (M) Wang Xinkai (CHN)
+                            </option>
+                            <option value="433">
+                              (346) (M) Liu Hongxi (CHN)
+                            </option>
+                            <option value="31">
+                              (113) (M) Chan Ting Fong James (HKG)
+                            </option>
+                            <option value="34">
+                              (114) (M) Chan Yat Lok (HKG)
+                            </option>
+                            <option value="39">
+                              (116) (M) Chau Long Yat (HKG)
+                            </option>
+                            <option value="41">
+                              (117) (M) Cheung Cheung Hung (HKG)
+                            </option>
+                            <option value="47">
+                              (120) (M) Chung Tsz Sing (HKG)
+                            </option>
+                            <option value="50">
+                              (121) (M) Johannsson Magnus Prostur (HKG)
+                            </option>
+                            <option value="65">
+                              (130) (M) Arijit Rana (IND)
+                            </option>
+                            <option value="69">
+                              (134) (M) Dondapati Mrutyam Jayaram (IND)
+                            </option>
+                            <option value="73">
+                              (138) (M) Kostubh Dcosta (IND)
+                            </option>
+                            <option value="75">
+                              (140) (M) Mohammad Reyan Basha (IND)
+                            </option>
+                            <option value="110">
+                              (155) (M) Vallipi Hima Teja (IND)
+                            </option>
+                            <option value="145">
+                              (176) (M) Kimura Shunya (JPN)
+                            </option>
+                            <option value="150">
+                              (181) (M) Kuroki Kaito (JPN)
+                            </option>
+                            <option value="160">
+                              (186) (M) Narushima Haruki (JPN)
+                            </option>
+                            <option value="161">
+                              (187) (M) Sekiguchi Yuta (JPN)
+                            </option>
+                            <option value="165">
+                              (191) (M) Takasu Futo (JPN)
+                            </option>
+                            <option value="166">
+                              (192) (M) Watanabe Eito (JPN)
+                            </option>
+                            <option value="204">
+                              (206) (M) Bae Geonyul (KOR)
+                            </option>
+                            <option value="209">
+                              (211) (M) Hur Jeonghyun (KOR)
+                            </option>
+                            <option value="210">
+                              (212) (M) Hwang Euichan (KOR)
+                            </option>
+                            <option value="225">
+                              (219) (M) Kim Dongjin (KOR)
+                            </option>
+                            <option value="232">
+                              (222) (M) Kim Jeongyoon (KOR)
+                            </option>
+                            <option value="250">
+                              (232) (M) Nwamadi Joeljin (KOR)
+                            </option>
+                            <option value="316">
+                              (280) (M) Amir Muhammad A Muhammad (QAT)
+                            </option>
+                            <option value="323">
+                              (287) (M) Mubarak Abdulla S A Al-noubi (QAT)
+                            </option>
+                            <option value="324">
+                              (288) (M) Nayef Mubarak K M Al-rashidi (QAT)
+                            </option>
+                            <option value="325">
+                              (289) (M) Oumar Doudai O Abakar (QAT)
+                            </option>
+                            <option value="327">
+                              (291) (M) Youssef Wissam A Hamed (QAT)
+                            </option>
+                            <option value="354">
+                              (304) (M) Nattapon Sookkasem (THA)
+                            </option>
+                            <option value="355">
+                              (305) (M) Puripol Boonson (THA)
+                            </option>
+                            <option value="356">
+                              (306) (M) Sarawut Nuansi (THA)
+                            </option>
+                            <option value="357">
+                              (307) (M) Supckon Sinzup (THA)
+                            </option>
+                            <option value="358">
+                              (308) (M) Thawatchai Himaiad (THA)
+                            </option>
+                            <option value="360">
+                              (310) (M) Watchaphol Thanthong (THA)
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="addBtn">
+            <a class="btn btn_02" href="/group_list.html">목록</a>
+            <button
+              onclick="location.href='group_register.html' "
+              class="btn_submit btn"
+              type="submit"
+            >
+              확인
+            </button>
+          </div>
+        </div>
+        <button type="submit" class="changePwBtn defaultBtn">만들기</button>
+      </form>
+    </div>
+    <script>
+      $("select[name=athlete]").select2();
+    </script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+      // // select2를 업데이트하여 변경된 옵션을 적용
+      // selectInClonedRow.trigger("change");
+
+      if (document.querySelector(".swapBtn")) {
+        const TableLength = document.querySelectorAll(".filed2_Table");
+
+        for (let i = 1; i <= TableLength.length; i++) {
+          const targetTbody = document.querySelector(`.Relay_Table_${i}`);
+          const targetSelect = targetTbody.querySelectorAll(
+            "td:nth-child(3) select"
+          );
+          const targetInput = targetTbody.querySelector(
+            "td:nth-child(2) input"
+          ).value;
+
+          for (let i = 0; i < targetSelect.length; i++) {
+            const selectElement = targetSelect[i];
+            const options = selectElement.options;
+
+            for (let j = 0; j < options.length; j++) {
+              const optionText = options[j].textContent;
+
+              if (targetInput && optionText.includes(`(${targetInput})`)) {
+                options[j].disabled = false; // 옵션 활성화
+              } else {
+                options[j].disabled = true; // 옵션 비활성화
+              }
+            }
+
+            // 선택된 값을 업데이트하여 비활성화된 옵션을 숨기게 만들기
+            selectElement.selectedIndex = -1;
+            selectElement.selectedIndex = 0;
+          }
+        }
+
+        // Selected 이벤트
+        $(document).on("select2:selecting", "select", function (e) {
+          const currentSelect = $(e.target);
+          const selectedValue = e.params.args.data.id; // 클릭된 옵션의 값
+          const targetInput = currentSelect.closest("td").find("#athlete_id");
+          currentSelect.find("option").each(function () {
+            $(this).removeAttr("selected");
+          });
+
+          currentSelect
+            .find(`option[value="${selectedValue}"]`)
+            .attr("selected", "selected");
+
+          currentSelect.trigger("change");
+
+          $(targetInput).val(selectedValue);
+        });
+
+        // 추가 이벤트
+        document.addEventListener("DOMContentLoaded", function () {
+          for (let i = 1; i <= TableLength.length; i++) {
+            const btn = document.querySelector(`.Relay_PlusBtn_${i}`);
+            if (!btn) continue;
+            btn.addEventListener("click", function () {
+              const targetTable = document.querySelector(`.Relay_Table_${i}`);
+              const targetTbody = document.querySelector(`.Relay_Tbody_${i}`);
+              const rows = targetTable.querySelectorAll(
+                ".grouping_body.entry_table tr"
+              );
+              if (rows && rows.length > 0) {
+                const lastRow = rows[rows.length - 1];
+
+                $(lastRow.querySelector("select")).select2("destroy");
+                const clonedRow = lastRow.cloneNode(true);
+                clonedRow
+                  .querySelectorAll(".select2-container")
+                  .forEach((el) => el.remove());
+                const inputInLastRow = lastRow.querySelector(
+                  "td:nth-child(2) input"
+                ).value;
+
+                const lastRowSelect = clonedRow.querySelectorAll("select");
+
+                for (let i = 0; i < lastRowSelect.length; i++) {
+                  for (
+                    let j = lastRowSelect[i].options.length - 1;
+                    j >= 0;
+                    j--
+                  ) {
+                    const optionText = lastRowSelect[i].options[j].label;
+                    if (
+                      inputInLastRow &&
+                      optionText.includes(`(${inputInLastRow})`)
+                    ) {
+                      // inputInLastRow 값이 있고, 해당 값과 일치하는 옵션은 유지
+                      continue;
+                    } else {
+                      // inputInLastRow 값이 없거나 일치하지 않는 옵션은 삭제
+                      lastRowSelect[i].removeChild(lastRowSelect[i].options[j]);
+                    }
+                  }
+                }
+                // select2를 업데이트하여 변경된 옵션을 적용
+                selectInClonedRow.trigger("change");
+
+                const td = document.createElement("td");
+
+                const swapButton = document.createElement("button");
+                swapButton.className = "BTN_Blue swapBtn defaultBtn BIG_btn";
+                swapButton.id = "swapBtn";
+                swapButton.type = "button";
+                const swapIcon = document.createElement("i");
+                swapIcon.className = "xi-check";
+                swapButton.appendChild(swapIcon);
+                td.appendChild(swapButton);
+
+                const deleteButton = document.createElement("button");
+                deleteButton.type = "button";
+                deleteButton.name = "delete_each_row";
+                deleteButton.className = "defaultBtn BIG_btn BTN_Blue";
+                const deleteIcon = document.createElement("i");
+                deleteIcon.className = "xi-minus";
+                deleteButton.appendChild(deleteIcon);
+
+                td.appendChild(deleteButton);
+                clonedRow.appendChild(td);
+                targetTbody.appendChild(clonedRow);
+                clonedRow.querySelector(
+                  "td:nth-child(2) input"
+                ).disabled = true;
+                $(lastRow.querySelector("select")).select2();
+                $(clonedRow)
+                  .find("select")
+                  .each(function () {
+                    $(this).select2();
+                  });
+              }
+            });
+          }
+          document.addEventListener("click", function (e) {
+            if (e.target.closest(".swapBtn")) {
+              swapButtonContent(e.target.closest(".swapBtn"));
+            }
+            if (e.target.name === "delete_each_row") {
+              e.target.closest("tr").remove();
+            }
+          });
+          $(document).ready(function () {
+            $("select")
+              .select2()
+              .on("select2:selecting", function (e) {
+                const currentSelect = $(e.target);
+                const selectedValue = e.params.args.data.id; // 클릭한 옵션의 값
+                const targetInput =
+                  this.parentElement.querySelector("#athlete_id\\[\\]");
+                currentSelect.find("option").each(function () {
+                  if ($(this).val() === selectedValue) {
+                    $(this).attr("selected", "selected");
+                  } else {
+                    $(this).removeAttr("selected");
+                  }
+                });
+                currentSelect.val(selectedValue).trigger("change");
+
+                // 추가 코드: 해당 값을 숨겨진 input 요소에 업데이트
+                $(targetInput).val(selectedValue);
+              });
+          });
+        });
+
+        // 릴레이 교환 버튼
+        if (document.querySelectorAll(".swapBtn")) {
+          let prevTarget = null;
+          function swapButtonContent(btn) {
+            if (prevTarget) {
+              const prevRow = prevTarget.closest("tr");
+              const currentRow = btn.closest("tr");
+              const prevAthleteIds = prevRow.querySelectorAll(
+                "td:nth-child(3) #athlete_id\\[\\]"
+              );
+              const currentAthleteIds = currentRow.querySelectorAll(
+                "td:nth-child(3) #athlete_id\\[\\]"
+              );
+              console.log(prevAthleteIds);
+              console.log(currentAthleteIds);
+
+              // Iterate through the athlete_id elements and swap their values
+              prevAthleteIds.forEach((prevAthleteId, index) => {
+                const currentAthleteId = currentAthleteIds[index];
+                const tempAthleteIdValue = prevAthleteId.value;
+                prevAthleteId.value = currentAthleteId.value;
+                currentAthleteId.value = tempAthleteIdValue;
+              });
+
+              const prevSelectBoxes = prevRow.querySelectorAll(
+                "td:nth-child(3) .select-box"
+              );
+              const currentSelectBoxes = currentRow.querySelectorAll(
+                "td:nth-child(3) .select-box"
+              );
+
+              const prevSelectTexts = prevRow.querySelectorAll(
+                "td:nth-child(3) #copy-value .select2-selection__rendered"
+              );
+              const currentSelectTexts = currentRow.querySelectorAll(
+                "td:nth-child(3) #copy-value .select2-selection__rendered"
+              );
+
+              prevSelectBoxes.forEach((prevSelectBox, index) => {
+                const currentSelectBox = currentSelectBoxes[index];
+
+                // Swap select2 values using select2 API
+                const prevSelectedValue = $(prevSelectBox).val();
+                const currentSelectedValue = $(currentSelectBox).val();
+
+                // Swap select2 rendered text
+                const tempText = prevSelectTexts[index].innerText;
+                prevSelectTexts[index].innerText =
+                  currentSelectTexts[index].innerText;
+                currentSelectTexts[index].innerText = tempText;
+                const tempTitle = prevSelectTexts[index].title;
+                prevSelectTexts[index].title = currentSelectTexts[index].title;
+                currentSelectTexts[index].title = tempTitle;
+                const prevOptions = Array.from(prevSelectBox.options).map(
+                  (option) => option.outerHTML
+                );
+                const currentOptions = Array.from(currentSelectBox.options).map(
+                  (option) => option.outerHTML
+                );
+                prevSelectBox.innerHTML = currentOptions.join("");
+                currentSelectBox.innerHTML = prevOptions.join("");
+              });
+
+              // Swap input values
+              const prevInputBox = prevRow.querySelector(
+                "td:nth-child(2) input"
+              );
+              const currentInputBox = currentRow.querySelector(
+                "td:nth-child(2) input"
+              );
+
+              const prevInputValue = $(prevInputBox).val();
+              const currentInputValue = $(currentInputBox).val();
+              $(prevInputBox).val(currentInputValue).trigger("change");
+              $(currentInputBox).val(prevInputValue).trigger("change");
+
+              // Swap input Pb
+              if (document.querySelector("#pb")) {
+                const prevPBBox = prevRow.querySelector(
+                  "td:nth-child(4) input"
+                );
+                const currentPBBox = currentRow.querySelector(
+                  "td:nth-child(4) input"
+                );
+
+                const prevPBValue = $(prevPBBox).val();
+                const currentPBValue = $(currentPBBox).val();
+                $(prevPBBox).val(currentPBValue).trigger("change");
+                $(currentPBBox).val(prevPBValue).trigger("change");
+              }
+              prevTarget.classList.remove("swapBtn_click");
+              prevTarget.querySelector("i").classList.remove("xi-close");
+              prevTarget.querySelector("i").classList.add("xi-check");
+              prevTarget = null;
+            } else {
+              prevTarget = btn;
+              btn.classList.add("swapBtn_click");
+              btn.querySelector("i").classList.remove("xi-check");
+              btn.querySelector("i").classList.add("xi-close");
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

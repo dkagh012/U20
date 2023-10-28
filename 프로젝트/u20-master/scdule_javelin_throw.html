@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/xeicon.min.css">
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>창 던지기</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="athlete">
+      <div class="profile_logo">
+        <img src="./assets/images/logo.png">
+      </div>
+      <div class="UserProfile">
+        <p class="UserProfile_tit tit_left_blue">
+          창 던지기
+        </p>
+        <form action="">
+          <div class="UserProfile_modify UserProfile_input thorw_main">
+            <div>
+              <ul class="UserDesc throwDesc">
+                <li class="row input_row throw_row">
+                  <span>경기 이름</span>
+                  <input type="text" placeholder="경기 종목 코드를 입력해주세요" value="창 던지기">
+                </li>
+                <li class="row input_row throw_row">
+                  <span>라운드</span>
+                  <input type="text" placeholder="경기 이름을 입력해주세요" value="예선">
+                </li>
+                <li class="row input_row throw_row">
+                  <span>심판 이름</span>
+                  <input type="text" placeholder="라운드을 입력하세요" value="권산">
+                </li>
+                <li class="row input_row throw_row">
+                  <span>용 기구</span>
+                  <input type="text" placeholder="장소을 입력하세요" value="1KG">
+                </li>
+                <li class="row input_row throw_row">
+                  <span>경기 시작 시간</span>
+                  <input placeholder="시작 시간" type="text" name="starttime" class="input_text" value="2023-03-09 00:00:00"
+                    maxlength="30" required="">
+                </li>
+                <li class="row input_row throw_row">
+                  <span>현재 시간</span>
+                  <input placeholder="시작 시간" type="text" name="starttime" class="input_text" value="2023-03-09 00:00:00"
+                    maxlength="30" required="">
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="result_BTN">
+            <h1 class="tit_padding tit_left_green">결과</h1>
+            <div>
+              <button type="button" class="defaultBtn BIG_btn BTN_blue4">순서 재정렬</button>
+              <button type="button" class="defaultBtn BIG_btn pdf_BTN2 ">자동 입력</button>
+            </div>
+          </div>
+          <!-- throw_list item 삭제 후 테이블을 넣어주세요 -->
+          <table class="box_table">
+            <!-- 창던지기 테이블  -->
+            <colgroup>
+              <col style="width: 7%">
+              <col style="width: 7%">
+              <col style="width: 7%">
+              <col style="width: 15%">
+              <col style="width: 6%">
+              <col style="width: 6%">
+              <col style="width: 6%">
+              <col style="width: 6%">
+              <col style="width: 6%">
+              <col style="width: 6%">
+              <col style="width: 6%">
+              <col style="width: 6%">
+              <col style="width: 6%">
+              <col style="width: 6%">
+              <col style="width: 7%">
+              <col style="width: 15%">
+            </colgroup>
+            <thead class=" result_table entry_table">
+              <tr>
+                <th>등수</th>
+                <th>순서</th>
+                <th>BIB</th>
+                <th>이름</th>
+                <th>1차 시기</th>
+                <th>2차 시기</th>
+                <th>3차 시기</th>
+                <th>3회 시기중 최고 기록</th>
+                <th>3회 시기에 따른 등수</th>
+                <th>3회 시기에 따른 다음시기 순서</th>
+                <th>4차 시기</th>
+                <th>5차 시기</th>
+                <th>6차 시기</th>
+                <th>기록</th>
+                <th>비고</th>
+                <th>신기록</th>
+              </tr>
+              <tr class="filed2_bottom">
+              </tr>
+            </thead>
+            <tbody class=" table_tbody De_tbody entry_table">
+              <tr>
+                <td rowspan="1" scope="col"><input type="text" value="" placeholder="레인"></td>
+                <td rowspan="1" scope="col"><input type="text" value="" placeholder="등수"></td>
+                <td rowspan="1" scope="col"><input type="text" value="" placeholder="등번호"></td>
+                <td rowspan="1" scope="col"><input type="text" value="" placeholder="이름을 입력하세요"></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+              </tr>
+              <tr class="Ranklist_Background">
+                <td rowspan="1" scope="col"><input type="text" value="" placeholder="레인"></td>
+                <td rowspan="1" scope="col"><input type="text" value="" placeholder="등수"></td>
+                <td rowspan="1" scope="col"><input type="text" value="" placeholder="등번호"></td>
+                <td rowspan="1" scope="col"><input type="text" value="" placeholder="이름을 입력하세요"></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+                <td rowspan="1" scope="col"><input type="text" value=""></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <h3 class="UserProfile_tit tit_left_red tit_padding">경기 비고</h3>
+      <input placeholder="비고를 입력해주세요." type="text" name="bibigo" class="note_text" value="" maxlength=" 100">
+      <div class="modify_Btn input_Btn result_Btn">
+        <button class=" BTN_Blue full_width " type="submit">등록하기</button>
+      </div>
+      </form>
+    </div>
+  </div>
+  </div>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

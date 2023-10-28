@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/xeicon.min.css">
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>심판 정보 수정</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="athlete">
+      <div class="profile_logo">
+        <img src="./assets/images/logo.png">
+      </div>
+      <div class="UserProfile">
+        <p class="UserProfile_tit tit_left_blue">
+          심판 정보
+        </p>
+        <form action="">
+          <div class="UserProfile_modify coachArea Participant_img ptp_img">
+            <div>
+              <img src="./assets/images/referee.jpg">
+              <div class="img_wrap">
+                <input id="Upload" name="athlete_imgFile" type="file" style="display:none;" />
+                <button class="BTN_blue4 imgFile" type="button"
+                  onclick="window.open('./picture.html', 'window_name', 'width=500, height=500, location=no, status=no, scrollbars=yes')">이미지
+                  촬영</button>
+                <button class="BTN_Blue  imgFile" type="button" id="my-button" onclick="onClickUpload();">이미지
+                  추가</button>
+                <button class=" BTN_blue2 imgFile" type="button">기본 이미지 변경</button>
+              </div>
+            </div>
+            <div>
+              <ul class="UserDesc Participant_list">
+                <li class="row input_row row_item">
+                  <span>식사 가능 여부</span>
+                  <input type="checkbox" value="식사">
+                </li>
+                <li class="row check">
+                  <span>태블릿(사용여부)</span>
+                  <input type="checkbox" name="is_using_tablet" id="is_using_tablet" onclick="isUsingTablet()">
+                </li>
+                <li class="row">
+                  <span>이름</span>
+                  <input type="text" value="Son" placeholder="이름을 입력하세요">
+                </li>
+                <li class="row">
+                  <span>성</span>
+                  <input type="text" value="Son" placeholder="성을 입력하세요">
+                </li>
+                <li class="row modify_input">
+                  <span>국가</span>
+                  <select title="국가" name="athleteCountry">
+                    <option value="non" hidden>국가</option>
+                    <option value="non">전체</option>
+                    <option value="IRQ">이라크</option>
+                    <option value="KOR">대한민국</option>
+                    <option value="JPN">일본</option>
+                    <option value="ARE">아랍에미리트</option>
+                  </select>
+                </li>
+                <li class="row">
+                  <span>소속</span>
+                  <input type="text" value="Korea" placeholder="소속을 입력하세요">
+                </li>
+                <li class="row modify_input">
+                  <span>직무</span>
+                  <select title="직무" name="RefereeJob">
+                    <option value="referee1">직무1</option>
+                    <option value="referee2">직무2</option>
+                  </select>
+                </li>
+                <li class="row modify_input">
+                  <span>성별</span>
+                  <select title="성별" name="gender">
+                    <option value="Man">남성</option>
+                    <option value="Woman">여성</option>
+                  </select>
+                </li>
+                <li class="row">
+                  <span>생년월일</span>
+                  <input type="date" value="1998-04-21">
+                </li>
+                <li class="row">
+                  <span>나이</span>
+                  <input type="text" value="25" placeholder="나이를 입력하세요">
+                </li>
+                <li class="row">
+                  <span>이미지 변경</span>
+                  <input type="file" name="athlete_imgFile">
+                </li>
+                <li class="row input_row row_item">
+                  <span>대회접근시설</span>
+                  <div>
+                    <label>
+                      <input type="checkbox" value="Y">전 구역
+                    </label>
+                    <label>
+                      <input type="checkbox" value="HQ">본부호텔
+                    </label>
+                  </div>
+                </li>
+                <li class="row input_row row_item">
+                  <span>선수촌</span>
+                  <div>
+                    <label> <input type="radio" value="AV" name="AV/VA">선수촌 거주 허용</label>
+                    <label><input type="radio" value="VA" name="AV/VA">선수촌 전구역
+                      (거주 불허)</label>
+                  </div>
+                </li>
+                <li class="row input_row row_item ">
+                  <span class="">교통 권한 </span>
+                  <div class="">
+                    <label>
+                      <input type="radio" name="transport" value="T1">1인 1차량
+                    </label>
+                    <label>
+                      <input type="radio" name="transport" value="T2">2인 1차량
+                    </label>
+                    <label>
+                      <input type="radio" name="transport" value="TA">선수임원수송버스
+                    </label>
+                    <label>
+                      <input type="radio" name="transport" value="TF">기술임원 수송버스
+                    </label>
+                  </div>
+                </li>
+                <li class="row input_row row_item input_width full_width">
+                  <span class="full_span">경기장 내 좌석</span>
+                  <select class="full_width2" name="coach_seats" required="">
+                    <option value="" selected="" disabled="" hidden="">좌석선택</option>
+                    <option value="RS">VIP석</option>
+                    <option value="US" selected="">자유석</option>
+                    <option value="AS">선수 임원석</option>
+                    <option value="MS">미디어석</option>
+
+                  </select>
+                </li>
+                <li class="row full_width">
+                  <span class="full_span">경기장 내 접근 허용</span>
+                  <div class="full_div">
+                    <label><input type="checkbox" name="judge_sector[]" value="All Area" id="All Area"><span>경기장 내 전
+                        구역</span></label>
+                    <label><input type="checkbox" name="judge_sector[]" value="Competition Area(FOP)"
+                        id="Competition Area(FOP)"><span>경기구역</span></label></label>
+                    <label><input type="checkbox" name="judge_sector[]" value="Warm-up Area"
+                        id="Warm-up Area"><span>선수준비구역</span></label>
+                    <label><input type="checkbox" name="judge_sector[]" value="Administration & Operation zone"
+                        id="Administration & Operation zone"><span>경기운영구역
+                        zone</span></label></label>
+                    <label><input type="checkbox" name="judge_sector[]" value="International Officials' Zone"
+                        id="International Officials' Zone"><span>국제임원 업무구역</span></label>
+                    <label><input type="checkbox" name="judge_sector[]" value="VIP Area"
+                        id="VIP Area"><span>VIP구역(3F)</span></label></label>
+                    <label><input type="checkbox" name="judge_sector[]" value="Mixed Zone"
+                        id="Mixed Zone"><span>공동취재구역</span></label></label>
+                    <label><input type="checkbox" name="judge_sector[]" value="PEA(Post Event Area)"
+                        id="PEA(Post Event Area)"><span>경기 후 구역</span></label></label>
+                    <label><input type="checkbox" name="judge_sector[]" value="TIC(Technical Information Center)"
+                        id="TIC(Technical Information Center)"><span>기술정보센터(2F)</span></label></label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modify_check full_width">
+            <div class="modify_enter modify_tit_color">
+              <p class="tit_left_red">참가예정경기</p>
+              <ul class="modify_checkList">
+                <li><label><input type="checkbox" name="judge_schedules[]" value="100m"
+                      id="100m"><span>100m</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="100mh" id="100m Hurdles"><span>100m
+                      Hurdles</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="110mh" id="110m Hurdles"><span>110m
+                      Hurdles</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="200m"
+                      id="200m"><span>200m</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="400m"
+                      id="400m"><span>400m</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="400mh" id="400m Hurdles"><span>400m
+                      Hurdles</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="800m"
+                      id="800m"><span>800m</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="1500m"
+                      id="1500m"><span>1500m</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="3000m"
+                      id="3000m"><span>3000m</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="3000mSC"
+                      id="3000m Steeplechase"><span>3000m Steeplechase</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="5000m"
+                      id="5000m"><span>5000m</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="10000m"
+                      id="10000m"><span>10000m</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="4x100mR" id="4x100 Relay"><span>4x100
+                      Relay</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="4x400mR" id="4x400 Relay"><span>4x400
+                      Relay</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="racewalk" id="Race Walk"><span>Race
+                      Walk</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="discusthrow"
+                      id="Discus Throw"><span>Discus Throw</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="javelinthrow"
+                      id="Javelin Throw"><span>Javelin Throw</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="shotput" id="Shot Put"><span>Shot
+                      Put</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="hammerthrow"
+                      id="Hammer Throw"><span>Hammer Throw</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="longjump" id="Long Jump"><span>Long
+                      Jump</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="triplejump"
+                      id="Triple Jump"><span>Triple Jump</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="highjump" id="High Jump"><span>High
+                      Jump</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="polevault" id="Pole Vault"><span>Pole
+                      Vault</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="heptathlon-100mh"
+                      id="Heptathlon-100m Hurdles"><span>Heptathlon-100m Hurdles</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="heptathlon-highjump"
+                      id="Heptathlon-High Jump"><span>Heptathlon-High Jump</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="heptathlon-shotput"
+                      id="Heptathlon-Shotput"><span>Heptathlon-Shotput</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="heptathlon-200m"
+                      id="Heptathlon-200m"><span>Heptathlon-200m</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="heptathlon-longjump"
+                      id="Heptathlon-Long Jump"><span>Heptathlon-Long Jump</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="heptathlon-javelinthrow"
+                      id="Heptathlon-Jevelin Throw"><span>Heptathlon-Jevelin Throw</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="heptathlon-800m"
+                      id="Heptathlon-800m"><span>Heptathlon-800m</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="decathlon-100m"
+                      id="Decathlon-100m"><span>Decathlon-100m</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="decathlon-highjump"
+                      id="Decathlon-High Jump"><span>Decathlon-High Jump</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="decathlon-shotput"
+                      id="Decathlon-Shotput"><span>Decathlon-Shotput</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="decathlon-400m"
+                      id="Decathlon-400m"><span>Decathlon-400m</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="decathlon-110mh"
+                      id="Decathlon-110m Hurdles"><span>Decathlon-110m Hurdles</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="decathlon-discusthrow"
+                      id="Decathlon-Discus Throw"><span>Decathlon-Discus Throw</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="decathlon-polevault"
+                      id="Decathlon-Pole Vault"><span>Decathlon-Pole Vault</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="decathlon-javelinthrow"
+                      id="Decathlon-Javelin Throw"><span>Decathlon-Javelin Throw</span></label></li>
+                <li><label><input type="checkbox" name="judge_schedules[]" value="decathlon-1500m"
+                      id="Decathlon-1500m"><span>Decathlon-1500m</span></label></li>
+              </ul>
+            </div>
+          </div>
+        </form>
+        <div class="modify_Btn input_Btn Participant_Btn">
+          <button class="BTN_blue2" type="button">수정하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/xeicon.min.css">
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>일정 수정</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="athlete">
+      <div class="profile_logo">
+        <img src="./assets/images/logo.png">
+      </div>
+      <div class="UserProfile">
+        <p class="UserProfile_tit tit_left_blue">
+          일정 수정
+        </p>
+        <form action="">
+          <div class="UserProfile_modify UserProfile_input">
+            <div>
+              <ul class="UserDesc">
+                <li class="row input_row Desc_item">
+                  <span>경기 종목 코드</span>
+                  <input type="text" placeholder="경기 종목 코드를 입력해주세요" value="shotput">
+                </li>
+                <li class="row input_row Desc_item">
+                  <span>경기 이름</span>
+                  <input type="text" placeholder="경기 이름을 입력해주세요" value="투포환">
+                </li>
+                <li class="row input_row Desc_item input_width">
+                  <span>성별</span>
+                  <select title="성별" name="gender">
+                    <option value="non" hidden="">경기 성별</option>
+                    <option value="P">혼성</option>
+                    <option value="Man" selected>남성</option>
+                    <option value="Woman">여성</option>
+                  </select>
+                </li>
+                <li class="row input_row Desc_item">
+                  <span>경기 라운드</span>
+                  <input type="text" placeholder="라운드을 입력하세요" value="결승">
+                </li>
+                <li class="row input_row Desc_item">
+                  <span>경기 장소</span>
+                  <input type="text" placeholder="장소을 입력하세요" value="B필드">
+                </li>
+                <li class="row input_row Desc_item">
+                  <span>경기 시간</span>
+                  <div>
+                    <input type="number" value="10" placeholder="시을 입력하세요">
+                    <span>:</span>
+                    <input type="number" value="15" placeholder="분을 입력하세요">
+                  </div>
+                </li>
+                <li class="row input_row Desc_item input_width">
+                  <span>성별</span>
+                  <select title="성별" name="game_time">
+                    <option value="non" hidden="">경기 진행 상태</option>
+                    <option value="n">준비</option>
+                    <option value="c">취소됨</option>
+                    <option value="o" selected>경기중</option>
+                    <option value="y">마감</option>
+                  </select>
+                </li>
+                <li class="row input_row Desc_item">
+                  <span>경기날짜</span>
+                  <div>
+                    <div class="schedule_year">
+                      <select id="athlete" required="" tabindex="-1" class="change select2-hidden-accessible"
+                        aria-hidden="true" name="date_year">
+                        <option value="" disabled="" selected="">년</option>
+                        <option value="2023">2023</option>
+                      </select>
+                    </div>
+                    <span>:</span>
+                    <div class="schedule_month">
+                      <select id="athlete" required="" tabindex="-1" class="change select2-hidden-accessible"
+                        aria-hidden="true" name="date_month">
+                        <option value="" disabled="" selected="">월</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                    </div>
+                    <span>:</span>
+                    <div class="schedule_day">
+                      <select id="athlete" required="" tabindex="-1" class="change select2-hidden-accessible"
+                        aria-hidden="true" name="date_day">
+                        <option value="" disabled="" selected="">일</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                      </select>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+        <div class="modify_Btn input_Btn Participant_Btn">
+          <button type="button" class="BTN_blue2">등록하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

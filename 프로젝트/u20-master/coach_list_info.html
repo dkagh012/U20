@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/xeicon.min.css">
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>코치 정보 보기</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="athlete">
+      <div class="profile_logo">
+        <img src="./assets/images/logo.png">
+      </div>
+      <div class="UserProfile">
+        <p class="UserProfile_tit tit_left_blue">
+          코치 정보
+        </p>
+        <form action="">
+          <div class="UserProfile_modify Participant_img">
+            <div>
+              <img src="./assets/img/coach_img/1.png" alt="avatar">
+            </div>
+            <div>
+              <ul class="UserDesc infoDesc Participant_list">
+                <li class="row">
+                  <span>고유번호</span>
+                  <p>1</p>
+                </li>
+                <li class="row">
+                  <span>이름</span>
+                  <p>kim SUENG</p>
+                </li>
+                <li class="row">
+                  <span>국가</span>
+                  <p>대한민국</p>
+                </li>
+                <li class="row">
+                  <span>소속</span>
+                  <p>KAAF</p>
+                </li>
+                <li class="row">
+                  <span>직무</span>
+                  <p>서브 코치</p>
+                </li>
+                <li class="row">
+                  <span>성별</span>
+                  <p>남</p>
+                </li>
+                <li class="row">
+                  <span>생년월일</span>
+                  <p>
+                    1973년 02월 13일 </p>
+                </li>
+                <li class="row">
+                  <span>나이</span>
+                  <p>50</p>
+                </li>
+                <li class="row">
+                  <span>식사 가능 여부</span>
+                  <p>N</p>
+                </li>
+                <li class="row">
+                  <span>대회접근시설</span>
+                  <p>Y</p>
+                </li>
+                <li class="row">
+                  <span>경기장 내 좌석</span>
+                  <p>US</p>
+                </li>
+                <li class="row">
+                  <span>교통 권한</span>
+                  <p>T2</p>
+                </li>
+                <li class="row">
+                  <span>선수촌</span>
+                  <p>AV</p>
+                </li>
+                <li class="row">
+                  <span>경기장 접근 허용</span>
+                  <div class="full_div align">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>7</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modify_check modify_container ">
+            <div class="modify_enter">
+              <p class="tit_left_green">AD 카드 발급 횟수 & 일자</p>
+              <div class="attend">
+                <table class="box_table">
+                  <colgroup>
+                    <col style="width: auto">
+                  </colgroup>
+                  <thead class="result_table entry_table">
+                    <tr>
+                      <th>발급 횟수</th>
+                      <th>발급 일자</th>
+                    </tr>
+                    <tr class="filed2_bottom">
+                    </tr>
+                  </thead>
+                  <tbody class="table_tbody entry_table AD_cnt">
+                    <tr>
+                      <td></td>
+                      <td>2023.05.06 </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>2023.05.06 </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>2023.05.06 </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>2023.05.06 </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>2023.05.06 </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>2023.05.06 </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>2023.05.06 </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>2023.05.06 </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modify_Btn">
+        <button class="BTN_blue2" onclick="updatePop(1, 'coach_id' ,'./entry_coach_issue.php');" value="ID발급">ID카드
+          보기</button> <button class="BTN_green" type="button" onclick="window.close()">닫기</button>
+      </div>
+    </div>
+  </div>
+  <script src="../u20-master/assets/js/main.js"></script>
+</body>
+
+</html>

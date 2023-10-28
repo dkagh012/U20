@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/xeicon.min.css">
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>바꿀 대상의 선수</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="schedule">
+      <div class="schedule_filed">
+        <div class="schedule_filed_tit">
+          <p class="tit_left_blue">조 편성 하기</p>
+        </div>
+        <div class="schedule_change_members">
+          <form action="">
+            <select class="d_select">
+              <option value="" hidden="">조편성 방식</option>
+              <option value="자동">자동</option>
+              <option value="수동">수동</option>
+            </select>
+            <div class="schedule_filed_tit round_tit">
+              <p class="tit_left_green">조 갯수</p>
+            </div>
+            <select class="d_select">
+              <option value="" hidden="">조 갯수</option>
+              <option value="">1</option>
+              <option value="">2</option>
+            </select>
+          </form>
+        </div>
+        <div class="Participant_Btn">
+          <button type="button" class="changePwBtn defaultBtn"
+            onclick="window.open('schedule_filed2.html') ">편성하기</button>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>

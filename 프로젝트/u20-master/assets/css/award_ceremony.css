@@ -1,0 +1,139 @@
+body {
+  overflow: hidden;
+}
+
+.awardCeremony {
+  position: relative;
+  margin: auto;
+  width: 100vw;
+  height: 120vh;
+  background-repeat: no-repeat;
+}
+
+.bannerLogoContainer {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+.bannerLogo {
+  width: 1891px;
+  height: 663px;
+  background-image: url(../images/banner_logo6.png);
+  background-repeat: no-repeat;
+  scale: 1;
+  opacity: 0.95;
+}
+
+.banner-container {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+}
+
+.banner {
+  width: 1891px;
+  height: 663px;
+}
+
+.banner-container .banner-element {
+  background-image: url(../images/banner_line6.png);
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: 1891px 663px;
+  width: 1px;
+  height: 100%;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  animation: wave2 3.5s ease-in-out infinite alternate;
+  /* opacity: 0.9; */
+}
+
+@keyframes wave2 {
+
+  0% {
+    scale: 0.98;
+    /* opacity: 0.85; */
+  }
+
+  35% {
+    /* opacity: 0.95; */
+  }
+
+  100% {
+    scale: 1.07;
+    /* opacity: 0.98; */
+  }
+}
+
+.first,
+.second,
+.third {
+  opacity: 0;
+
+}
+
+video {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+}
+
+.flag-container {
+  position: absolute;
+}
+
+.flag-container.first {
+  top: 425px;
+  left: calc(50% - 268px);
+}
+
+.flag-container.second {
+  top: 641px;
+  left: calc(50% - 854px);
+}
+
+.flag-container.third {
+  top: 641px;
+  left: calc(50% + 318px);
+}
+
+.flag {
+  margin: 7px 0;
+  width: 536px;
+  height: 359px;
+}
+
+.flag-container .flag-element {
+  position: relative;
+  background-size: 536px 359px;
+  width: 1px;
+  height: 100%;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  animation: wave 0.9s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+  0% {
+    scale: 0.98;
+    opacity: 0.85;
+  }
+
+  35% {
+    opacity: 0.95;
+  }
+
+  100% {
+    scale: 1.04;
+    opacity: 0.98;
+  }
+}

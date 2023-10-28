@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Download Word File</title>
+  </head>
+
+  <body>
+    <button onclick="RunWord()">달리기</button>
+    <button onclick="throwWord()">던지기</button>
+    <button onclick="highWord()">높이뛰기</button>
+    <button onclick="jumpWord()">멀리뛰기</button>
+    <button onclick="RelayWord()">릴레이뛰기</button>
+
+    <script>
+      function KO_RunWord() {
+        const link = document.createElement("a");
+        link.href = "wordRun_KO.html";
+        link.download = "wordRun_KO..doc"; // change extension to .doc
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+      function EN_RunWord() {
+        const link = document.createElement("a");
+        link.href = "wordRun_EN.html";
+        link.download = "wordRun_EN.doc"; // change extension to .doc
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+      function KO_throwWord() {
+        const link = document.createElement("a");
+        link.href = "wordThrow_KO.html";
+        link.download = "wordThrow_KO.doc"; // change extension to .doc
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+      function EN_throwWord() {
+        const link = document.createElement("a");
+        link.href = "wordThrow_EN.html";
+        link.download = "wordThrow_EN.doc"; // change extension to .doc
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+
+      function KO_verticalWord() {
+        const link = document.createElement("a");
+        link.href = "word_vertical_KO.html";
+        link.download = "word_vertical_KO.doc"; // change extension to .doc
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+      function EN_verticalWord() {
+        const link = document.createElement("a");
+        link.href = "word_vertical_EN.html";
+        link.download = "word_vertical_EN.doc"; // change extension to .doc
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+
+      function KO_horizontalWord() {
+        const link = document.createElement("a");
+        link.href = "word_horizontality_KO.html";
+        link.download = "word_horizontality_KO.doc"; // change extension to .doc
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+      function EN_horizontalWord() {
+        const link = document.createElement("a");
+        link.href = "word_horizontality_EN.html";
+        link.download = "word_horizontality_EN.doc"; // change extension to .doc
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+
+      function KO_RelayWord() {
+        const link = document.createElement("a");
+        link.href = "wordRelay_KO.html";
+        link.download = "wordRelay_KO.doc"; // change extension to .doc
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+      function EN_RelayWord() {
+        const link = document.createElement("a");
+        link.href = "wordRelay_EN.html";
+        link.download = "wordRelay_EN.doc"; // change extension to .doc
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+  </body>
+</html>

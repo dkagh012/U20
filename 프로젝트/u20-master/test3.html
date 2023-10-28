@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/xeicon.min.css?v=1684221575">
+        <link rel="stylesheet" href="assets/css/swiper.min.css?v=1684221575">
+        <link rel="stylesheet" href="assets/css/reset.css?v=1684221575">
+        <link rel="stylesheet" href="assets/css/style.css?v=1684221575">
+        <title>트랙일정 | 트랙경기 | 제20회 예천아시아 U20 육상경기 선수권대회</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <script type="text/javascript" src="assets/js/jquery-1.12.4.min.js?v=1684221575"></script>
+        <script type="text/javascript" charset="utf8" src="assets/js/datatables.min.js?v=1684221575"></script>
+        <script type="text/javascript" src="assets/js/useDataTables.js?v=1684221575"></script>
+</head>
+
+<body>
+        <script type="text/javascript" src="assets/js/onlynumber.js"></script>
+        <script src="assets/js/restrict.js"></script>
+        <div class="schedule_container">
+                <div class="result_tit">
+                        <div class="result_list2">
+                                <p class="tit_left_blue">100m 준결승전 </p>
+                        </div>
+                        <div class="result_list" style="display:flex; gap:20px;">
+                                <button type="button" class="defaultBtn BTN_Blue" style="font-size:12px"
+                                        onclick="window.open('status_pdf?sports=100m&round=semi-final&gender=f&lang=ko&status=s', 'window_name', 'width=800, height=750, location=no, status=no, scrollbars=yes')">
+                                        Start List PDF</button>
+                                <button type="button" class="defaultBtn BTN_Blue" style="font-size:12px"
+                                        onclick="window.open('status_pdf?sports=100m&round=semi-final&gender=f&lang=ko&status=o', 'window_name', 'width=800, height=750, location=no, status=no, scrollbars=yes')">
+                                        Official Result PDF</button>
+                                <button type="button" class="defaultBtn BTN_Blue" style="font-size:12px"
+                                        onclick="window.open('record_change_type?sports=100m&round=semi-final&gender=f', 'window_name', 'width=800, height=750, location=no, status=no, scrollbars=yes')">
+                                        기록 전환</button>
+                                <button type="button" class="defaultBtn BTN_Red" style="font-size:12px"
+                                        onclick="window.open('group_write', 'window_name', 'width=800, height=750, location=no, status=no, scrollbars=yes')">
+                                        다음 조 편성</button>
+                                <p class="defaultBtn BTN_DarkBlue">마감</p>
+                        </div>
+                </div>
+
+                <div class="schedule schedule_flex filed_high_flex">
+                        <form action="#" class="form schedule_filed filed_list_item filed_container" id="actionform1">
+                                <!-- class="contents something" -->
+                                <div class="schedule_filed_tit">
+                                        <p class="tit_left_yellow">1조</p>
+                                        <span class="defaultBtn BTN_green">Official Result</span>
+                                </div>
+                                <table class="box_table">
+                                        <colgroup>
+                                                <col style="width: 7%;">
+                                                <col style="width: 7%;">
+                                                <col style="width: 7%;">
+                                                <col style="width: 23%;">
+                                                <col style="width: auto;">
+                                                <col style="width: auto;">
+                                                <col style="width: auto;">
+                                                <col style="width: auto;">
+                                                <col style="width: auto;">
+                                                <col style="width: 8%;">
+                                        </colgroup>
+                                        <thead class="result_table entry_table">
+                                                <tr>
+                                                        <th scope="col" colspan="1">레인</th>
+                                                        <th scope="col" colspan="1">등수</th>
+                                                        <th scope="col" colspan="1">등번호</th>
+                                                        <th scope="col" colspan="1">이름</th>
+                                                        <th scope="col" colspan="1">기록</th>
+                                                        <th scope="col" colspan="1">Reaction Time</th>
+                                                        <th scope="col" colspan="1">비고</th>
+                                                        <th scope="col" colspan="1">참고기록</th>
+                                                        <th scope="col" colspan="1">Q/q</th>
+                                                        <th scope="col" colspan="1">신기록</th>
+                                                </tr>
+                                                <tr class="filed2_bottom">
+                                                </tr>
+                                        </thead>
+                                        <tbody class=" table_tbody De_tbody entry_table">
+
+                                                <tr>
+                                                        <td><input type="number" name="rain[]" value="4" min="1"
+                                                                        required="" readonly />
+                                                        </td>
+                                                        <td><input type="number" name="rank[]" value="1" min="1" /></td>
+                                                        <td><input placeholder="등번호" type="text" name="playerbib[]"
+                                                                        value="00323" maxlength="30" required=""
+                                                                        readonly />
+                                                        </td>
+                                                        <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                                        value="KI YEONGNAN" maxlength="30" required=""
+                                                                        readonly />
+                                                        </td>
+                                                        <td><input placeholder="경기 결과" type="text" name="gameresult[]"
+                                                                        value="12.35" onkeyup="trackResultForm(this)"
+                                                                        style="" /></td>
+                                                        <td><input type="text" name="reactiontime[]" value=""
+                                                                        onkeyup="trackReactionTimeForm(this)"
+                                                                        style="" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td><input type="text" value="Q" maxlength="100" /></td>
+                                                        <td>
+                                                        </td>
+                                                </tr>
+
+                                                <tr>
+                                                        <td><input type="number" name="rain[]" value="6" min="1"
+                                                                        required="" readonly />
+                                                        </td>
+                                                        <td><input type="number" name="rank[]" value="2" min="1" /></td>
+                                                        <td><input placeholder="등번호" type="text" name="playerbib[]"
+                                                                        value="00216" maxlength="30" required=""
+                                                                        readonly />
+                                                        </td>
+                                                        <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                                        value="NOH YOONSEO" maxlength="30" required=""
+                                                                        readonly />
+                                                        </td>
+                                                        <td><input placeholder="경기 결과" type="text" name="gameresult[]"
+                                                                        value="12.40" onkeyup="trackResultForm(this)"
+                                                                        style="" /></td>
+                                                        <td><input type="text" name="reactiontime[]" value=""
+                                                                        onkeyup="trackReactionTimeForm(this)"
+                                                                        style="" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td><input type="text" value="Q" maxlength="100" /></td>
+                                                        <td>
+                                                        </td>
+                                                </tr>
+
+                                                <tr>
+                                                        <td><input type="number" name="rain[]" value="5" min="1"
+                                                                        required="" readonly />
+                                                        </td>
+                                                        <td><input type="number" name="rank[]" value="3" min="1" /></td>
+                                                        <td><input placeholder="등번호" type="text" name="playerbib[]"
+                                                                        value="00169" maxlength="30" required=""
+                                                                        readonly />
+                                                        </td>
+                                                        <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                                        value="BAE YUNJIN" maxlength="30" required=""
+                                                                        readonly />
+                                                        </td>
+                                                        <td><input placeholder="경기 결과" type="text" name="gameresult[]"
+                                                                        value="12.41" onkeyup="trackResultForm(this)"
+                                                                        style="" /></td>
+                                                        <td><input type="text" name="reactiontime[]" value=""
+                                                                        onkeyup="trackReactionTimeForm(this)"
+                                                                        style="" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td><input type="text" value="q" maxlength="100" /></td>
+                                                        <td>
+                                                        </td>
+                                                </tr>
+
+                                                <tr>
+                                                        <td><input type="number" name="rain[]" value="3" min="1"
+                                                                        required="" readonly />
+                                                        </td>
+                                                        <td><input type="number" name="rank[]" value="4" min="1" /></td>
+                                                        <td><input placeholder="등번호" type="text" name="playerbib[]"
+                                                                        value="00162" maxlength="30" required=""
+                                                                        readonly />
+                                                        </td>
+                                                        <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                                        value="KIM SEOHYUN" maxlength="30" required=""
+                                                                        readonly />
+                                                        </td>
+                                                        <td><input placeholder="경기 결과" type="text" name="gameresult[]"
+                                                                        value="13.19" onkeyup="trackResultForm(this)"
+                                                                        style="" /></td>
+                                                        <td><input type="text" name="reactiontime[]" value=""
+                                                                        onkeyup="trackReactionTimeForm(this)"
+                                                                        style="" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td>
+                                                                PB </td>
+                                                </tr>
+
+                                                <tr>
+                                                        <td><input type="number" name="rain[]" value="2" min="1"
+                                                                        required="" readonly />
+                                                        </td>
+                                                        <td><input type="number" name="rank[]" value="5" min="1" /></td>
+                                                        <td><input placeholder="등번호" type="text" name="playerbib[]"
+                                                                        value="00295" maxlength="30" required=""
+                                                                        readonly />
+                                                        </td>
+                                                        <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                                        value="LEE HYUNCHAE" maxlength="30" required=""
+                                                                        readonly />
+                                                        </td>
+                                                        <td><input placeholder="경기 결과" type="text" name="gameresult[]"
+                                                                        value="13.48" onkeyup="trackResultForm(this)"
+                                                                        style="" /></td>
+                                                        <td><input type="text" name="reactiontime[]" value=""
+                                                                        onkeyup="trackReactionTimeForm(this)"
+                                                                        style="" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td>
+                                                                SB </td>
+                                                </tr>
+
+                                                <tr>
+                                                        <td><input type="number" name="rain[]" value="8" min="1"
+                                                                        required="" readonly />
+                                                        </td>
+                                                        <td><input type="number" name="rank[]" value="6" min="1" /></td>
+                                                        <td><input placeholder="등번호" type="text" name="playerbib[]"
+                                                                        value="00338" maxlength="30" required=""
+                                                                        readonly />
+                                                        </td>
+                                                        <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                                        value="KIM CHAEWON" maxlength="30" required=""
+                                                                        readonly />
+                                                        </td>
+                                                        <td><input placeholder="경기 결과" type="text" name="gameresult[]"
+                                                                        value="13.56" onkeyup="trackResultForm(this)"
+                                                                        style="" /></td>
+                                                        <td><input type="text" name="reactiontime[]" value=""
+                                                                        onkeyup="trackReactionTimeForm(this)"
+                                                                        style="" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td>
+                                                        </td>
+                                                </tr>
+
+                                                <tr>
+                                                        <td><input type="number" name="rain[]" value="1" min="1"
+                                                                        required="" readonly />
+                                                        </td>
+                                                        <td><input type="number" name="rank[]" value="7" min="1" /></td>
+                                                        <td><input placeholder="등번호" type="text" name="playerbib[]"
+                                                                        value="00194" maxlength="30" required=""
+                                                                        readonly />
+                                                        </td>
+                                                        <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                                        value="LEE ROA" maxlength="30" required=""
+                                                                        readonly />
+                                                        </td>
+                                                        <td><input placeholder="경기 결과" type="text" name="gameresult[]"
+                                                                        value="13.64" onkeyup="trackResultForm(this)"
+                                                                        style="" /></td>
+                                                        <td><input type="text" name="reactiontime[]" value=""
+                                                                        onkeyup="trackReactionTimeForm(this)"
+                                                                        style="" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td>
+                                                                PB </td>
+                                                </tr>
+
+                                                <tr>
+                                                        <td><input type="number" name="rain[]" value="7" min="1"
+                                                                        required="" readonly />
+                                                        </td>
+                                                        <td><input type="number" name="rank[]" value="8" min="1" /></td>
+                                                        <td><input placeholder="등번호" type="text" name="playerbib[]"
+                                                                        value="00331" maxlength="30" required=""
+                                                                        readonly />
+                                                        </td>
+                                                        <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                                        value="JU YEJI" maxlength="30" required=""
+                                                                        readonly />
+                                                        </td>
+                                                        <td><input placeholder="경기 결과" type="text" name="gameresult[]"
+                                                                        value="DNS" onkeyup="trackResultForm(this)"
+                                                                        style="" /></td>
+                                                        <td><input type="text" name="reactiontime[]" value=""
+                                                                        onkeyup="trackReactionTimeForm(this)"
+                                                                        style="" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td><input type="text" value="" maxlength="100" /></td>
+                                                        <td>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                </table>
+                                <input type=hidden name=sports value=100m>
+                                <input type=hidden name=gender value=f>
+                                <input type=hidden name=round value=semi-final>
+                                <input type=hidden name=group value=1>
+                                <input type=hidden name=flag value='n'>
+                                <div class="filed_BTN">
+                                        <div>
+                                                <button type="button"
+                                                        onclick="window.open('electronic_display?sports=100m&round=semi-final&gender=f&group=1&flag=n','display_nf','width=1000,height=800');"
+                                                        class="defaultBtn BIG_btn BTN_DarkBlue filedBTN">전광판 보기</button>
+                                                <button type="button"
+                                                        onclick="window.open('electronic_display?sports=100m&round=semi-final&gender=f&group=1&flag=y','display_f','width=1000,height=800');"
+                                                        class="defaultBtn BIG_btn BTN_DarkBlue filedBTN">전광판(국기)
+                                                        보기</button>
+                                                <button type="button" class="defaultBtn BIG_btn BTN_Red filedBTN"
+                                                        onclick="window.open('track_normal_result_pdf?sports=100m&round=semi-final&gender=f&group=1&lang=ko');">PDF(한)
+                                                        출력</button>
+                                                <button type="button" class="defaultBtn BIG_btn BTN_Red filedBTN"
+                                                        onclick="window.open('track_normal_result_pdf?sports=100m&round=semi-final&gender=f&group=1&lang=en');">PDF(영)
+                                                        출력</button>
+                                                <button type="button"
+                                                        onclick="location.href='action/excel_excute.php?page_code=schedule_track&sports=100m&round=semi-final&gender=f&group=1';"
+                                                        class="defaultBtn BIG_btn excel_Print filedBTN">엑셀 출력</button>
+                                                <button type="button" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                                                        onclick="window.open('track_normal_result_word?sports=100m&round=semi-final&gender=f&group=1&lang=ko');">워드(한)
+                                                        출력</button>
+                                                <button type="button" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                                                        onclick="window.open('track_normal_result_word?sports=100m&round=semi-final&gender=f&group=1&lang=en');">워드(영)
+                                                        출력</button>
+                                        </div>
+                                        <div>
+                                                <button type="button" class="defaultBtn BIG_btn BTN_Blue fileconnectTN"
+                                                        onclick="openPopup1();">기록 입력</button>
+                                        </div>
+                                        <script>
+                                                function openPopup1() {
+                                                        let iniform = window.open("", 'popOpen', ['width=1200,height=800']);
+                                                        let frm = document.getElementById("actionform1");
+                                                        frm.action = "schedule_track_normal_result_view";
+                                                        frm.target = "popOpen";
+                                                        frm.method = 'GET';
+                                                        frm.submit();
+                                                }
+                                        </script>
+                        </form>
+                </div>
+
+
+                <form action="#" class="form schedule_filed filed_list_item filed_container" id="actionform2">
+                        <!-- class="contents something" -->
+                        <div class="schedule_filed_tit">
+                                <p class="tit_left_yellow">2조</p>
+                                <span class="defaultBtn BTN_green">Official Result</span>
+                        </div>
+                        <table class="box_table">
+                                <colgroup>
+                                        <col style="width: 7%;">
+                                        <col style="width: 7%;">
+                                        <col style="width: 7%;">
+                                        <col style="width: 23%;">
+                                        <col style="width: auto;">
+                                        <col style="width: auto;">
+                                        <col style="width: auto;">
+                                        <col style="width: auto;">
+                                        <col style="width: auto;">
+                                        <col style="width: 8%;">
+                                </colgroup>
+                                <thead class="result_table entry_table">
+                                        <tr>
+                                                <th scope="col" colspan="1">레인</th>
+                                                <th scope="col" colspan="1">등수</th>
+                                                <th scope="col" colspan="1">등번호</th>
+                                                <th scope="col" colspan="1">이름</th>
+                                                <th scope="col" colspan="1">기록</th>
+                                                <th scope="col" colspan="1">Reaction Time</th>
+                                                <th scope="col" colspan="1">비고</th>
+                                                <th scope="col" colspan="1">참고기록</th>
+                                                <th scope="col" colspan="1">Q/q</th>
+                                                <th scope="col" colspan="1">신기록</th>
+                                        </tr>
+                                        <tr class="filed2_bottom">
+                                        </tr>
+                                </thead>
+                                <tbody class=" table_tbody De_tbody entry_table">
+
+                                        <tr>
+                                                <td><input type="number" name="rain[]" value="6" min="1" required=""
+                                                                readonly />
+                                                </td>
+                                                <td><input type="number" name="rank[]" value="1" min="1" /></td>
+                                                <td><input placeholder="등번호" type="text" name="playerbib[]"
+                                                                value="00151" maxlength="30" required="" readonly />
+                                                </td>
+                                                <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                                value="LEE DAIN" maxlength="30" required="" readonly />
+                                                </td>
+                                                <td><input placeholder="경기 결과" type="text" name="gameresult[]"
+                                                                value="12.28" onkeyup="trackResultForm(this)"
+                                                                style="" /></td>
+                                                <td><input type="text" name="reactiontime[]" value=""
+                                                                onkeyup="trackReactionTimeForm(this)" style="" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td><input type="text" value="Q" maxlength="100" /></td>
+                                                <td>
+                                                </td>
+                                        </tr>
+
+                                        <tr>
+                                                <td><input type="number" name="rain[]" value="4" min="1" required=""
+                                                                readonly />
+                                                </td>
+                                                <td><input type="number" name="rank[]" value="2" min="1" /></td>
+                                                <td><input placeholder="등번호" type="text" name="playerbib[]"
+                                                                value="00354" maxlength="30" required="" readonly />
+                                                </td>
+                                                <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                                value="MIN SOYOON" maxlength="30" required=""
+                                                                readonly />
+                                                </td>
+                                                <td><input placeholder="경기 결과" type="text" name="gameresult[]"
+                                                                value="12.46" onkeyup="trackResultForm(this)"
+                                                                style="" /></td>
+                                                <td><input type="text" name="reactiontime[]" value=""
+                                                                onkeyup="trackReactionTimeForm(this)" style="" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td><input type="text" value="Q" maxlength="100" /></td>
+                                                <td>
+                                                        PB </td>
+                                        </tr>
+
+                                        <tr>
+                                                <td><input type="number" name="rain[]" value="3" min="1" required=""
+                                                                readonly />
+                                                </td>
+                                                <td><input type="number" name="rank[]" value="3" min="1" /></td>
+                                                <td><input placeholder="등번호" type="text" name="playerbib[]"
+                                                                value="00332" maxlength="30" required="" readonly />
+                                                </td>
+                                                <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                                value="KWON NAYOON" maxlength="30" required=""
+                                                                readonly />
+                                                </td>
+                                                <td><input placeholder="경기 결과" type="text" name="gameresult[]"
+                                                                value="12.91" onkeyup="trackResultForm(this)"
+                                                                style="" /></td>
+                                                <td><input type="text" name="reactiontime[]" value=""
+                                                                onkeyup="trackReactionTimeForm(this)" style="" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td><input type="text" value="q" maxlength="100" /></td>
+                                                <td>
+                                                </td>
+                                        </tr>
+
+                                        <tr>
+                                                <td><input type="number" name="rain[]" value="5" min="1" required=""
+                                                                readonly />
+                                                </td>
+                                                <td><input type="number" name="rank[]" value="4" min="1" /></td>
+                                                <td><input placeholder="등번호" type="text" name="playerbib[]"
+                                                                value="00276" maxlength="30" required="" readonly />
+                                                </td>
+                                                <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                                value="LIM YEONHEE" maxlength="30" required=""
+                                                                readonly />
+                                                </td>
+                                                <td><input placeholder="경기 결과" type="text" name="gameresult[]"
+                                                                value="12.97" onkeyup="trackResultForm(this)"
+                                                                style="" /></td>
+                                                <td><input type="text" name="reactiontime[]" value=""
+                                                                onkeyup="trackReactionTimeForm(this)" style="" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td>
+                                                        PB </td>
+                                        </tr>
+
+                                        <tr>
+                                                <td><input type="number" name="rain[]" value="7" min="1" required=""
+                                                                readonly />
+                                                </td>
+                                                <td><input type="number" name="rank[]" value="5" min="1" /></td>
+                                                <td><input placeholder="등번호" type="text" name="playerbib[]"
+                                                                value="00217" maxlength="30" required="" readonly />
+                                                </td>
+                                                <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                                value="LEE AJEOUNG" maxlength="30" required=""
+                                                                readonly />
+                                                </td>
+                                                <td><input placeholder="경기 결과" type="text" name="gameresult[]"
+                                                                value="13.13" onkeyup="trackResultForm(this)"
+                                                                style="" /></td>
+                                                <td><input type="text" name="reactiontime[]" value=""
+                                                                onkeyup="trackReactionTimeForm(this)" style="" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td>
+                                                        PB </td>
+                                        </tr>
+
+                                        <tr>
+                                                <td><input type="number" name="rain[]" value="8" min="1" required=""
+                                                                readonly />
+                                                </td>
+                                                <td><input type="number" name="rank[]" value="6" min="1" /></td>
+                                                <td><input placeholder="등번호" type="text" name="playerbib[]"
+                                                                value="00325" maxlength="30" required="" readonly />
+                                                </td>
+                                                <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                                value="KIM TEAYEON" maxlength="30" required=""
+                                                                readonly />
+                                                </td>
+                                                <td><input placeholder="경기 결과" type="text" name="gameresult[]"
+                                                                value="13.38" onkeyup="trackResultForm(this)"
+                                                                style="" /></td>
+                                                <td><input type="text" name="reactiontime[]" value=""
+                                                                onkeyup="trackReactionTimeForm(this)" style="" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td>
+                                                        PB </td>
+                                        </tr>
+
+                                        <tr>
+                                                <td><input type="number" name="rain[]" value="1" min="1" required=""
+                                                                readonly />
+                                                </td>
+                                                <td><input type="number" name="rank[]" value="7" min="1" /></td>
+                                                <td><input placeholder="등번호" type="text" name="playerbib[]"
+                                                                value="00204" maxlength="30" required="" readonly />
+                                                </td>
+                                                <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                                value="HO JIHEE" maxlength="30" required="" readonly />
+                                                </td>
+                                                <td><input placeholder="경기 결과" type="text" name="gameresult[]"
+                                                                value="13.68" onkeyup="trackResultForm(this)"
+                                                                style="" /></td>
+                                                <td><input type="text" name="reactiontime[]" value=""
+                                                                onkeyup="trackReactionTimeForm(this)" style="" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td>
+                                                        PB </td>
+                                        </tr>
+
+                                        <tr>
+                                                <td><input type="number" name="rain[]" value="2" min="1" required=""
+                                                                readonly />
+                                                </td>
+                                                <td><input type="number" name="rank[]" value="8" min="1" /></td>
+                                                <td><input placeholder="등번호" type="text" name="playerbib[]"
+                                                                value="00376" maxlength="30" required="" readonly />
+                                                </td>
+                                                <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                                value="KIM DOYEON" maxlength="30" required=""
+                                                                readonly />
+                                                </td>
+                                                <td><input placeholder="경기 결과" type="text" name="gameresult[]"
+                                                                value="13.78" onkeyup="trackResultForm(this)"
+                                                                style="" /></td>
+                                                <td><input type="text" name="reactiontime[]" value=""
+                                                                onkeyup="trackReactionTimeForm(this)" style="" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td><input type="text" value="" maxlength="100" /></td>
+                                                <td>
+                                                        PB </td>
+                                        </tr>
+                                </tbody>
+                        </table>
+                        <input type=hidden name=sports value=100m>
+                        <input type=hidden name=gender value=f>
+                        <input type=hidden name=round value=semi-final>
+                        <input type=hidden name=group value=2>
+                        <input type=hidden name=flag value='n'>
+                        <div class="filed_BTN">
+                                <div>
+                                        <button type="button"
+                                                onclick="window.open('electronic_display?sports=100m&round=semi-final&gender=f&group=2&flag=n','display_nf','width=1000,height=800');"
+                                                class="defaultBtn BIG_btn BTN_DarkBlue filedBTN">전광판 보기</button>
+                                        <button type="button"
+                                                onclick="window.open('electronic_display?sports=100m&round=semi-final&gender=f&group=2&flag=y','display_f','width=1000,height=800');"
+                                                class="defaultBtn BIG_btn BTN_DarkBlue filedBTN">전광판(국기) 보기</button>
+                                        <button type="button" class="defaultBtn BIG_btn BTN_Red filedBTN"
+                                                onclick="window.open('track_normal_result_pdf?sports=100m&round=semi-final&gender=f&group=2&lang=ko');">PDF(한)
+                                                출력</button>
+                                        <button type="button" class="defaultBtn BIG_btn BTN_Red filedBTN"
+                                                onclick="window.open('track_normal_result_pdf?sports=100m&round=semi-final&gender=f&group=2&lang=en');">PDF(영)
+                                                출력</button>
+                                        <button type="button"
+                                                onclick="location.href='action/excel_excute.php?page_code=schedule_track&sports=100m&round=semi-final&gender=f&group=2';"
+                                                class="defaultBtn BIG_btn excel_Print filedBTN">엑셀 출력</button>
+                                        <button type="button" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                                                onclick="window.open('track_normal_result_word?sports=100m&round=semi-final&gender=f&group=2&lang=ko');">워드(한)
+                                                출력</button>
+                                        <button type="button" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                                                onclick="window.open('track_normal_result_word?sports=100m&round=semi-final&gender=f&group=2&lang=en');">워드(영)
+                                                출력</button>
+                                </div>
+                                <div>
+                                        <button type="button" class="defaultBtn BIG_btn BTN_Blue fileconnectTN"
+                                                onclick="openPopup2();">기록 입력</button>
+                                </div>
+                                <script>
+                                        function openPopup2() {
+                                                let iniform = window.open("", 'popOpen', ['width=1200,height=800']);
+                                                let frm = document.getElementById("actionform2");
+                                                frm.action = "schedule_track_normal_result_view";
+                                                frm.target = "popOpen";
+                                                frm.method = 'GET';
+                                                frm.submit();
+                                        }
+                                </script>
+                </form>
+        </div>
+
+
+        <form action="#" class="form schedule_filed filed_list_item filed_container" id="actionform3">
+                <!-- class="contents something" -->
+                <div class="schedule_filed_tit">
+                        <p class="tit_left_yellow">3조</p>
+                        <span class="defaultBtn BTN_green">Official Result</span>
+                </div>
+                <table class="box_table">
+                        <colgroup>
+                                <col style="width: 7%;">
+                                <col style="width: 7%;">
+                                <col style="width: 7%;">
+                                <col style="width: 23%;">
+                                <col style="width: auto;">
+                                <col style="width: auto;">
+                                <col style="width: auto;">
+                                <col style="width: auto;">
+                                <col style="width: auto;">
+                                <col style="width: 8%;">
+                        </colgroup>
+                        <thead class="result_table entry_table">
+                                <tr>
+                                        <th scope="col" colspan="1">레인</th>
+                                        <th scope="col" colspan="1">등수</th>
+                                        <th scope="col" colspan="1">등번호</th>
+                                        <th scope="col" colspan="1">이름</th>
+                                        <th scope="col" colspan="1">기록</th>
+                                        <th scope="col" colspan="1">Reaction Time</th>
+                                        <th scope="col" colspan="1">비고</th>
+                                        <th scope="col" colspan="1">참고기록</th>
+                                        <th scope="col" colspan="1">Q/q</th>
+                                        <th scope="col" colspan="1">신기록</th>
+                                </tr>
+                                <tr class="filed2_bottom">
+                                </tr>
+                        </thead>
+                        <tbody class=" table_tbody De_tbody entry_table">
+
+                                <tr>
+                                        <td><input type="number" name="rain[]" value="6" min="1" required="" readonly />
+                                        </td>
+                                        <td><input type="number" name="rank[]" value="1" min="1" /></td>
+                                        <td><input placeholder="등번호" type="text" name="playerbib[]" value="00340"
+                                                        maxlength="30" required="" readonly />
+                                        </td>
+                                        <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                        value="JANG HYOMIN" maxlength="30" required="" readonly />
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult[]" value="12.72"
+                                                        onkeyup="trackResultForm(this)" style="" /></td>
+                                        <td><input type="text" name="reactiontime[]" value=""
+                                                        onkeyup="trackReactionTimeForm(this)" style="" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td><input type="text" value="Q" maxlength="100" /></td>
+                                        <td>
+                                        </td>
+                                </tr>
+
+                                <tr>
+                                        <td><input type="number" name="rain[]" value="5" min="1" required="" readonly />
+                                        </td>
+                                        <td><input type="number" name="rank[]" value="2" min="1" /></td>
+                                        <td><input placeholder="등번호" type="text" name="playerbib[]" value="00210"
+                                                        maxlength="30" required="" readonly />
+                                        </td>
+                                        <td><input placeholder="선수 이름" type="text" name="playername[]" value="LEE YUNJI"
+                                                        maxlength="30" required="" readonly />
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult[]" value="13.02"
+                                                        onkeyup="trackResultForm(this)" style="" /></td>
+                                        <td><input type="text" name="reactiontime[]" value=""
+                                                        onkeyup="trackReactionTimeForm(this)" style="" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td><input type="text" value="Q" maxlength="100" /></td>
+                                        <td>
+                                                PB </td>
+                                </tr>
+
+                                <tr>
+                                        <td><input type="number" name="rain[]" value="3" min="1" required="" readonly />
+                                        </td>
+                                        <td><input type="number" name="rank[]" value="3" min="1" /></td>
+                                        <td><input placeholder="등번호" type="text" name="playerbib[]" value="00382"
+                                                        maxlength="30" required="" readonly />
+                                        </td>
+                                        <td><input placeholder="선수 이름" type="text" name="playername[]" value="JO AHYUNG"
+                                                        maxlength="30" required="" readonly />
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult[]" value="13.33"
+                                                        onkeyup="trackResultForm(this)" style="" /></td>
+                                        <td><input type="text" name="reactiontime[]" value=""
+                                                        onkeyup="trackReactionTimeForm(this)" style="" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td>
+                                                SB </td>
+                                </tr>
+
+                                <tr>
+                                        <td><input type="number" name="rain[]" value="8" min="1" required="" readonly />
+                                        </td>
+                                        <td><input type="number" name="rank[]" value="4" min="1" /></td>
+                                        <td><input placeholder="등번호" type="text" name="playerbib[]" value="00238"
+                                                        maxlength="30" required="" readonly />
+                                        </td>
+                                        <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                        value="LEE YUJUNG" maxlength="30" required="" readonly />
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult[]" value="13.44"
+                                                        onkeyup="trackResultForm(this)" style="" /></td>
+                                        <td><input type="text" name="reactiontime[]" value=""
+                                                        onkeyup="trackReactionTimeForm(this)" style="" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td>
+                                        </td>
+                                </tr>
+
+                                <tr>
+                                        <td><input type="number" name="rain[]" value="2" min="1" required="" readonly />
+                                        </td>
+                                        <td><input type="number" name="rank[]" value="5" min="1" /></td>
+                                        <td><input placeholder="등번호" type="text" name="playerbib[]" value="00289"
+                                                        maxlength="30" required="" readonly />
+                                        </td>
+                                        <td><input placeholder="선수 이름" type="text" name="playername[]" value="KIM JIA"
+                                                        maxlength="30" required="" readonly />
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult[]" value="13.54"
+                                                        onkeyup="trackResultForm(this)" style="" /></td>
+                                        <td><input type="text" name="reactiontime[]" value=""
+                                                        onkeyup="trackReactionTimeForm(this)" style="" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td>
+                                                SB </td>
+                                </tr>
+
+                                <tr>
+                                        <td><input type="number" name="rain[]" value="1" min="1" required="" readonly />
+                                        </td>
+                                        <td><input type="number" name="rank[]" value="6" min="1" /></td>
+                                        <td><input placeholder="등번호" type="text" name="playerbib[]" value="00300"
+                                                        maxlength="30" required="" readonly />
+                                        </td>
+                                        <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                        value="KIM DAYEON" maxlength="30" required="" readonly />
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult[]" value="13.60"
+                                                        onkeyup="trackResultForm(this)" style="" /></td>
+                                        <td><input type="text" name="reactiontime[]" value=""
+                                                        onkeyup="trackReactionTimeForm(this)" style="" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td>
+                                                PB </td>
+                                </tr>
+
+                                <tr>
+                                        <td><input type="number" name="rain[]" value="4" min="1" required="" readonly />
+                                        </td>
+                                        <td><input type="number" name="rank[]" value="7" min="1" /></td>
+                                        <td><input placeholder="등번호" type="text" name="playerbib[]" value="00355"
+                                                        maxlength="30" required="" readonly />
+                                        </td>
+                                        <td><input placeholder="선수 이름" type="text" name="playername[]" value="JEON JIYU"
+                                                        maxlength="30" required="" readonly />
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult[]" value="DNS"
+                                                        onkeyup="trackResultForm(this)" style="" /></td>
+                                        <td><input type="text" name="reactiontime[]" value=""
+                                                        onkeyup="trackReactionTimeForm(this)" style="" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td>
+                                        </td>
+                                </tr>
+
+                                <tr>
+                                        <td><input type="number" name="rain[]" value="7" min="1" required="" readonly />
+                                        </td>
+                                        <td><input type="number" name="rank[]" value="8" min="1" /></td>
+                                        <td><input placeholder="등번호" type="text" name="playerbib[]" value="00173"
+                                                        maxlength="30" required="" readonly />
+                                        </td>
+                                        <td><input placeholder="선수 이름" type="text" name="playername[]"
+                                                        value="SHIN DAYEON" maxlength="30" required="" readonly />
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult[]" value="DNS"
+                                                        onkeyup="trackResultForm(this)" style="" /></td>
+                                        <td><input type="text" name="reactiontime[]" value=""
+                                                        onkeyup="trackReactionTimeForm(this)" style="" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td><input type="text" value="" maxlength="100" /></td>
+                                        <td>
+                                        </td>
+                                </tr>
+                        </tbody>
+                </table>
+                <input type=hidden name=sports value=100m>
+                <input type=hidden name=gender value=f>
+                <input type=hidden name=round value=semi-final>
+                <input type=hidden name=group value=3>
+                <input type=hidden name=flag value='n'>
+                <div class="filed_BTN">
+                        <div>
+                                <button type="button"
+                                        onclick="window.open('electronic_display?sports=100m&round=semi-final&gender=f&group=3&flag=n','display_nf','width=1000,height=800');"
+                                        class="defaultBtn BIG_btn BTN_DarkBlue filedBTN">전광판 보기</button>
+                                <button type="button"
+                                        onclick="window.open('electronic_display?sports=100m&round=semi-final&gender=f&group=3&flag=y','display_f','width=1000,height=800');"
+                                        class="defaultBtn BIG_btn BTN_DarkBlue filedBTN">전광판(국기) 보기</button>
+                                <button type="button" class="defaultBtn BIG_btn BTN_Red filedBTN"
+                                        onclick="window.open('track_normal_result_pdf?sports=100m&round=semi-final&gender=f&group=3&lang=ko');">PDF(한)
+                                        출력</button>
+                                <button type="button" class="defaultBtn BIG_btn BTN_Red filedBTN"
+                                        onclick="window.open('track_normal_result_pdf?sports=100m&round=semi-final&gender=f&group=3&lang=en');">PDF(영)
+                                        출력</button>
+                                <button type="button"
+                                        onclick="location.href='action/excel_excute.php?page_code=schedule_track&sports=100m&round=semi-final&gender=f&group=3';"
+                                        class="defaultBtn BIG_btn excel_Print filedBTN">엑셀 출력</button>
+                                <button type="button" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                                        onclick="window.open('track_normal_result_word?sports=100m&round=semi-final&gender=f&group=3&lang=ko');">워드(한)
+                                        출력</button>
+                                <button type="button" class="defaultBtn BIG_btn BTN_Blue filedBTN"
+                                        onclick="window.open('track_normal_result_word?sports=100m&round=semi-final&gender=f&group=3&lang=en');">워드(영)
+                                        출력</button>
+                        </div>
+                        <div>
+                                <button type="button" id="btn_submit" class="defaultBtn BIG_btn BTN_Blue fileconnectTN"
+                                        onclick="openPopup3();">기록 입력</button>
+                        </div>
+                        <script>
+                                function openPopup3() {
+                                        let iniform = window.open("", 'popOpen', ['width=1200,height=800']);
+                                        let frm = document.getElementById("actionform3");
+                                        frm.action = "schedule_track_normal_result_view";
+                                        frm.target = "popOpen";
+                                        frm.method = 'GET';
+                                        frm.submit();
+                                }
+                        </script>
+        </form>
+        </div>
+        </div>
+
+        </form>
+        <button type="button" class="changePwBtn defaultBtn" onclick="window.close();">확인</button>
+        </div>
+        <script type="text/javascript" src="assets/js/main.js?v=1684221575"></script>
+</body>
+
+</html>

@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/xeicon.min.css?v=1685001296">
+        <link rel="stylesheet" href="assets/css/swiper.min.css?v=1685001296">
+        <link rel="stylesheet" href="assets/css/reset.css?v=1685001296">
+        <link rel="stylesheet" href="assets/css/style.css?v=1685001296">
+        <title>필드결과입력 | 필드경기 | 제20회 예천아시아 U20 육상경기 선수권대회</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <script type="text/javascript" src="assets/js/jquery-1.12.4.min.js?v=1685001296"></script>
+        <script type="text/javascript" charset="utf8" src="assets/js/datatables.min.js?v=1685001296"></script>
+        <script type="text/javascript" src="assets/js/useDataTables.js?v=1685001296"></script>
+</head>
+
+<body>
+        <script type="text/javascript" src="assets/js/onlynumber.js?v=1685001296"></script>
+        <script type="text/javascript" src="assets/js/change_athletics.js"></script>
+        <script type="text/javascript">
+                $(document).ready(function () {
+
+                        $('#loading').hide();
+                        $('#post_action').submit(function () {
+                                $('#loading').show();
+                                return true;
+
+                        });
+
+                });
+
+                window.onload = function () {
+                        for (k = 0; k < document.querySelectorAll('#name').length; k++) {
+                                let a = document.querySelectorAll('#name')[k];
+                                fieldFinal2(a);
+                        }
+                        rankcal4()
+                }
+                $(document).on("click", "button[name='addtempresult']", function () {
+                        $("#submit_div_gwoan_san").append("<input type='hidden' name=tempstore value='1'>");
+                });
+                $(document).on("click", "button[name='addresult']", function () {
+                        $("#submit_div_gwoan_san").append("<input type='hidden' name=tempstore value='0'>");
+                });
+
+                function input_time() {
+                        var today = new Date();
+                        var year = today.getFullYear();
+                        var month = ('0' + (today.getMonth() + 1)).slice(-2);
+                        var day = ('0' + today.getDate()).slice(-2);
+                        var dateString = year + '-' + month + '-' + day;
+                        var hours = ('0' + today.getHours()).slice(-2);
+                        var minutes = ('0' + today.getMinutes()).slice(-2);
+                        var seconds = ('0' + today.getSeconds()).slice(-2);
+                        var timeString = hours + ':' + minutes + ':' + seconds;
+                        let total = dateString + " " + timeString;
+                        let intime = document.querySelector("input[name='starttime']")
+                        intime.value = total
+                }
+        </script>
+
+        <div class="loading" id="loading">
+                <div>
+                        <i class="xi-spinner-2 Loading_spin"></i>
+                </div>
+        </div>
+
+        <div class="container">
+                <div class="athlete">
+                        <div class="profile_logo">
+                                <img src="assets/images/logo.png">
+                        </div>
+                        <div class="UserProfile">
+                                <p class="UserProfile_tit tit_left_blue">
+                                        Triple Jump </p>
+                                <form action="" method="post" id="post_action">
+                                        <input type="hidden" name="sports" value="triplejump">
+                                        <input type="hidden" name="gender" value="f">
+                                        <input type="hidden" name="round" value="final">
+                                        <input type="hidden" name="group" value="1">
+                                        <div class="UserProfile_modify UserProfile_input thorw_main">
+                                                <div>
+                                                        <ul class="UserDesc throwDesc">
+                                                                <li class="row input_row throw_row">
+                                                                        <span>경기 이름</span>
+                                                                        <input placeholder="경기 이름" type="text"
+                                                                                value="Triple Jump" maxlength="16"
+                                                                                required readonly />
+                                                                </li>
+                                                                <li class="row input_row throw_row">
+                                                                        <span>라운드</span>
+                                                                        <input placeholder="라운드" type="text"
+                                                                                value="final" maxlength="16" required
+                                                                                readonly />
+                                                                </li>
+                                                                <li class="row input_row throw_row">
+                                                                        <span>심판 이름</span>
+                                                                        <input placeholder="심판 이름" type="text"
+                                                                                name="refereename" value="sumin LEE"
+                                                                                maxlength="30" required readonly />
+                                                                </li>
+                                                                <li class="row input_row throw_row">
+                                                                        <span>경기 시작 시간</span>
+                                                                        <input placeholder="시작 시간" type="text"
+                                                                                name="starttime" class="input_text"
+                                                                                value="2023-05-24 15:00:00"
+                                                                                maxlength="30" required />
+                                                                        <div class="full_div">
+                                                                                <button type="button"
+                                                                                        class="defaultBtn BTN_Blue"
+                                                                                        onclick="input_time()">현재시간</button>
+                                                                        </div>
+                                                                </li>
+                                                                <li class="row input_row throw_row">
+                                                                        <span>용기구</span>
+                                                                        <input placeholder="용기구" type="text"
+                                                                                name="weight" class="input_text"
+                                                                                value=" KG" maxlength="16" required />
+                                                                </li>
+                                                        </ul>
+                                                        <div class="Thorw_result">
+                                                                <div class="result_BTN">
+                                                                        <h1 class="tit_padding tit_left_green">결과</h1>
+                                                                        <div>
+                                                                                <select name="order"
+                                                                                        onchange="location.href='schedule_field_normal_result_view?sports=triplejump&round=final&gender=f&group=1&order='+this.value;"
+                                                                                        style="float:right;">
+                                                                                        <option value="order" selected>
+                                                                                                순서순</option>
+                                                                                        <option value="result">기록순
+                                                                                        </option>
+                                                                                </select>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <table class="box_table">
+                                                                <colgroup>
+                                                                        <col style="width: 4%" />
+                                                                        <col style="width: 4%" />
+                                                                        <col style="width: 7%" />
+                                                                        <col style="width: 18%" />
+                                                                        <col style="width: 5%" />
+                                                                        <col style="width: 5%" />
+                                                                        <col style="width: 5%" />
+                                                                        <col style="width: 5%" />
+                                                                        <col style="width: 5%" />
+                                                                        <col style="width: 5%" />
+                                                                        <col style="width: 5%" />
+                                                                        <col style="width: 5%" />
+                                                                        <col style="width: 5%" />
+                                                                        <col style="width: 5%" />
+                                                                        <col style="width: 5%" />
+                                                                        <col style="width: 3%" />
+                                                                        <col style="width: 5%" />
+                                                                        <col style="width: 7%" />
+                                                                </colgroup>
+                                                                <thead class="result_table De_tbody entry_table">
+                                                                        <tr>
+                                                                                <th rowspan=2>등수</th>
+                                                                                <th rowspan=2>순서</th>
+                                                                                <th rowspan=2>BIB</th>
+                                                                                <th rowspan=2>이름</th>
+                                                                                <th>1차 시기</th>
+                                                                                <th>2차 시기</th>
+                                                                                <th>3차 시기</th>
+                                                                                <th>3회 시기중 최고 기록</th>
+                                                                                <th>3회 시기에 따른 등수</th>
+                                                                                <th>3회 시기에 따른 다음시기 순서</th>
+                                                                                <th>4차 시기</th>
+                                                                                <th>5차 시기</th>
+                                                                                <th>6차 시기</th>
+                                                                                <th>기록</th>
+                                                                                <th rowspan=2>비고</th>
+                                                                                <th rowspan=2>참고기록</th>
+                                                                                <th rowspan=2>메달</th>
+                                                                                <th rowspan="2"
+                                                                                        style="background: none">신기록
+                                                                                </th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <th style="background: none"
+                                                                                        colspan="10">풍속</th>
+                                                                        </tr>
+                                                                        <tr class="filed2_bottom"></tr>
+                                                                </thead>
+                                                                <tbody class="table_tbody De_tbody entry_table">
+                                                                        <tr id=col1 class="col1_1">
+                                                                                <td rowspan=2><input type="number"
+                                                                                                name="rank[309]"
+                                                                                                id="rank" value=""
+                                                                                                min="1" required></td>
+                                                                                <td rowspan=2><input type="number"
+                                                                                                name="rain[309]"
+                                                                                                value="1" required></td>
+                                                                                <td rowspan=2><input placeholder="BIB"
+                                                                                                type="text" id="bib"
+                                                                                                name="playerbib[]"
+                                                                                                value="00036" required
+                                                                                                readonly></td>
+                                                                                <td rowspan=2><input placeholder="선수 이름"
+                                                                                                type="text" id="name"
+                                                                                                name="playername[]"
+                                                                                                value="PARK GEUNJEONG"
+                                                                                                required readonly></td>
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[309][1]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[309][2]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[309][3]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input placeholder="최고기록"
+                                                                                                id="threetop"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5"
+                                                                                                readonly /></td>
+                                                                                <td rowspan=2><input placeholder="등수"
+                                                                                                id="middlerank"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5"
+                                                                                                readonly /></td>
+                                                                                <td rowspan=2><input
+                                                                                                placeholder="두번째 순서"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5" readonly
+                                                                                                id="middleRane" /></td>
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[309][4]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[309][5]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[309][6]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input id="result" type="text"
+                                                                                                name="gameresult[309]"
+                                                                                                value="" required
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+                                                                                <td rowspan=2><input type="text"
+                                                                                                name="bigo[309]"
+                                                                                                value=""></td>
+                                                                                <td rowspan=2><input type="checkbox"
+                                                                                                name="record_rr[309]">
+                                                                                </td>
+                                                                                <td rowspan=2>
+                                                                                        <select
+                                                                                                name="record_medal[309]">
+                                                                                                <option value="0"
+                                                                                                        selected>
+                                                                                                </option>
+                                                                                                <option value="10000">
+                                                                                                        Gold</option>
+                                                                                                <option value="100">
+                                                                                                        Silver</option>
+                                                                                                <option value="1">Bronze
+                                                                                                </option>
+                                                                                        </select>
+                                                                                </td>
+                                                                                <td rowspan=2><input type="text"
+                                                                                                name="newrecord[309]"
+                                                                                                value=""></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td><input type="text"
+                                                                                                name="wind[309][1]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[309][2]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[309][3]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input placeholder="풍속"
+                                                                                                id="threetopwind"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5"
+                                                                                                readonly /></td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[309][4]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[309][5]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[309][6]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input placeholder="풍속"
+                                                                                                name="lastwind[309]"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5"
+                                                                                                readonly /></td>
+                                                                        </tr>
+                                                                        <tr id=col1 class="col1_2">
+                                                                                <td rowspan=2><input type="number"
+                                                                                                name="rank[364]"
+                                                                                                id="rank" value=""
+                                                                                                min="1" required></td>
+                                                                                <td rowspan=2><input type="number"
+                                                                                                name="rain[364]"
+                                                                                                value="2" required></td>
+                                                                                <td rowspan=2><input placeholder="BIB"
+                                                                                                type="text" id="bib"
+                                                                                                name="playerbib[]"
+                                                                                                value="00091" required
+                                                                                                readonly></td>
+                                                                                <td rowspan=2><input placeholder="선수 이름"
+                                                                                                type="text" id="name"
+                                                                                                name="playername[]"
+                                                                                                value="LEE HYEONJEONG"
+                                                                                                required readonly></td>
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[364][1]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[364][2]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[364][3]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input placeholder="최고기록"
+                                                                                                id="threetop"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5"
+                                                                                                readonly /></td>
+                                                                                <td rowspan=2><input placeholder="등수"
+                                                                                                id="middlerank"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5"
+                                                                                                readonly /></td>
+                                                                                <td rowspan=2><input
+                                                                                                placeholder="두번째 순서"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5" readonly
+                                                                                                id="middleRane" /></td>
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[364][4]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[364][5]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[364][6]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input id="result" type="text"
+                                                                                                name="gameresult[364]"
+                                                                                                value="" required
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+                                                                                <td rowspan=2><input type="text"
+                                                                                                name="bigo[364]"
+                                                                                                value=""></td>
+                                                                                <td rowspan=2><input type="checkbox"
+                                                                                                name="record_rr[364]">
+                                                                                </td>
+                                                                                <td rowspan=2>
+                                                                                        <select
+                                                                                                name="record_medal[364]">
+                                                                                                <option value="0"
+                                                                                                        selected>
+                                                                                                </option>
+                                                                                                <option value="10000">
+                                                                                                        Gold</option>
+                                                                                                <option value="100">
+                                                                                                        Silver</option>
+                                                                                                <option value="1">Bronze
+                                                                                                </option>
+                                                                                        </select>
+                                                                                </td>
+                                                                                <td rowspan=2><input type="text"
+                                                                                                name="newrecord[364]"
+                                                                                                value=""></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td><input type="text"
+                                                                                                name="wind[364][1]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[364][2]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[364][3]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input placeholder="풍속"
+                                                                                                id="threetopwind"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5"
+                                                                                                readonly /></td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[364][4]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[364][5]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[364][6]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input placeholder="풍속"
+                                                                                                name="lastwind[364]"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5"
+                                                                                                readonly /></td>
+                                                                        </tr>
+                                                                        <tr id=col1 class="col1_3">
+                                                                                <td rowspan=2><input type="number"
+                                                                                                name="rank[460]"
+                                                                                                id="rank" value=""
+                                                                                                min="1" required></td>
+                                                                                <td rowspan=2><input type="number"
+                                                                                                name="rain[460]"
+                                                                                                value="3" required></td>
+                                                                                <td rowspan=2><input placeholder="BIB"
+                                                                                                type="text" id="bib"
+                                                                                                name="playerbib[]"
+                                                                                                value="00187" required
+                                                                                                readonly></td>
+                                                                                <td rowspan=2><input placeholder="선수 이름"
+                                                                                                type="text" id="name"
+                                                                                                name="playername[]"
+                                                                                                value="LEE SOYEON"
+                                                                                                required readonly></td>
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[460][1]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[460][2]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[460][3]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input placeholder="최고기록"
+                                                                                                id="threetop"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5"
+                                                                                                readonly /></td>
+                                                                                <td rowspan=2><input placeholder="등수"
+                                                                                                id="middlerank"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5"
+                                                                                                readonly /></td>
+                                                                                <td rowspan=2><input
+                                                                                                placeholder="두번째 순서"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5" readonly
+                                                                                                id="middleRane" /></td>
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[460][4]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[460][5]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[460][6]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input id="result" type="text"
+                                                                                                name="gameresult[460]"
+                                                                                                value="" required
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+                                                                                <td rowspan=2><input type="text"
+                                                                                                name="bigo[460]"
+                                                                                                value=""></td>
+                                                                                <td rowspan=2><input type="checkbox"
+                                                                                                name="record_rr[460]">
+                                                                                </td>
+                                                                                <td rowspan=2>
+                                                                                        <select
+                                                                                                name="record_medal[460]">
+                                                                                                <option value="0"
+                                                                                                        selected>
+                                                                                                </option>
+                                                                                                <option value="10000">
+                                                                                                        Gold</option>
+                                                                                                <option value="100">
+                                                                                                        Silver</option>
+                                                                                                <option value="1">Bronze
+                                                                                                </option>
+                                                                                        </select>
+                                                                                </td>
+                                                                                <td rowspan=2><input type="text"
+                                                                                                name="newrecord[460]"
+                                                                                                value=""></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td><input type="text"
+                                                                                                name="wind[460][1]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[460][2]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[460][3]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input placeholder="풍속"
+                                                                                                id="threetopwind"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5"
+                                                                                                readonly /></td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[460][4]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[460][5]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[460][6]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input placeholder="풍속"
+                                                                                                name="lastwind[460]"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5"
+                                                                                                readonly /></td>
+                                                                        </tr>
+                                                                        <tr id=col1 class="col1_4">
+                                                                                <td rowspan=2><input type="number"
+                                                                                                name="rank[368]"
+                                                                                                id="rank" value=""
+                                                                                                min="1" required></td>
+                                                                                <td rowspan=2><input type="number"
+                                                                                                name="rain[368]"
+                                                                                                value="4" required></td>
+                                                                                <td rowspan=2><input placeholder="BIB"
+                                                                                                type="text" id="bib"
+                                                                                                name="playerbib[]"
+                                                                                                value="00095" required
+                                                                                                readonly></td>
+                                                                                <td rowspan=2><input placeholder="선수 이름"
+                                                                                                type="text" id="name"
+                                                                                                name="playername[]"
+                                                                                                value="PARK MINHEE"
+                                                                                                required readonly></td>
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[368][1]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[368][2]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[368][3]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input placeholder="최고기록"
+                                                                                                id="threetop"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5"
+                                                                                                readonly /></td>
+                                                                                <td rowspan=2><input placeholder="등수"
+                                                                                                id="middlerank"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5"
+                                                                                                readonly /></td>
+                                                                                <td rowspan=2><input
+                                                                                                placeholder="두번째 순서"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5" readonly
+                                                                                                id="middleRane" /></td>
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[368][4]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[368][5]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input type="text"
+                                                                                                name="game_trial_result[368][6]"
+                                                                                                value=""
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+
+                                                                                <td><input id="result" type="text"
+                                                                                                name="gameresult[368]"
+                                                                                                value="" required
+                                                                                                onkeyup="field2Format(this)">
+                                                                                </td>
+                                                                                <td rowspan=2><input type="text"
+                                                                                                name="bigo[368]"
+                                                                                                value=""></td>
+                                                                                <td rowspan=2><input type="checkbox"
+                                                                                                name="record_rr[368]">
+                                                                                </td>
+                                                                                <td rowspan=2>
+                                                                                        <select
+                                                                                                name="record_medal[368]">
+                                                                                                <option value="0"
+                                                                                                        selected>
+                                                                                                </option>
+                                                                                                <option value="10000">
+                                                                                                        Gold</option>
+                                                                                                <option value="100">
+                                                                                                        Silver</option>
+                                                                                                <option value="1">Bronze
+                                                                                                </option>
+                                                                                        </select>
+                                                                                </td>
+                                                                                <td rowspan=2><input type="text"
+                                                                                                name="newrecord[368]"
+                                                                                                value=""></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td><input type="text"
+                                                                                                name="wind[368][1]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[368][2]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[368][3]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input placeholder="풍속"
+                                                                                                id="threetopwind"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5"
+                                                                                                readonly /></td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[368][4]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[368][5]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input type="text"
+                                                                                                name="wind[368][6]"
+                                                                                                value=""
+                                                                                                onkeyup="windFormat(this)">
+                                                                                </td>
+                                                                                <td><input placeholder="풍속"
+                                                                                                name="lastwind[368]"
+                                                                                                type="text"
+                                                                                                class="input_text"
+                                                                                                maxlength="5"
+                                                                                                readonly /></td>
+                                                                        </tr>
+                                                                </tbody>
+                                                        </table>
+                                                </div>
+                                                <h3 class="UserProfile_tit tit_left_red tit_padding">경기 비고</h3>
+                                                <input placeholder="비고를 입력해주세요." type="text" name="bibigo"
+                                                        class="note_text" value="" maxlength="100" />
+                                                <div class="modify_Btn input_Btn result_Btn" id="submit_div_gwoan_san">
+                                                        <button type="submit" class="defaultBtn BTN_Blue full_width"
+                                                                name="addresult"
+                                                                formaction="action/competition/schedule_field_normal_result_insert.php">
+                                                                <span>확인</span>
+                                                        </button>
+                                                </div>
+                                        </div>
+                                </form>
+                        </div>
+                </div>
+        </div>
+        <script type="text/javascript" src="assets/js/main.js?v=1685001296"></script>
+</body>
+
+</html>

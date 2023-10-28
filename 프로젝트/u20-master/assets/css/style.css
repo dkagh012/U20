@@ -1,0 +1,4058 @@
+/* root */
+:root {
+  --colorBorder: #e6e6e6;
+  --colorWhite: #fff;
+  --colorBlack: #333;
+  --colorGray: #666;
+  --colorDarkBlack: #101010;
+  --colorRed: #e5006b;
+  --colorBlue: #6aafe6;
+  --colorDarkBlue: #024274;
+  --colorLogo: #006caf;
+  --colorHover: #f8faff;
+  --colorBackground: #f6f8fa;
+  --colorStar: #fd8309;
+  --colorMint: #00c3bd;
+  --colorYellow: #fce205;
+  --colorGreen: #77af9c;
+  --colorGreen2: #519d9e;
+  --colorpurple: #ba55d3;
+  --colorLogoBLue: #005bac;
+  --colorLogoOrange: #ea5404;
+  --colorLogoRed: #eb3341;
+  --colorLogoGreen: #5cc377;
+  --colorLogoGreen2: rgb(72, 174, 99);
+  --colorLogoGreen3: rgb(29, 138, 58);
+  --colorLogoYellow: #fad393;
+  --colorBackgroundGray: #717171;
+  --colorBackgroundBeige: #f5f5f5;
+  --colorHover: #9db5cd;
+  --colorPink2: #ffd3a6d9;
+  --1: 1em;
+  --5: 0.5rem;
+  --10: 1rem;
+  --20: 2rem;
+  --30: 3rem;
+  --50: 5rem;
+  --80: 8rem;
+}
+
+/* font */
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Noto Sans Light"), local("NotoSans-Light"),
+    url(../css/fonts/NotoSans-Light.eot);
+  src: url(../css/fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"),
+    url(../css/fonts/NotoSans-Light.woff2) format("woff2"),
+    url(../css/fonts/NotoSans-Light.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Noto Sans Regular"), local("NotoSans-Regular"),
+    url(../css/fonts/NotoSans-Regular.eot);
+  src: url(../css/fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"),
+    url(../css/fonts/NotoSans-Regular.woff2) format("woff2"),
+    url(../css/fonts/NotoSans-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Medium"), local("NotoSans-Medium"),
+    url(../css/fonts/NotoSans-Medium.eot);
+  src: url(../css/fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"),
+    url(../css/fonts/NotoSans-Medium.woff2) format("woff2"),
+    url(../css/fonts/NotoSans-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans Bold"), local("NotoSans-Bold"),
+    url(../css/fonts/NotoSans-Bold.eot);
+  src: url(../css/fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"),
+    url(../css/fonts/NotoSans-Bold.woff2) format("woff2"),
+    url(../css/fonts/NotoSans-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Nanum Myeongjo";
+  font-style: normal;
+  font-weight: 900;
+  src: local("※"), url(../css/fonts/NanumMyeongjoEB.eot);
+  src: url(../css/fonts/NanumMyeongjoEB.eot?#iefix) format("embedded-opentype"),
+    url(../css/fonts/NanumMyeongjoEB.woff2) format("woff2"),
+    url(../css/fonts/NanumMyeongjoEB.woff) format("woff");
+}
+
+/* animation */
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes xi-spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="button"] {
+  -webkit-appearance: none !important;
+  border-radius: 5px !important;
+}
+
+/* color */
+.hide {
+  display: none !important;
+}
+
+.none {
+  display: none !important;
+}
+
+.tit_padding {
+  padding-left: 2rem;
+  color: var(--colorBlack);
+  font-weight: bold;
+  margin-left: 0px;
+  display: block;
+  font-size: 3rem;
+  line-height: 3rem;
+  margin: 2rem 0;
+}
+
+.note_text {
+  width: 100%;
+  height: 13rem;
+  margin-top: 3rem;
+}
+
+.menu_red {
+  color: var(--colorLogoRed);
+}
+
+.menu_Orange {
+  color: var(--colorLogoOrange);
+}
+
+.menu_yellow {
+  color: var(--colorYellow);
+}
+
+.menu_green {
+  color: var(--colorLogoGreen);
+}
+
+.menu_blue {
+  color: var(--colorLogoBLue);
+}
+
+.PwBtnArea {
+  padding-top: 5rem;
+}
+
+.popup_BTN {
+  cursor: pointer;
+}
+
+.word_BTN {
+  background: #0072cd;
+}
+
+.pdf_BTN {
+  background: #ad0b00;
+}
+
+.pdf_BTN2 {
+  background: #d60000;
+}
+
+.item_popup {
+  display: none;
+  position: absolute;
+  margin-top: 2%;
+  word-break: keep-all;
+  width: 130px;
+  height: auto;
+  background-color: var(--colorBlue);
+  color: white;
+  font-size: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: 400;
+  letter-spacing: calc((-15 / 1000) * 1em);
+  z-index: 14;
+  line-height: 21px;
+  text-align: center;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+}
+
+.rainbow_border {
+  background: var(--colorBackground);
+  display: flex;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    #eb0e1f 0%,
+    #f39801 33%,
+    #18a53d 66%,
+    #005c9f 100%
+  );
+  border-image-slice: 1;
+}
+
+.Ranklist_Background {
+  background: var(--colorBackgroundBeige);
+}
+
+.input_click {
+  background-color: var(--colorPink2) !important;
+}
+
+.MainRank_tit > h1 > .crown {
+  color: #ffd700;
+}
+
+.MainRank_tit > h1 > .group {
+  color: #6495ed;
+  padding-left: 1rem;
+}
+
+.MainRank_tit > h1 > .calendar {
+  color: #6495ed;
+  padding-left: 1rem;
+}
+
+.MainRank_tit > h1 > .timer {
+  color: #f56464;
+  padding-left: 1rem;
+}
+
+.MainRank_tit > h1 > .key {
+  color: #d8dae0;
+  padding-left: 1rem;
+}
+
+.MainRank_tit > h1 > .chart {
+  color: #ff8c00;
+  padding-left: 1rem;
+}
+
+.BTN_blue4 {
+  background: #0072cd !important;
+}
+
+.BTN_DarkBlue {
+  background: var(--colorDarkBlue) !important;
+}
+
+.BTN_purple {
+  background: var(--colorpurple) !important;
+}
+
+.BTN_green {
+  background: var(--colorLogoGreen) !important;
+}
+
+.BTN_Blue {
+  background: #4196d9 !important;
+}
+
+.BTN_Red {
+  background: var(--colorRed) !important;
+}
+
+.BTN_yellow {
+  background: var(--colorLogoYellow) !important;
+}
+
+.BTN_Orange {
+  background: var(--colorLogoOrange) !important;
+}
+
+.BTN_blue2 {
+  background: #78bfff !important;
+}
+
+.BTN_blue3 {
+  background: var(--colorLogoBLue) !important;
+}
+
+.BTN_Orange2 {
+  background: #ff5630 !important;
+}
+
+.BTN_Red2 {
+  background: var(--colorLogoRed);
+}
+
+.full_width {
+  width: 100% !important;
+}
+
+.full_div {
+  word-wrap: break-word;
+  flex-wrap: wrap;
+  width: 70%;
+  gap: 6px;
+}
+
+.full_div > label {
+  display: flex;
+}
+
+.full_span {
+  width: 15% !important;
+}
+
+.full_width2 {
+  width: 85% !important;
+}
+
+.result_blueBTN {
+  background: white;
+  border: 2px solid #7074c9 !important;
+  color: #7074c9 !important;
+  font-weight: bold !important;
+}
+
+.result_redBTN {
+  background: white;
+  border: 2px solid #ff7171 !important;
+  color: #ff7171 !important;
+  font-weight: bold !important;
+}
+
+.result_orangeBTN {
+  background: white;
+  border: 2px solid #ffa15f !important;
+  color: #ffa15f !important;
+  font-weight: bold !important;
+}
+
+.result_greenBTN {
+  background: white;
+  border: 2px solid #53af76 !important;
+  color: #53af76 !important;
+  font-weight: bold !important;
+}
+
+.result_greenBTN:hover {
+  color: white !important;
+  background: #53af76 !important;
+}
+
+.result_redBTN:hover {
+  color: white !important;
+  background: #ff7171 !important;
+}
+
+.result_blueBTN:hover {
+  color: white !important;
+  background: #7074c9 !important;
+}
+
+.result_orangeBTN:hover {
+  color: white !important;
+  background: #ffa15f !important;
+}
+
+.tit_left_red {
+  border-left: 9px solid var(--colorLogoRed);
+}
+
+.tit_left_green {
+  border-left: 9px solid var(--colorLogoGreen);
+}
+
+.tit_left_yellow {
+  border-left: 9px solid var(--colorLogoYellow);
+}
+
+.tit_left_blue {
+  border-left: 9px solid var(--colorLogoBLue);
+}
+
+.tit_left_Orange {
+  border-left: 9px solid var(--colorLogoOrange);
+}
+
+input::placeholder {
+  color: var(--colorLogo);
+}
+
+.matchBtn {
+  background: #dd4132;
+}
+
+.ID_Print {
+  background: var(--colorYellow);
+}
+
+.excel_Print {
+  background: var(--colorGreen);
+}
+
+.excel_input {
+  background: var(--colorGreen2);
+}
+
+.excel_form {
+  background: var(--colorLogoGreen3);
+}
+
+.ExcelBtn {
+  display: flex;
+  gap: 5px;
+}
+
+.prevent {
+  overflow: hidden;
+}
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Loading_spin {
+  -webkit-animation: xi-spin 2s infinite linear;
+  animation: xi-spin 2s infinite linear;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  position: absolute;
+  color: white;
+  font-size: 50px;
+}
+
+/* checkBox */
+input[type="checkbox"][disabled]:checked {
+  appearance: none;
+  background-image: url(../images/btn_check.png);
+  background-color: var(--colorLogo);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  background-size: cover;
+  /* 체크박스 요소의 크기 */
+}
+
+input[type="checkbox"][disabled]:not(:checked) {
+  appearance: none;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid blue;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  background-size: cover;
+  /* 체크박스 요소의 크기 */
+}
+
+/* 체크박스 이미지 조각의 위치 */
+input[type="checkbox"][disabled]:not(:checked):before {
+  background-position: 0 0;
+  /* 체크박스가 선택되지 않은 상태 */
+}
+
+input[type="checkbox"][disabled]:checked:before {
+  background-position: -20px 0;
+  /* 체크박스가 선택된 상태 */
+}
+
+/* pagination */
+
+.pagination {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.pagination > li {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--colorBorder);
+  border-radius: 50%;
+}
+
+.pagination > li:hover {
+  background: var(--colorBorder);
+}
+
+.pagination > li:first-child,
+.pagination > li:last-child {
+  border: 1px solid var(--colorBorder);
+  border-radius: 50%;
+  color: #111;
+}
+
+.pagination > li a {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-weight: 300;
+}
+
+.pagination > li a em {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-weight: 100;
+  line-height: 40px;
+}
+
+.pagination > li a i::before {
+  font-size: 30px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 3rem;
+}
+
+.change {
+  border-radius: 0;
+  background: white;
+  width: 100%;
+  border: 1px solid var(--colorBorder);
+}
+
+.pagination .clicked {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--colorLogo);
+  color: #fff;
+}
+
+.pagination .click {
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--colorLogo);
+  color: #fff;
+}
+
+/* 페이지 네이션 끝 */
+.Wrapper {
+  max-width: 160rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.TopWrapper {
+  padding-top: 13rem;
+}
+
+.BottomWrapper {
+  padding-bottom: 10rem;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 1rem;
+}
+
+/* header */
+.headerWrapper {
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+}
+
+.headerBody {
+  padding-top: 1rem;
+  padding-bottom: 1.1rem;
+  background: white;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    #eb0e1f 0%,
+    #f39801 33%,
+    #18a53d 66%,
+    #005c9f 100%
+  );
+  border-image-slice: 1;
+}
+
+.headerWrapper .headerBodyLayout {
+  max-width: 160rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 6rem;
+}
+
+.headerBodyLayout .logo {
+  display: inline-block;
+  width: 16%;
+  padding-top: 1rem;
+  margin-right: 1rem;
+}
+
+.headerBodyArea {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gnbMask {
+  width: 62%;
+  height: 100%;
+}
+
+.headerBodyLayout .logo a {
+  display: block;
+  background-image: url(../images/logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  height: 4rem;
+  font-size: 1px;
+  text-indent: -9999vw;
+  color: transparent;
+  width: 8rem;
+}
+
+.headerBodyArea .UserPage {
+  height: 6rem;
+  line-height: 6rem;
+  font-size: 22px;
+  float: right;
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+  width: 22%;
+  font-weight: 500;
+}
+
+.headerBodyArea .UserPage > a:nth-child(1) {
+  color: var(--colorLogo);
+  display: flex;
+  align-items: center;
+}
+
+.headerBodyArea .UserPage > a:nth-child(2) {
+  color: #eb0e1f;
+  display: flex;
+  align-items: center;
+}
+
+.headerBodyArea .UserPage > a:nth-child(1) > p,
+.headerBodyArea .UserPage > a:nth-child(2) > p {
+  font-size: 16px;
+  white-space: nowrap;
+  padding-left: 0.5rem;
+}
+
+.gnb {
+  display: flex;
+  width: 100%;
+}
+
+.gnbList > li {
+  width: 20%;
+  display: block;
+  text-align: center;
+}
+
+.gnbItem > div:nth-child(1) > span {
+  line-height: 6rem;
+  display: block;
+  letter-spacing: -1px;
+  height: 6rem;
+  cursor: pointer;
+  color: var(--colorDarkBlack);
+}
+
+.gnbBack > div:nth-child(1) > span {
+  color: var(--colorLogo);
+}
+
+.gnbList > li > div:nth-child(1) > span > i:nth-child(3) {
+  transition-duration: 0.5s;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.gnbItem > div:nth-child(1) > span > i:nth-child(1) {
+  padding-right: 5px;
+}
+
+.gnbItem > div:nth-child(1) > span > i:nth-child(2) {
+  display: none;
+}
+
+.gnbList > li > div:nth-child(1) > span:hover {
+  color: var(--colorLogo);
+}
+
+.gnbItem > div:nth-child(1) > i {
+  display: none;
+}
+
+.gnbDetailMenuList {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 85px;
+  background: var(--colorBackground);
+  box-shadow: 0 4px 9px -7px #222;
+  animation: fadein 0.6s;
+  -moz-animation: fadein 0.6s;
+  -webkit-animation: fadein 0.6s;
+  -o-animation: fadein 0.6s;
+}
+
+.gnbDetailMenuList > ul {
+  display: flex;
+  padding: 1rem;
+  gap: 25px;
+  width: 100%;
+  justify-content: center;
+  max-width: 160rem;
+  margin: 0 auto;
+}
+
+.gnbDetailMenuList > ul > li > a {
+  padding: 1rem;
+  line-height: 50px;
+}
+
+.gnbDetailMenuList > ul > li > a:hover {
+  color: var(--colorLogo);
+}
+
+.gnbBack > div {
+  display: block;
+  width: 100%;
+}
+
+.gnbBack > div > span > i:nth-child(3) {
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+
+.gnbBack > div:nth-child(1) > span > i:nth-child(2) {
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.gnbBack > div > span > i:nth-child(1) {
+  display: none;
+}
+
+.gnb > .gnbList {
+  display: flex;
+  font-weight: 500;
+  width: 100%;
+  font-size: 16px;
+}
+
+.gnbBack {
+  border-radius: 0.475rem;
+  background: var(--colorBackground);
+}
+
+.sideBtn {
+  display: none;
+}
+
+.menuBtn {
+  display: none;
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+}
+
+.menuopen {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* header 끄읏 */
+
+/* 메인페이지 랭킹 부분 */
+
+.MainRank {
+  padding: 0 2rem 5rem;
+  background: white;
+  margin-bottom: 5rem;
+  box-shadow: 0 0 10px 0 rgb(93 144 255 / 20%);
+  border-radius: 25px;
+  position: relative;
+}
+
+.MainRank .MainRank_tit > h1 {
+  color: var(--colorBlack);
+  margin-left: 0;
+  display: block;
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 5rem;
+  padding: 4rem 0 2rem;
+}
+
+/*  메인 랭킹 끝 */
+
+/* 참가자 관리 선수 임원 심판 코치 작업 부분 */
+
+.athlete {
+  position: relative;
+  height: auto;
+  padding: 3rem 5rem;
+  background: white;
+  box-shadow: 0 0 10px 0 rgb(93 144 255 / 20%);
+  border-radius: 25px;
+}
+
+.athlete > .profile_logo {
+  position: absolute;
+  top: 1%;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.athlete > .profile_logo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.UserProfile > .UserProfile_tit {
+  padding-left: 2rem;
+  color: var(--colorBlack);
+  font-weight: bold;
+  margin-left: 0px;
+  display: block;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.UserProfile_modify {
+  display: flex;
+  align-items: center;
+}
+
+.info_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info_table {
+  width: 49%;
+}
+
+.coachArea {
+  height: auto;
+}
+
+.UserProfile_modify > div:nth-child(1) > img {
+  height: 100%;
+  width: 200px;
+  object-fit: cover;
+}
+
+.UserProfile_modify > div:nth-child(2) {
+  width: 70%;
+}
+
+.UserDesc .row {
+  width: 100%;
+  display: flex;
+  text-align: left;
+  border-bottom: 1px solid var(--colorBorder);
+  padding: 12px;
+  align-items: center;
+  margin: 10px 0 10px 0;
+}
+
+.UserDesc .row > span {
+  color: var(--colorGray);
+  width: 16%;
+  line-height: 20px;
+}
+
+.UserDesc .row > label {
+  color: var(--colorGray);
+  width: 16%;
+  line-height: 41px;
+  cursor: pointer;
+}
+
+.table_Layout {
+  table-layout: fixed;
+}
+
+.AD_card_cnt {
+  overflow-y: auto;
+  max-height: 171px;
+}
+
+.UserDesc .Desc_item > span {
+  width: 15%;
+}
+
+.UserDesc .row > input {
+  border: 0;
+  background: transparent;
+  font-weight: 300;
+  width: 85%;
+  outline: none;
+  font-size: 16px;
+  cursor: text;
+}
+
+.UserDesc .row > input::placeholder {
+  text-align: left;
+}
+
+.UserDesc .row > div {
+  display: flex;
+  height: 100%;
+  width: 70%;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.UserDesc .row > div > input {
+  border: 0;
+  background: transparent;
+  outline: none;
+  width: 30%;
+  font-size: 16px;
+  cursor: text;
+  border: 1px solid var(--colorBorder);
+  padding-left: 1rem;
+}
+
+.schedule_month,
+.schedule_year,
+.schedule_day,
+.schedule_hour,
+.schedule_minute {
+  width: 80px;
+}
+
+.schedule_year > input {
+  width: 100%;
+  border: 1px solid var(--colorBorder);
+  padding: 1rem 0 1rem 5px;
+}
+
+.schedule_Q {
+  width: 10%;
+}
+
+.schedule_Q input {
+  width: 100%;
+  border: 1px solid var(--colorBorder);
+  padding: 1rem 0 1rem 5px;
+}
+
+.schedule_month,
+.schedule_day,
+.schedule_hour,
+.schedule_minute {
+  border: 1px solid var(--colorBorder);
+}
+
+.img_wrap {
+  display: flex;
+  gap: 5px;
+  padding-top: 2rem;
+}
+
+.img_wrap > button {
+  width: calc(100% / 3);
+  padding: 5px 0;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.imgFile {
+  border: 0;
+  color: white;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.UserDesc .row > select {
+  border: 0px;
+  background: transparent;
+  width: 85%;
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.UserDesc .row > select:focus {
+  background: var(--colorLogo);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: white;
+}
+
+.UserDesc .check > input {
+  width: 16px;
+  cursor: pointer;
+}
+
+.UserDesc .row_item > span {
+  width: 10%;
+}
+
+.row_item > label {
+  width: 70%;
+  text-align: center;
+}
+
+.modify_enter > p {
+  color: var(--colorBlack);
+  display: block;
+  font-size: 3rem;
+  line-height: 3rem;
+  margin: 2rem 0px;
+  font-weight: bold;
+  padding-left: 2rem;
+}
+
+.enter {
+  border: 1px solid var(--colorBorder);
+}
+
+.attend {
+  border: 1px solid var(--colorBorder);
+}
+
+.modifyform {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 14px;
+  justify-content: space-between;
+}
+
+.modify_checkList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modify_check {
+  width: 48%;
+}
+
+.modify_container {
+  width: 100%;
+  font-size: 14px;
+}
+
+.UserDesc .modify_row > span {
+  width: 22%;
+  color: var(--colorGray);
+}
+
+.modify_checkList > li > label {
+  width: auto;
+  line-height: 50px;
+  display: block;
+  padding-right: 20px;
+}
+
+.box_table tr:nth-child(even) {
+  background: var(--colorBackgroundBeige);
+}
+
+.box_table tr:nth-child(odd) > td:nth-child(4) > table > tbody > tr {
+  background: white;
+}
+
+.table_tbody > tr:hover td:nth-child(4) > table > tbody > tr {
+  background: #ffd3a6d9;
+  color: rgb(0, 0, 0);
+}
+
+/* 참가자 관리 수정에 참가자 정보 부분 */
+.UserProfile_input {
+  width: 100%;
+  display: block;
+}
+
+/* 선수 정보 보기 */
+
+.infoDesc .row {
+  margin: 3rem 0;
+}
+
+.infoDesc .row > p {
+  font-weight: 300;
+  padding-left: 2rem;
+}
+
+.modify_check .enter .enter_item {
+  display: flex;
+}
+
+.modify_check .enter .enter_item > li {
+  padding: 20px 10px;
+  width: 100%;
+  text-align: center;
+  color: #222;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  border-right: 1px solid var(--colorBorder);
+  font-weight: 300;
+  word-break: break-all;
+}
+
+.modify_check .enter .enter_item > li:last-child {
+  border: 0;
+}
+
+.modify_check .enter .enter_list > li {
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  color: #222;
+  height: 60px;
+  border-right: 1px solid var(--colorBorder);
+}
+
+.modify_check .enter .enter_list > li:last-child {
+  border: 0;
+}
+
+.modify_check .attend .attend_item {
+  display: flex;
+}
+
+.modify_check .attend .attend_list > li {
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  color: #222;
+  height: 60px;
+}
+
+.modify_check .attend .attend_list > li {
+  border-right: 1px solid var(--colorBorder);
+}
+
+.modify_check .attend .attend_list > li:last-child {
+  border: 0;
+}
+
+.modify_check .attend .attend_item > li {
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 300;
+  color: #222;
+  background: #fff;
+  height: 60px;
+}
+
+.modify_check .attend .attend_item > li {
+  border-right: 1px solid var(--colorBorder);
+}
+
+.modify_check .attend .attend_item > li:last-child {
+  border: 0;
+}
+
+.modify_Btn {
+  display: flex !important;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+.input_modify_Btn {
+  display: flex !important;
+  justify-content: center;
+}
+
+.input_modify_Btn > button {
+  width: 25%;
+  height: 50px;
+}
+
+.input_Btn {
+  display: block;
+  text-align: right;
+  width: 100%;
+}
+
+.modify_Btn > button {
+  height: 50px;
+  width: 45%;
+  color: var(--colorWhite);
+  border: 0;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/*선수 테이블 정렬 부분 */
+
+.defaultBtn {
+  vertical-align: text-top;
+  height: 30px;
+  margin: 0;
+  padding: 0 5px;
+  font-weight: 300;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.BIG_btn {
+  width: auto;
+  height: 40px;
+  padding: 0 1.5rem;
+}
+
+.BIG_btn2 {
+  padding: 0 2rem;
+  width: auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.changePwBtn {
+  width: 100%;
+  font-size: 20px;
+  line-height: 1em;
+  padding: 16px;
+  height: auto;
+  background: var(--colorLogo);
+}
+
+.nextBTN {
+  width: 50%;
+  line-height: 1em;
+  padding: 16px;
+  height: auto;
+}
+
+.resetBTN {
+  width: 50%;
+  line-height: 1em;
+  padding: 16px;
+  height: auto;
+}
+
+/* 경기 결과 목록 */
+
+/* 경기 결과 끝 */
+
+.country_input {
+  height: auto;
+}
+
+/* 국가별 순위 보기 꿑 */
+
+.SearchBtn {
+  border: 0;
+  border-radius: 9px;
+  font-size: 17px;
+  border: 1px solid var(--colorBorder);
+  cursor: pointer;
+  padding: 0 2rem;
+  height: 40px;
+  background: var(--colorWhite);
+  font-weight: 300;
+}
+
+.SearchBtn:hover {
+  background: var(--colorLogo);
+  color: white;
+}
+
+.defaultBtn.trackBtn {
+  background: rgb(180, 180, 0);
+}
+
+.defaultBtn.synthesis {
+  background: rgb(64, 64, 39);
+}
+
+.defaultBtn.fieldBtn {
+  background: rgb(0, 180, 39);
+}
+
+.defaultBtn.detailInfoBtn {
+  background: #024274;
+}
+
+.defaultBtn.makeGroupBtn {
+  background: #ffa600;
+  word-break: break-all;
+}
+
+.playerRegistrationBtnArea {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.playerRegistrationBtnArea > div > button {
+  font-weight: 300;
+}
+
+.defaultPagination {
+  display: flex;
+  justify-content: center;
+}
+
+.defaultPageItem {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.defaultPageItem .defaultPageLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.defaultPageItem.active {
+  background: var(--colorBlue);
+  border-radius: 5px;
+  color: #fff;
+}
+
+.defaultSelectArea {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  height: 4rem;
+}
+
+.defaultSelectArea select {
+  padding: 0 2.8rem 0 1rem;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--colorBorder);
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  background: url(../images/bg_selectArrow_down.png) right center no-repeat;
+}
+
+.defaultSelectArea select::-ms-expand {
+  display: none;
+}
+
+.defaultSelectArea .defaultSearchInput {
+  height: 100%;
+  border: 1px solid var(--colorBorder);
+  border-right: 0;
+  outline: none;
+  padding-left: 10px;
+  width: 100%;
+  border-top-left-radius: 10px;
+  font-weight: 100;
+  border-bottom-left-radius: 10px;
+  font-size: 12px;
+}
+
+.defaultSelectArea .search {
+  height: 40px;
+  display: flex;
+  width: 200px;
+}
+
+.defaultSelectArea .defaultSearchBth {
+  height: 100%;
+  border: 1px solid var(--colorBorder);
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: var(--colorBackground);
+}
+
+/* 조편성 */
+.schedule_container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.schedule {
+  position: relative;
+}
+
+.schedule_flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.schedule_filed {
+  position: relative;
+  height: auto;
+  padding: 3rem;
+  background: white;
+  display: flex;
+  margin-bottom: 5rem;
+  border-radius: 25px;
+  box-shadow: 0 0 10px 0 rgb(93 144 255 / 20%);
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.schedule_filed > .profile_logo {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+}
+
+.schedule_filed > .profile_logo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.filed_list_item {
+  width: 49%;
+  height: 100%;
+}
+
+.changefiled {
+  width: 100%;
+}
+
+.schedule_filed_tit {
+  display: flex;
+  margin-bottom: 5rem;
+  justify-content: space-between;
+}
+
+.schedule_filed_tit > span {
+  font-size: 12px;
+  padding: 8px 10px;
+  cursor: text;
+}
+
+.schedule_filed .schedule_filed_tit > p {
+  padding-left: 2rem;
+  color: var(--colorBlack);
+  margin-left: 0px;
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 3rem;
+}
+
+.BTNform {
+  display: flex;
+  gap: 20px;
+  padding: 2rem 0;
+}
+
+.BTNform2 {
+  gap: 5px;
+}
+
+input::-webkit-inner-spin-button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.schedule_filed .filed_item > ul > li > select {
+  width: 100%;
+  outline: 0;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 12px;
+}
+
+.filed2_item > ul {
+  gap: 20px;
+}
+
+.schedule_change_members > .input_text {
+  width: 100%;
+  height: 60px;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+
+/* 대상 바꾸기 페이지 */
+.schedule_change_members > form > select {
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  padding: 0 1rem;
+}
+
+.view_BTN {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.filed_BTN {
+  text-align: right;
+  display: flex;
+  gap: 5px;
+}
+
+.view_Big_btn {
+  width: auto;
+  height: 20px;
+  width: 90px;
+  padding: 0px 0.5rem;
+}
+
+.view_page_btn {
+  height: 45px;
+  width: 90px;
+}
+
+.filed_BTN > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filed_BTN2 {
+  text-align: right;
+  padding: 1rem 0;
+}
+
+.filed_BTN .filedBTN {
+  font-size: 14px;
+}
+
+.filed_Item > a {
+  cursor: pointer;
+}
+
+/* 조 편성하기 */
+.round_tit {
+  margin: 5rem 0px;
+}
+
+/* 창 던지기 페이지 */
+.thorw_main {
+  height: auto;
+}
+
+.throwDesc {
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.throwDesc > .row > span {
+  width: 20%;
+  font-size: 13px;
+  margin-right: 1rem;
+}
+
+.UserDesc .throw_row > input {
+  width: 80%;
+  font-size: 14px;
+}
+
+.UserDesc .throw_row {
+  width: 49%;
+}
+
+.UserDsc .referee_tit > input {
+  border: 0;
+}
+
+.high_jump {
+  font-size: 14px;
+}
+
+.UserDesc .referee_row > input {
+  width: 90%;
+}
+
+.UserDesc .referee_row > span {
+  width: 10%;
+}
+
+.Thorw_result > div > .throw_tit {
+  padding-left: 2rem;
+  color: var(--colorBlack);
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 4rem 0;
+  line-height: 3rem;
+}
+
+/* 멀리뛰기 결과지 */
+
+.jump_tit > span {
+  padding: 2.3rem 0;
+  height: 100%;
+  display: block;
+}
+
+.jump_number2 > input {
+  height: 100%;
+}
+
+.jump_text > input {
+  height: 100%;
+}
+
+/* 높이뛰기 */
+
+.Ranklist_Background > ul > li > p > input {
+  background: transparent;
+}
+
+.Ranklist_Background > ul > li > select {
+  background: transparent;
+}
+
+.Ranklist_Background > ul > li > p > input {
+  background: transparent;
+}
+
+/* 달리기 페이지*/
+.Thorw_result {
+  font-size: 14px;
+}
+
+/* ID card */
+.ID_back {
+  width: 70rem;
+}
+
+.ID_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  height: 800px;
+  padding: 0 55px;
+}
+
+.ID_card > img {
+  height: 375px;
+  width: 250px;
+  position: relative;
+  border-radius: 10px;
+}
+
+/* 로그인 페이지 */
+.loginBox {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.login_Logo > img {
+  display: block;
+  margin: 0 auto;
+  width: 20rem;
+  padding-top: 150px;
+  padding-bottom: 20px;
+}
+
+.login_pannel {
+  display: block;
+  margin: 0 auto;
+  width: 580px;
+  border-radius: 3%;
+  background: var(--colorWhite);
+  box-shadow: 0 0 10px 0 rgb(93 144 255 / 20%);
+}
+
+.login_pannel_inner {
+  padding: 20px;
+}
+
+.id_pw_wrap {
+  display: block;
+}
+
+.login_row {
+  width: 100%;
+  display: inline-block;
+  text-align: left;
+  border: 1px solid var(--colorBorder);
+  border-radius: 5px;
+  padding: 12px;
+  margin: 10px 0 20px 0;
+}
+
+.login_row > input {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  background: transparent;
+  outline: 0;
+}
+
+.login_row > input::placeholder {
+  color: var(--colorLogo);
+}
+
+.login_Logo {
+  padding-bottom: 4rem;
+}
+
+.btn_login {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  border-radius: 5px;
+  background-color: var(--colorLogoBLue);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--colorWhite);
+  border: 0;
+  margin-top: 5rem;
+  cursor: pointer;
+}
+
+/* 오른쪽 탑 버튼 */
+.top {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 100;
+  width: 54px;
+  height: 54px;
+}
+
+#js-scroll {
+  background: var(--colorLogoBLue);
+  border-radius: 50%;
+  text-align: center;
+  display: none;
+  width: 54px;
+  height: 54px;
+  cursor: pointer;
+}
+
+.topBtn {
+  font-size: 2em;
+  padding-top: 10px;
+  line-height: 1;
+  height: 100%;
+  color: white;
+  width: 100%;
+}
+
+/* 계정 관리 부분 */
+.MainRank .title {
+  font-size: 24px;
+  line-height: 1em;
+  color: #495057;
+  padding: 0 30px 14px;
+  border-bottom: 1px solid var(--colorBorder);
+}
+
+.MainRank .defaultContents {
+  padding: 30px;
+}
+
+.MainRank .myPageBox {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.MainRank .myPageBox > p:nth-child(1) {
+  color: var(--colorGray);
+  font-weight: 500;
+}
+
+.MainRank .myPageBox p {
+  width: 20%;
+}
+
+.MainRank .myPageBox p:last-child {
+}
+
+.changePwLink {
+  transition: all 0.2s;
+}
+
+.changePwLink:hover {
+  color: var(--colorBlue);
+}
+
+.labelBox > h1 {
+  color: var(--colorBlack);
+  margin-left: 0;
+  display: block;
+  font-size: 5rem;
+  line-height: 5rem;
+  padding: 3rem 0;
+  font-weight: 700;
+}
+
+.MainRank .myPageBox.labelBox {
+  display: block;
+  padding: 0;
+}
+
+.mypage_account {
+  padding-top: 5rem;
+}
+
+.labelBox .labelItem {
+  display: flex;
+  padding: 1rem 0;
+}
+
+.labelBox .labelItem > label:nth-child(1) {
+  color: var(--colorGray);
+  font-weight: 500;
+}
+
+.labelBox .labelItem label {
+  width: 20%;
+  font-weight: 100;
+}
+
+.changePwFormArea {
+  padding: 0 30px 0;
+}
+
+.changePwNotice {
+  padding: 10px 30px 20px;
+}
+
+.changePwNotice h5 {
+  font-size: 16px;
+  line-height: 1em;
+  margin-bottom: 10px;
+  color: #616161;
+}
+
+.changePwNotice p {
+  padding-bottom: 8px;
+  color: #444444;
+  font-size: 14px;
+  line-height: 1em;
+  font-weight: 600;
+}
+
+.changePwInputArea {
+  border: 0;
+  border-bottom: 1px solid var(--colorBorder);
+  padding: 12px;
+  margin: 10px 0 20px 0;
+}
+
+.changePwInputArea input {
+  width: 100%;
+  outline: none;
+  border: 0;
+  font-size: 16px;
+  line-height: 1em;
+}
+
+.signupPageBox {
+  margin-bottom: 10rem;
+}
+
+.signupPageBox > p {
+  font-size: 24px;
+  line-height: 1em;
+  color: #495057;
+}
+
+.signupPageBox label {
+  font-weight: 600;
+  color: #495057;
+}
+
+/* 0302 
+코드들이 꼬여서 이곳에 정리
+수정 */
+.Participant_padding {
+  padding: 2rem 0;
+}
+
+.Participant_list {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 13px;
+  height: 100%;
+}
+
+.Participant_img {
+  height: auto;
+  gap: 20px;
+  padding: 2rem 0;
+}
+
+.Participant_img > div:nth-child(1) {
+  width: 30%;
+  height: 100%;
+}
+
+.Participant_img > div:nth-child(1) > img {
+  height: 100%;
+  width: 100%;
+}
+
+.Participant_list .row {
+  margin: 0;
+  width: 50%;
+  padding: 0;
+}
+
+.Participant_list .row > span {
+  width: 30%;
+  padding: 2rem 1rem;
+  background: var(--colorBackground);
+  height: 100%;
+}
+
+.Participant_list .row > p {
+  width: 70%;
+}
+
+.Participant_list .row > input {
+  width: 70%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-size: 14px;
+  padding-left: 8px;
+  padding: 2rem 8px 2rem;
+  margin: 0;
+}
+
+.UserDesc .row > input:focus::placeholder {
+  color: black;
+}
+
+.UserDesc .row > div > input:focus::placeholder {
+  color: black;
+}
+
+.UserDesc .row > input:focus {
+  background: var(--colorLogo);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: white;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.UserDesc .row > div > input:focus {
+  background: var(--colorLogo);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: white;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.Participant_list .row > select {
+  width: 70%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-size: 14px;
+  padding-left: 8px;
+  height: 100%;
+  padding: 2rem 8px 2rem;
+}
+
+.UserDesc .row > select > option {
+  color: black;
+  background-color: white;
+}
+
+.UserDesc .row > select > optgroup {
+  color: white;
+  background-color: var(--colorLogo);
+}
+
+.UserDesc .row > select > optgroup > option {
+  color: black;
+  background-color: white;
+}
+
+.Participant_Btn {
+  padding-top: 2rem;
+}
+
+.Participant_Btn > button {
+  width: 100%;
+}
+
+/* 권한 및 비밀번호 변경 */
+.pms_tit {
+  padding: 5rem 0;
+}
+
+.pms_tit > h1 {
+  padding-left: 2rem;
+  color: var(--colorBlack);
+  font-weight: bold;
+  margin-left: 0px;
+  display: block;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+/* 상세보기 페이지 */
+.result_tit {
+  height: 80px;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.result_list > p {
+  font-size: 12px;
+  padding: 8px 10px;
+  cursor: text;
+}
+
+.result_list2 {
+  color: var(--colorBlack);
+  margin-left: 0px;
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 3rem;
+}
+
+.result_list2 > p {
+  padding-left: 2rem;
+}
+
+/* 조 편성하기 */
+.group_input {
+  width: 100%;
+  padding: 12px;
+}
+
+/* 상세보기 맨 밑 조 구성원 변경 */
+.team_table {
+  /*border: 1px solid #ccc;*/
+  border-collapse: collapse;
+  margin-top: 10px;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.team_table caption,
+.modal_table caption {
+  display: none;
+}
+
+.team_table tr {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 0.35em;
+}
+
+.team_table th,
+.team_table td {
+  padding: 13px 10px 13px 10px;
+  text-align: center;
+}
+
+.team_table tbody tr.border_bg,
+.modal_table tr.border_bg {
+  background: #fff;
+}
+
+.team_table th {
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  background: #f3f6f9;
+  color: #2f2f2f;
+  white-space: nowrap;
+}
+
+.team_table td {
+  font-size: 1em;
+  position: relative;
+  /* white-space: nowrap; */
+}
+
+.team_table td[data-th]::before {
+  display: none;
+  text-transform: uppercase;
+  content: attr(data-th);
+}
+
+.team_table.center {
+  width: 70%;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.table > tbody > tr:nth-of-type(even) {
+  background-color: #e0dfdf;
+}
+
+.Participant_list .row_date > input {
+  width: 23%;
+}
+
+/* 상세보기 페이지 */
+
+/* 높이뛰기 */
+
+.decathlon_flex {
+  flex-direction: column;
+}
+
+.decathlon_container {
+  width: 100% !important;
+}
+
+/* 페이지 보기 */
+.pageArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.page_size {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  width: 140px;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.AllPage {
+  font-size: 26px;
+  color: var(--colorDarkBlack);
+}
+
+.changePageSize {
+  padding: 0 2.5rem 0 1rem;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--colorBorder);
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  background: url(../images/bg_selectArrow_down.png) right center no-repeat;
+}
+
+/* ad카드 */
+
+.AD_card_Box {
+  page-break-after: always;
+}
+
+.AD_box {
+  user-select: none;
+  width: 100mm;
+  height: 150mm;
+  margin: 0 auto;
+  position: relative;
+  background: white;
+  padding: 5mm;
+}
+
+.AD_front {
+  width: 105mm;
+  height: 164.839mm;
+  box-sizing: border-box;
+}
+
+.AD_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.bar {
+  width: 50px;
+  background-color: white;
+}
+
+.AD_card {
+  z-index: 0;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 100%;
+  height: 100%;
+}
+
+.AD_card > img {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+}
+
+.AD_front_User {
+  position: absolute;
+  top: 19%;
+  width: 142px;
+  left: 12%;
+  height: 155px;
+}
+
+.AD_front_name {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.AD_front_name > p {
+  line-height: 34px;
+  word-break: break-word;
+  width: 31rem;
+  letter-spacing: -0.5px;
+}
+
+.AD_front_desc {
+  font-size: 16px;
+  padding-top: 5px;
+  position: absolute;
+  bottom: 31%;
+  left: 12%;
+  font-weight: 500;
+}
+
+.AD_front_desc > p {
+  line-height: 15px;
+  word-spacing: 1px;
+  letter-spacing: 1px;
+}
+
+.AD_front_User > img {
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  height: 100%;
+}
+
+.User_permit {
+  font-size: 10px;
+}
+
+.village {
+  position: absolute;
+  bottom: 5%;
+  font-weight: bold;
+  left: 9%;
+  font-size: 65px;
+  line-height: 69px;
+  color: white;
+}
+
+.eat {
+  position: absolute;
+  bottom: 5.5%;
+  font-weight: bold;
+  left: 32%;
+  width: 56px;
+  color: white;
+  height: 56px;
+}
+
+.transport {
+  position: absolute;
+  bottom: 12.5%;
+  font-weight: bold;
+  left: 47%;
+  font-size: 34px;
+  line-height: 34px;
+  color: white;
+}
+
+.Seats {
+  position: absolute;
+  bottom: 15.5%;
+  font-weight: bold;
+  right: 21%;
+  font-size: 34px;
+  line-height: 33px;
+  color: white;
+  padding: 0px 5px;
+}
+
+.Access_venue {
+  position: absolute;
+  right: 9%;
+  bottom: 5%;
+  display: flex;
+  gap: 6px;
+  font-size: 65px;
+  line-height: 69px;
+}
+
+.Access_venue > p {
+  color: white;
+}
+
+.Nat {
+  position: absolute;
+  right: 30%;
+  bottom: 56%;
+  display: flex;
+  gap: 14px;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.Nat > p {
+  color: #333333;
+}
+
+.position {
+  position: absolute;
+  right: 12%;
+  bottom: 56%;
+  display: flex;
+  gap: 14px;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.position > p {
+  color: #333333;
+}
+
+.User_permit > p {
+  width: 17px;
+  text-align: center;
+  height: 17px;
+}
+
+.User_permit > img {
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+}
+
+.AD_form {
+  position: absolute;
+  bottom: 39%;
+  left: 12%;
+}
+
+.AD_country {
+  font-size: 30px;
+  position: absolute;
+  bottom: 49.5%;
+  left: 4%;
+  line-height: 30px;
+  font-weight: 700;
+  width: 190px;
+  text-indent: 15px;
+  letter-spacing: 7px;
+  text-align: center;
+}
+
+.AD_front_text {
+  font-size: 11px;
+  position: absolute;
+  bottom: 25%;
+  left: 12%;
+  font-weight: 300;
+}
+
+.AD_front_text p {
+  line-height: 15px;
+  word-spacing: 1px;
+  letter-spacing: 1px;
+}
+
+/* 뒷면 */
+.AD_back {
+  width: 105mm;
+  height: 164.839mm;
+  box-sizing: border-box;
+}
+
+.AD_back_User {
+  position: absolute;
+  top: 6.2%;
+  width: 77px;
+  height: 68px;
+  left: 10.5%;
+}
+
+.AD_back_User > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.AD_back_name {
+  position: absolute;
+  top: 7%;
+  left: 32%;
+  width: 116px;
+}
+
+.AD_back_name > p {
+  font-size: 15px;
+  line-height: 14px;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+.AD_back_nationality {
+  position: absolute;
+  top: 10.7%;
+  left: 32.5%;
+  line-height: 19px;
+  font-weight: 100;
+  zoom: 0.7;
+}
+
+.AD_back_nationality > span {
+  display: flex;
+  align-items: center;
+}
+
+.AD_back_nationality > span > p:first-child {
+  font-weight: 500;
+  width: 56px;
+}
+
+.AD_back_nationality > span > p:nth-child(2) {
+  padding: 0 0.5rem 0 0;
+}
+
+.AD_back_nationality > span > p {
+  font-size: 10px;
+}
+
+/* 조편성하기 부분 */
+.filed2_Table {
+  width: 100%;
+  border-spacing: 0 10px;
+}
+
+.filed2_list > tr > th {
+  padding: 2rem 0;
+  border-top: 1px solid var(--colorBorder);
+  font-size: 16px;
+}
+
+.filed2_list > tr > th:nth-child(1) {
+  border-left: 1px solid var(--colorBorder);
+  border-right: 1px solid var(--colorBorder);
+}
+
+.filed2_list > tr > th:nth-child(2) {
+  border-left: 1px solid var(--colorBorder);
+  border-right: 1px solid var(--colorBorder);
+}
+
+.filed2_Table > tbody > tr > td:nth-child(1) > input {
+  border: 0px;
+  text-align: center;
+  background: transparent;
+  width: 100%;
+}
+
+.filed2_list {
+  position: relative;
+}
+
+.filed2_bottom {
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    #eb0e1f 0%,
+    #f39801 33%,
+    #18a53d 66%,
+    #005c9f 100%
+  );
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+}
+
+.filed2 {
+  display: block !important;
+}
+
+.grouping_table {
+  width: calc(100% / 3.1);
+}
+
+.filed2_form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.grouping_body > tr > td {
+  text-align: center;
+  vertical-align: middle;
+  border-left: 1px solid var(--colorBorder);
+}
+
+.grouping_body > tr > td > select {
+  border: 0;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.grouping_body > tr > td > select:focus {
+  background-color: var(--colorPink2);
+  outline: 0;
+}
+
+.grouping_body > tr > td > select > option {
+  background-color: var(--colorWhite);
+  outline: 0;
+}
+
+.grouping_body > tr > td:first-child {
+  border-right: 1px solid var(--colorBorder);
+}
+
+.grouping_body > tr > td > input {
+  border: 0;
+  text-align: center;
+  padding: 2rem 1rem;
+  width: 100%;
+  background-color: transparent;
+}
+
+.grouping_body > tr > td > input[name="name[]"] {
+  width: 100%;
+  cursor: pointer;
+}
+
+.grouping_body > tr {
+  border-left: 1px solid var(--colorBorder);
+  border-bottom: 1px solid var(--colorBorder);
+  border-right: 1px solid var(--colorBorder);
+}
+
+/* 국가 및 선수 랭킹 index 페이지  */
+
+.box_table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+}
+
+.table_head {
+  background: #545454;
+  line-height: 20px;
+  font-weight: 500;
+  width: 100%;
+  color: white;
+}
+
+.table_head > tr > th {
+  padding: 1.5rem 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*  참가자 관리 작성 부분 선수진*/
+.entry_table {
+  font-size: 14px;
+}
+
+.entry_table > tr > td > img {
+  width: 40px;
+}
+
+/* 결과지 10종 경기 */
+.decathlonList {
+  width: 100%;
+}
+
+.result_table {
+  background: var(--colorBackground);
+  position: relative !important;
+}
+
+.result_table > tr > th {
+  padding: 2rem 0;
+  border: 1px solid var(--colorBorder);
+  text-align: center;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+.result_table > tr > th > table {
+  width: 100%;
+  height: 100%;
+}
+
+.result_table > tr > th > table > tr > th {
+}
+
+.result_tableBTN {
+  height: 50%;
+  font-size: 12px;
+  color: white;
+  display: block;
+  padding: 6px;
+  border: 0;
+  border-radius: 5px;
+  margin: 6px auto;
+}
+
+.result_table > tr > th > input {
+  text-align: center;
+  border: 0;
+  background: transparent;
+  width: 100%;
+  font-size: 12px;
+  outline: 0;
+}
+
+.De_tbody > tr > td {
+  padding: 0.5rem 0;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid var(--colorBorder);
+}
+
+.field3_hover > tr > td {
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid var(--colorBorder);
+}
+
+.table_tbody > tr > td {
+  padding: 1rem 0;
+  text-align: center;
+  vertical-align: middle;
+  word-break: break-all;
+  position: relative;
+  border: 1px solid var(--colorBorder);
+}
+
+.table_tbody > tr:hover {
+  background: #ffd3a6d9;
+  color: rgb(0, 0, 0);
+}
+
+.table_tbody > tr:hover > td {
+  border-color: transparent;
+}
+
+.field3_hover:hover {
+  background: #ffd3a6d9;
+  color: rgb(0, 0, 0);
+}
+
+.field3_hover:hover > tr > td {
+  border-color: transparent;
+  background: #ffd3a6d9;
+}
+
+.field3_hover > tr:hover td > input {
+  color: rgb(0, 0, 0);
+}
+
+.field3_hover > tr > td > input {
+  text-align: center;
+  border: 0;
+  background: transparent;
+  width: 100%;
+  font-size: 12px;
+  outline: 0;
+}
+
+.De_tbody > tr:hover {
+  background: #ffd3a6d9;
+  color: rgb(0, 0, 0);
+}
+
+.De_tbody > tr:hover td > input {
+  color: rgb(0, 0, 0);
+}
+
+.De_tbody > tr > td > input {
+  text-align: center;
+  border: 0;
+  background: transparent;
+  width: 100%;
+  font-size: 12px;
+  outline: 0;
+}
+
+.input_table > tr > td {
+  padding: 0.5rem 0;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid var(--colorBorder);
+}
+
+.input_table > tr > td > input {
+  text-align: center;
+  padding: 0.5rem 0;
+  border: 0;
+  background: transparent;
+  width: 100%;
+  font-size: 12px;
+}
+
+/* 계정 관리 table */
+.table_UserID {
+  width: 100%;
+}
+
+.table_UserID > tbody > tr > td {
+  text-align: left;
+}
+
+.table_UserID > tbody > tr > td > div {
+  display: flex;
+}
+
+/* 높이뛰기 상세보기*/
+.high_jump_table > tr > td {
+  height: 60px;
+  border: 1px solid var(--colorBorder);
+  text-align: center;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+.result_BTN {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+/* 높이뛰기 끝 */
+
+.time_row > span {
+  margin: 0 0.5rem !important;
+}
+
+.time_row > span:nth-child(1) {
+  margin: 0 1rem 0 0 !important;
+}
+
+.time_row > div {
+  width: 80%;
+  align-items: center;
+}
+
+.time_row > div > input {
+  width: 80px;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+
+/* ad카드 여부 */
+.gnb_active {
+  border-radius: 0.475rem;
+  background: var(--colorBackground);
+}
+
+.gnb_active > div:nth-child(1) > span > i:nth-child(1) {
+  padding-right: 5px;
+}
+
+.gnb_active > div > span > i:nth-child(1) {
+  display: none;
+}
+
+.gnb_active > div:nth-child(1) > span > i:nth-child(2) {
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.gnb_active > div > span > i:nth-child(3) {
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+
+.gnb_active > div:nth-child(1) > span {
+  color: var(--colorLogo);
+}
+
+.AD_on {
+  background: var(--colorLogoOrange);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: white;
+}
+
+.AD_off {
+  background: var(--colorpurple);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: white;
+}
+
+.De_thead > tr > th > input {
+  text-align: center;
+  border: 0;
+  background: transparent;
+  width: 100%;
+  font-size: 12px;
+  outline: 0;
+}
+
+/* 선수 증명서 발급 */
+* {
+  box-sizing: border-box;
+}
+
+.page2 {
+  width: 21cm;
+  min-height: 29.7cm;
+  padding: 1cm;
+  /* border: 2px solid #e099ae; */
+  text-align: center;
+  font-family: "OPTITimes", sans-serif;
+  position: relative;
+}
+
+.pdf_header {
+  letter-spacing: 2px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.pdf_header > p:nth-child(2) {
+  padding: 1rem 0;
+}
+
+.pdf_img {
+  width: 200px;
+  padding: 2.5rem 0;
+  margin: 0 auto;
+}
+
+.pdf_img > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.paf_tit {
+  border-top: 3px solid #4991ce;
+  border-bottom: 3px solid #4991ce;
+  width: 400px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  line-height: 30px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #4991cd;
+  letter-spacing: 1px;
+}
+
+.pdf_name {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  padding-top: 7rem;
+}
+
+.pdf_name > p {
+  padding: 1.5rem 0;
+  width: 500px;
+  margin: 0 auto;
+}
+
+img.U20Img {
+  bottom: 67px;
+  left: 13%;
+  position: absolute;
+}
+
+img.AAAImg {
+  bottom: 78px;
+  left: 13%;
+  position: absolute;
+}
+
+img.HAKImg {
+  bottom: 70px;
+  left: 9%;
+  position: absolute;
+}
+
+.pdf_intro {
+  width: 634px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: bold;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pdf_background {
+  width: 20.5cm;
+  min-height: 29cm;
+  border: 2px solid #e099ae;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  z-index: -1;
+}
+
+.pdf_background2 {
+  width: 20cm;
+  min-height: 28.5cm;
+  border: 2px solid #e099ae;
+  position: absolute;
+  z-index: -1;
+  top: 2%;
+  left: 2%;
+}
+
+.pdf_sign {
+  width: 234px;
+  position: relative;
+}
+
+.pdf_sign > div:nth-child(1) > span {
+  display: block;
+  width: auto;
+  height: 1px;
+  background: black;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.pdf_sign > div:nth-child(1) > img {
+  width: 170px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.pdf_sign > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 6px;
+  font-size: 10px;
+}
+
+.pdf_sign > div:nth-child(2) > p:nth-child(1) {
+  font-weight: bold;
+}
+
+.sign_containner {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding-top: 5rem;
+  position: absolute;
+  width: calc(100% - 2cm);
+  bottom: 50px;
+}
+
+/* 메인 데이터 테이블 */
+.dataTables_paginate {
+  width: 100%;
+  padding-top: 3rem;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.dataTables_paginate > span {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.paginate_button {
+  border: 1px solid var(--colorBorder);
+  border-radius: 50%;
+  color: #111;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.current {
+  text-align: center;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background-color: var(--colorLogo);
+  color: #fff;
+}
+
+/* 조편성 목록에 인원 추가 select2 부분 */
+.changeMemberList {
+  margin-top: 3rem;
+}
+
+/* SB PB */
+.pb_sb {
+  display: flex;
+  gap: 20px;
+}
+
+.pb_sb_tit {
+  width: 50%;
+}
+
+.pb_sb_List {
+  display: flex;
+  gap: 20px;
+  padding: 1rem 0;
+}
+
+.pb_sb_List > select,
+.pb_sb_List > input {
+  border: 1px solid var(--colorBorder);
+  height: 100%;
+  width: 45%;
+  transition: all 0.5s ease 0s;
+  padding: 1rem;
+  height: 40px;
+  background: var(--colorWhite);
+  border-radius: 0;
+}
+
+.pb_sb_List > input:focus {
+  background: var(--colorLogo);
+  transition: all 0.5s ease;
+  color: white;
+  text-decoration: underline;
+  text-underline-position: under;
+  outline: 0;
+}
+
+.pb_sb_List > select:focus {
+  background: var(--colorLogo);
+  transition: all 0.5s ease;
+  color: white;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.pb_sb_List > select > option {
+  color: black;
+  background: white;
+}
+
+/* 조편성 목록 등록하기 수동  */
+.groupSelect_tit {
+  margin: 4rem 0;
+  border: 1px solid var(--colorBorder);
+}
+
+.groupSelect_tit > ul {
+  display: flex;
+  text-align: center;
+}
+
+.groupSelect_tit > ul > li {
+  width: calc(100% / 3);
+}
+
+.groupSelect_tit > ul:nth-child(1) {
+  background: var(--colorBackground);
+}
+
+.groupSelect_tit > ul > li > p {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--colorDarkBlack);
+}
+
+.groupSelect_tit > ul:nth-child(2) > li > input {
+  width: 100%;
+  outline: 0;
+  border: 0;
+  padding: 1rem 0;
+  text-align: center;
+  border-right: 1px solid var(--colorBorder);
+  cursor: pointer;
+}
+
+.groupSelect_tit > ul:nth-child(2) > li > input:focus {
+  background: var(--colorLogo);
+  color: white;
+}
+
+.grouptSelectList {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grouptSelectList > div {
+  width: 50%;
+  padding: 0.5rem 0;
+}
+
+.grouptSelectList > div > label {
+  cursor: pointer;
+  display: flex;
+}
+
+.grouptSelectList > div > label > div:nth-child(1) {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* 10종 경기 수정 */
+.changeTableList {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 4rem;
+}
+
+.changeTableList .changeTableItem {
+  width: calc(100% / 11);
+}
+
+.changeTableList .changeTableItem2 {
+  width: calc(100% / 7);
+}
+
+.changeTableBtn {
+  width: 100%;
+  line-height: 1em;
+  padding: 16px;
+  height: auto;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 300;
+  background: var(--colorDarkBlack);
+  color: white;
+}
+
+.changeTableBtn:hover {
+  background: var(--colorLogo);
+  color: white;
+}
+
+.changeBtn_color {
+  background: var(--colorLogo);
+  color: white;
+}
+
+.swapBtn_click {
+  background: red !important;
+}
+
+.swapBtn {
+  height: 50px;
+  width: 100%;
+  vertical-align: text-top;
+  margin: 0;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.swapBtn > i {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 카메라 기능 추가 */
+.pictureBTN {
+  cursor: pointer;
+  width: 100%;
+  font-size: 50px !important;
+  line-height: 1em;
+  padding: 1rem 0 !important;
+  height: auto !important;
+  color: var(--colorDarkBlack) !important;
+  border: 1px solid var(--colorBorder) !important;
+  background: var(--colorBackground);
+}
+
+.pictureBTN:hover {
+  color: var(--colorWhite) !important;
+  background: var(--colorLogo) !important;
+  border: 0 !important;
+}
+
+.picture_wrap {
+  position: relative;
+  height: auto;
+  padding: 3rem;
+  background: white;
+  display: flex;
+  border-radius: 25px;
+  box-shadow: 0 0 10px 0 rgb(93 144 255 / 20%);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 768px;
+  margin: 0 auto 5rem;
+}
+
+#copy-value > input {
+  border: 0;
+  text-align: center;
+  padding: 2rem 1rem;
+  width: 100%;
+  background-color: transparent;
+}
+#swapBtn {
+  vertical-align: middle;
+  height: 40px;
+  width: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin: 0 auto;
+}
+@media (max-width: 1440px) {
+  .filed2_bottom {
+    display: none;
+  }
+
+  .gnb > .gnbList {
+    font-size: 12px;
+    letter-spacing: 0px;
+  }
+
+  .headerBodyArea .UserPage > a:nth-child(1) > p,
+  .headerBodyArea .UserPage > a:nth-child(2) > p {
+    font-size: 14px;
+  }
+
+  .BIG_btn2 {
+    width: auto;
+    height: 40px;
+    font-size: 16px;
+    padding: 0 1rem;
+  }
+
+  .matchBtn {
+    width: auto;
+  }
+
+  .defaultList .Ranklist_result > ul > li > p > button {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .account_label > label > input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+  }
+
+  .schedule_filed .filed_item > ul > li > input {
+    font-size: 10px;
+  }
+
+  .schedule_filed .filed_item > ul > li > select {
+    font-size: 10px;
+  }
+
+  .schedule_filed .filed_item > ul > li > p {
+    font-size: 10px;
+  }
+
+  /* 높이뛰기 */
+  .filed_high_flex {
+    flex-direction: column;
+  }
+
+  .filed_container {
+    width: 100%;
+  }
+
+  .filed_high_list > ul > li > p,
+  .filed_high_item > ul > li > p {
+    font-size: 14px;
+  }
+
+  /* 릴레이 */
+  .filed_relay_list > ul > li > p,
+  .filed_relay_item > ul > li > p {
+    font-size: 10px;
+  }
+
+  .filed_jump_list > ul > li > p,
+  .filed_jump > li > p {
+    font-size: 14px;
+  }
+
+  /* 7종 경기 */
+  .heptathlon_list > ul > li {
+    font-size: 14px;
+  }
+
+  /* 10종 경기 */
+  .decathlon_list > ul > li {
+    font-size: 12px;
+  }
+
+  .changeTableList {
+    flex-wrap: wrap;
+  }
+
+  .changeTableList .changeTableItem {
+    width: calc(100% / 7.5);
+  }
+
+  .changeTableList .changeTableItem2 {
+    width: calc(100% / 4.2);
+  }
+
+  .changeTableBtn {
+    font-size: 10px;
+  }
+
+  .grouping_table {
+    width: 49%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .entry_table {
+    font-size: 12px;
+  }
+
+  .playerRegistrationBtnArea > div > button {
+    font-weight: 500;
+  }
+
+  .defaultBtn {
+    font-weight: 500;
+  }
+
+  .box_table {
+    font-size: 12px;
+  }
+
+  .img_wrap > button {
+    font-size: 10px;
+  }
+
+  .defaultSelectArea select {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .schedule_month,
+  .schedule_year,
+  .schedule_day,
+  .schedule_hour,
+  .schedule_minute {
+    width: 55px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .item_popup {
+    width: 100px;
+  }
+
+  .MainRank {
+    padding: 2rem;
+  }
+
+  .headerBodyLayout .logo a {
+    height: 2.5rem;
+  }
+
+  /* header */
+  .headerBodyLayout .logo {
+    height: 4rem;
+    padding-top: 1rem;
+  }
+
+  .gnb {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .gnbList > li {
+    width: 20%;
+  }
+
+  .headerBodyArea .UserPage {
+    height: 4rem;
+    line-height: 4rem;
+  }
+
+  .gnbDetailMenuList {
+    top: 65px;
+  }
+
+  .gnbList > li > div:nth-child(1) > span {
+    line-height: 4rem;
+    height: 4rem;
+  }
+
+  .headerBodyArea .UserPage > a:nth-child(1) > p,
+  .headerBodyArea .UserPage > a:nth-child(2) > p {
+    font-size: 10px;
+  }
+
+  .headerWrapper .headerBodyLayout {
+    height: 4rem;
+  }
+
+  .gnbDetailMenuList > ul > li > a {
+    padding: 1rem;
+    line-height: 40px;
+  }
+
+  .gnb > .gnbList {
+    font-size: 10px;
+  }
+
+  .changePageSize {
+    font-size: 10px;
+  }
+
+  .resultList > select {
+    font-size: 10px;
+  }
+
+  .MainRank .MainRank_tit > h1 {
+    padding: 0rem 0 2rem;
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .info_container {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .info_table {
+    width: 100%;
+  }
+
+  /* athlete list */
+
+  .pageArea {
+    display: block;
+  }
+
+  .defaultBtn {
+    padding: 0px 5px;
+    font-size: 10px;
+    line-height: 10px;
+  }
+
+  .BIG_btn2 {
+    width: auto;
+    font-size: 12px;
+    height: 30px;
+  }
+
+  .nextBTN {
+    padding: 16px;
+  }
+
+  .changePwBtn {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .BIG_btn {
+    font-size: 12px;
+    padding: 0px 2rem;
+  }
+
+  /* coach list */
+
+  .coachList .Ranklist_result > ul > li > p > button {
+    font-size: 10px;
+    line-height: 10px;
+  }
+
+  /* 선수 정보 수정 */
+
+  .UserDesc .row > select {
+    font-size: 14px;
+  }
+
+  .account_label > label > input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+  }
+
+  .UserProfile > form {
+    font-size: 14px;
+  }
+
+  .athlete {
+    padding: 2rem;
+  }
+
+  .UserDesc .row > div > input {
+    font-size: 14px;
+  }
+
+  /* 업무 일정 조 편성  */
+  .filed_list_item {
+    width: 100%;
+  }
+
+  .schedule_filed {
+    font-size: 12px;
+    line-height: 17px;
+    padding: 3rem;
+  }
+
+  .schedule_filed .filed2_list > ul > li > p {
+    font-size: 16px;
+  }
+
+  .schedule_filed > .profile_logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .throw_item > ul > li > input,
+  .throw_item > ul > li > select,
+  .throw_item > ul > li > span,
+  .Thorw_result .throw_list > ul {
+    font-size: 12px;
+  }
+
+  .high_jump {
+    font-size: 12px;
+  }
+
+  .Thorw_result {
+    font-size: 12px;
+  }
+
+  .run_item > ul > li > input {
+    font-size: 12px;
+  }
+
+  .run_item > ul > li > select {
+    font-size: 12px;
+  }
+
+  .relay_item {
+    font-size: 12px;
+  }
+
+  .relay_list {
+    font-size: 12px;
+  }
+
+  .labelBox > h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .Participant_list .row > input {
+    width: 70%;
+    font-size: 10px;
+  }
+
+  .Participant_list .row > select {
+    width: 70%;
+    font-size: 10px;
+  }
+
+  .Participant_list {
+    font-size: 10px;
+  }
+
+  .Participant_list .row_date > input {
+    width: 23%;
+  }
+
+  .filed_BTN .filedBTN {
+    font-size: 12px;
+  }
+
+  .pageUp {
+    display: block;
+  }
+
+  .pageUp .page_size {
+    margin: 1rem 0;
+  }
+
+  /* 창던지기 */
+  .filed_throw_list > ul {
+    gap: 0;
+  }
+
+  /* 창 던지기 끝 */
+  /* 높이뛰기 */
+  .filed_high_list > ul > li > p,
+  .filed_high_item > ul > li > p {
+    font-size: 10px;
+  }
+
+  .filed_jump_list > ul > li > p,
+  .filed_jump > li > p {
+    font-size: 10px;
+  }
+
+  /* 7종 경기 */
+  .heptathlon_list > ul > li {
+    font-size: 10px;
+  }
+
+  .heptathlon_list > ul > li > p {
+    font-size: 12px;
+  }
+
+  /* 10종 경기 */
+  .decathlon_list > ul > li {
+    font-size: 10px;
+  }
+
+  .decathlon_list > ul {
+    padding: 1rem 0;
+  }
+
+  /* 테이블 선수진 */
+  .entry_table {
+    font-size: 10px;
+  }
+
+  /* 10종 경기 테이블 */
+  .result_tableBTN {
+    height: 50%;
+    color: white;
+    display: block;
+    padding: 3px;
+    border: 0;
+    border-radius: 5px;
+    margin: 3px auto;
+    font-size: 10px;
+  }
+
+  .result_table > tr > th {
+    font-size: 10px;
+  }
+
+  .De_tbody > tr > td > input {
+    font-size: 10px;
+  }
+
+  .field3_hover > tr > td > input {
+    font-size: 10px;
+  }
+
+  .changeTableList .changeTableItem {
+    width: calc(100% / 6.5);
+  }
+
+  .page_size {
+    width: 116px;
+    margin-bottom: 2rem;
+  }
+
+  .AllPage {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 940px) {
+  .page_size > span:nth-child(2) {
+    display: none;
+  }
+
+  .AllPage {
+    font-size: 20px;
+    position: absolute;
+    top: 7%;
+    right: 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* hedaer */
+  header .gnb {
+    width: 100%;
+  }
+
+  .menuhide {
+    display: none;
+  }
+
+  .gnbMask_right {
+    height: 100%;
+    position: fixed;
+    width: 50%;
+    z-index: 13;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .defaultSelectArea .defaultSearchInput {
+    width: 130px;
+  }
+
+  .gnbList > li {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .gnb > .gnbList {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    font-size: 12px;
+  }
+
+  .gnbList > li > a {
+    width: 20%;
+    background: white;
+  }
+
+  .gnbDetailMenuList > ul > li > a {
+    width: 100%;
+    display: block;
+    padding: 0;
+    border: 0;
+  }
+
+  .gnbsied {
+    height: 100%;
+    position: fixed;
+    width: 50%;
+    z-index: 13;
+    background: white;
+  }
+
+  .gnbList > li > div:nth-child(1) > span > i:nth-child(3) {
+    display: none;
+  }
+
+  .gnbList > li > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  .gnbBack {
+    border: 0;
+  }
+
+  .gnbBack > div:nth-child(1) > span {
+    color: var(--colorLogo);
+  }
+
+  .gnbBack > div:nth-child(1) > i {
+  }
+
+  .gnbItem > div:nth-child(1) > i:nth-child(2) {
+    display: inline-block;
+  }
+
+  .gnbBack > div:nth-child(1) > i:nth-child(2) {
+    display: none;
+  }
+
+  .gnbBack > div:nth-child(1) > i:nth-child(3) {
+    display: block;
+  }
+
+  .gnbDetailMenuList {
+    display: none;
+    position: relative;
+    width: 100%;
+    top: 0;
+    box-shadow: none;
+  }
+
+  .gnbDetailMenuList > ul > li {
+    background: white;
+    border-bottom: 1px solid var(--colorBackgroundGray);
+    /* border: 0; */
+    border-radius: 0px;
+  }
+
+  .gnbDetailMenuList > ul > li:first-child {
+    border-top: 1px solid var(--colorBackgroundGray);
+  }
+
+  .gnbDetailMenuList > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+  }
+
+  .gnbMask {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    line-height: 1.8em;
+  }
+
+  .menuBtn {
+    display: block;
+    font-size: 20px;
+  }
+
+  /* 정보 보기 */
+  .UserProfile > form {
+    font-size: 12px;
+  }
+
+  /* 업무 일정 조 편성  */
+  .schedule_filed {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .schedule_filed .filed_item > ul > li > input {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .schedule_filed .filed_item > ul > li > p {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .schedule_filed .filed_item > ul > li > select {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .schedule_filed > .profile_logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .athlete > .profile_logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .throw_item > ul > li > input,
+  .throw_item > ul > li > select,
+  .throw_item > ul > li > span,
+  .Thorw_result .throw_list > ul {
+    font-size: 10px;
+  }
+
+  .modify_Btn > button {
+    height: 4rem;
+    font-size: 12px;
+    width: 10rem;
+  }
+
+  .Participant_Btn > button {
+    width: 100%;
+  }
+
+  .high_jump {
+    font-size: 10px;
+  }
+
+  .Thorw_result {
+    font-size: 10px;
+  }
+
+  .run_item > ul > li > input {
+    font-size: 10px;
+  }
+
+  .run_item > ul > li > select {
+    font-size: 10px;
+  }
+
+  .relay_item {
+    font-size: 10px;
+  }
+
+  .relay_list {
+    font-size: 10px;
+  }
+
+  .top {
+    width: 36px;
+    height: 36px;
+  }
+
+  .topBtn {
+    font-size: 1.4em;
+    padding-top: 7px;
+  }
+
+  .filed_BTN .filedBTN {
+    font-size: 10px;
+  }
+
+  /* 창던지기 끝 */
+
+  /* 7종 경기 */
+
+  .throwDesc > .row > span {
+    font-size: 10px;
+    width: 25%;
+  }
+
+  .UserDesc .throw_row > input {
+    font-size: 10px;
+    width: 75%;
+  }
+}

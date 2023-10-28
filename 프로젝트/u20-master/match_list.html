@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/xeicon.min.css">
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>경기 목록</title>
+</head>
+
+<body>
+  <!-- header -->
+  <div class="headerWrapper">
+    <header class="headerBody">
+      <div class="headerBodyLayout">
+        <div class="headerBodyArea">
+          <h1 class="logo"><a href="./index.html">예천U20</a></h1>
+          <div class="gnbMask menuhide">
+            <div class="gnbsied">
+              <div class="gnb">
+                <ul class="gnbList">
+                  <li class="gnbItem ">
+                    <div>
+                      <span>
+                        <i class="xi-user menu_red"></i>
+                        <i class="xi-group"></i>
+                        참가자 관리
+                        <i class="xi-angle-up"></i>
+                      </span>
+                      <i class="xi-man"></i>
+                      <i class="xi-run"></i>
+                    </div>
+                    <div class="gnbDetailMenuList">
+                      <ul>
+                        <li><a href="./athlete_list.html">선수 목록</a></li>
+                        <li><a href="./coach_list.html">코치 목록</a></li>
+                        <li><a href="./referee_list.html">심판 목록</a></li>
+                        <li><a href="./director_list.html">임원 목록</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="gnbItem gnb_active">
+                    <div>
+                      <span>
+                        <i class="xi-run menu_Orange"></i>
+                        <i class="xi-bicycle"></i>
+                        경기 관리
+                        <i class="xi-angle-up"></i>
+                      </span>
+                      <i class="xi-man"></i>
+                      <i class="xi-run"></i>
+                    </div>
+                    <div class="gnbDetailMenuList">
+                      <ul>
+                        <li><a href="./match_list.html">경기 목록</a></li>
+                        <li><a href="./country_list.html">국가 목록</a></li>
+                        <li><a href="./schedule_list.html">일정목록</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="gnbItem">
+                    <div>
+                      <span>
+                        <i class="xi-timer-o menu_yellow"></i>
+                        <i class="xi-alarm-clock-o"></i>
+                        기록 관리
+                        <i class="xi-angle-up"></i>
+                      </span>
+                      <i class="xi-man"></i>
+                      <i class="xi-run"></i>
+                    </div>
+                    <div class="gnbDetailMenuList">
+                      <ul>
+                        <li><a href="./record_list.html">경기결과 목록</a></li>
+                        <li><a href="./historical_list.html">역대기록 목록</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="gnbItem">
+                    <div>
+                      <span>
+                        <i class="xi-paper-o menu_green"></i>
+                        <i class="xi-equalizer-thin"></i>
+                        통계 관리
+                        <i class="xi-angle-up"></i>
+                      </span>
+                      <i class="xi-man"></i>
+                      <i class="xi-run"></i>
+                    </div>
+                    <div class="gnbDetailMenuList">
+                      <ul>
+                        <li><a href="./player_ranking.html">선수별 순위보기</a></li>
+                        <li><a href="./best_player.html">신기록 경기기록</a></li>
+                        <li><a href="./match_standings.html">경기별 순위보기</a></li>
+                        <li><a href="./match_medals.html">경기별 메달보기</a></li>
+                        <li><a href="./country_rank.html">국가별 순위보기</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="gnbItem">
+                    <div>
+                      <span>
+                        <i class="xi-key menu_blue"></i>
+                        <i class="xi-security"></i>
+                        계정 관리
+                        <i class="xi-angle-up"></i>
+                      </span>
+                      <i class="xi-man"></i>
+                      <i class="xi-run"></i>
+                    </div>
+                    <div class="gnbDetailMenuList">
+                      <ul>
+                        <li><a href="./account_mypage.html">계정 정보</a></li>
+                        <li><a href="./account_change_pw.html">비빌번호 변경</a></li>
+                        <li><a href="./account_signup.html">계정 생성</a></li>
+                        <li><a href="./account_list.html">계정 목록</a></li>
+                        <li><a href="./log_list.html">로그 목록</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="gnbMask_right">
+            </div>
+          </div>
+          <div class="UserPage">
+            <a href="./account_mypage.html"><i class="xi-profile xi-1x"></i>
+              <p>마이페이지</p>
+            </a>
+            <a href="./login.html"><i class="xi-power-off xi-1x"></i>
+              <p>로그아웃</p>
+            </a>
+            <button type="button" class="menuBtn" type="button"><i class="xi-bars"></i></button>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div class="top">
+    <div id="js-scroll"><i class="xi-arrow-up topBtn"></i></div>
+  </div>
+
+  <!-- rank -->
+  <div class="Area">
+    <div class="Wrapper TopWrapper">
+      <div class="MainRank matchList defaultList">
+        <div class="MainRank_tit">
+          <h1>경기 목록<i class="xi-calendar calendar"></i></h1>
+        </div>
+        <div class="searchArea pageArea">
+          <div class="page_size">
+            <select title="페이지" name="entry_size" id="changePageSize" class="changePageSize">
+              <option value="non" hidden>페이지</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+            </select>
+          </div>
+          <form class="searchForm">
+            <div class="selectArea defaultSelectArea">
+              <div class="defaultSelectBox">
+                <select title="경기종목 코드" name="matchListCode">
+                  <option value="non" hidden>경기종목 코드</option>
+                  <option value="non">전체</option>
+                  <option value="IRQ">이라크</option>
+                  <option value="KOR">대한민국</option>
+                  <option value="JPN">일본</option>
+                  <option value="ARE">아랍에미리트</option>
+                </select>
+              </div>
+              <div class="defaultSelectBox">
+                <select title="경기종목 이름" name="matchListTitle">
+                  <option value="non" hidden>경기종목 이름</option>
+                  <option value="non">전체</option>
+                  <option value="area1">지역1</option>
+                  <option value="area2">지역2</option>
+                  <option value="area3">지역3</option>
+                  <option value="area4">지역4</option>
+                </select>
+              </div>
+              <div class="defaultSelectBox">
+                <select title="경기종목 이름(한글)" name="matchListKoreaTitle">
+                  <option value="non" hidden>경기종목 이름(한글)</option>
+                  <option value="non">전체</option>
+                  <option value="affiliation1">소속1</option>
+                  <option value="affiliation2">소속2</option>
+                  <option value="affiliation3">소속3</option>
+                  <option value="affiliation4">소속4</option>
+                </select>
+              </div>
+              <div class="">
+                <button class="SearchBtn" type="submit"><i class="xi-search"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <table class="box_table">
+          <!-- 경기종목 테이블 -->
+          <colgroup>
+            <col width="20%">
+            <col width="30%">
+            <col width="30%">
+            <col width="15%">
+          </colgroup>
+          <thead class="table_head entry_table">
+            <tr>
+              <th scope="col" colspan="1">구분</th>
+              <th scope="col" colspan="1">경기종목 코드</th>
+              <th scope="col" colspan="1">경기종목 이름</th>
+              <th scope="col" colspan="1">삭제</th>
+            </tr>
+          </thead>
+          <tbody class="table_tbody entry_table">
+            <tr>
+              <td scope="col">1</td>
+              <td scope="col">코드</td>
+              <td scope="col">이름</td>
+              <td scope="col"><button type="button" class="BTN_Red defaultBtn">삭제</button></td>
+            </tr>
+            <tr class="Ranklist_Background">
+              <td scope="col">1</td>
+              <td scope="col">코드</td>
+              <td scope="col">이름</td>
+              <td scope="col"><button type="button" class="BTN_Red defaultBtn">삭제</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="playerRegistrationBtnArea">
+          <div class="ExcelBtn IDBtn">
+            <button type="button" class="defaultBtn BIG_btn2 excel_Print">엑셀 출력</button>
+          </div>
+          <div class="registrationBtn">
+            <button type="button" class="defaultBtn BTN_Blue BIG_btn"
+              onclick="window.open('/match_input.html', 'window_name', 'width=1100, height=500, location=no, status=no, scrollbars=yes')">등록</button>
+          </div>
+        </div>
+        <div class="page">
+          <ul class="pagination">
+            <li class="page_item"><a href="#"><i class="xi-angle-left-min xi-2x"></i></a></li>
+            <li class="page_item page_number"><a href="#" data-dt-idx="1"><em class="page_link clicked">1</em></a></li>
+            <li class="page_item page_number"><a href="#" data-dt-idx="2"><em class="page_link">2</em></a>
+            </li>
+            <li class="page_item page_number"><a href="#" data-dt-idx="3"><em class="page_link">3</em></a>
+            </li>
+            <li class="page_item page_number"><a href="#" data-dt-idx="4"><em class="page_link">4</em></a>
+            </li>
+            <li class="page_item page_number"><a href="#" data-dt-idx="5"><em class="page_link">5</em></a>
+            </li>
+            <li class="page_item"><a href="#"><i class="xi-angle-right-min xi-2x"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/main_dh.js"></script>
+</body>
+
+</html>

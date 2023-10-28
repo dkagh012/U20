@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="./assets/js/jquery-1.12.4.min.js"
+    ></script>
+    <link rel="stylesheet" href="./assets/css/xeicon.min.css" />
+    <link rel="stylesheet" href="./assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/select2.min.css" />
+    <script type="text/javascript" src="./assets/js/select2.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>임원 정보 등록</title>
+  </head>
+
+  <body>
+    <div class="schedule_container">
+      <form
+        action="action/sport/schedule_manual_update.php"
+        method="post"
+        class="form"
+      >
+        <div class="schedule schedule_flex">
+          <!-- n조 -->
+          <div class="schedule_filed filed_list_item grouping_table">
+            <div class="profile_logo">
+              <img src="./assets/images/logo.png" />
+            </div>
+            <div class="schedule_filed_tit schedule_green">
+              <p class="tit_left_yellow">1조</p>
+            </div>
+            <div class="filed2_form">
+              <table
+                cellspacing="0"
+                cellpadding="0"
+                class="filed2_Table filed2_swap group_datatable"
+                id=""
+                name="table_name[]"
+              >
+                <colgroup>
+                  <col width="10%" />
+                  <col width="10%" />
+                  <col width="70%" />
+                  <col width="10%" />
+                </colgroup>
+                <thead class="filed_list filed2_list result_table">
+                  <tr>
+                    <th>순서</th>
+                    <th>국가</th>
+                    <th>선수 이름</th>
+                    <th>교체</th>
+                  </tr>
+                </thead>
+                <!-- 레인넘버 & 선수 선택 for문 -->
+                <tbody
+                  class="grouping_body entry_table Relay_Tbody_1"
+                  id="Relay_Tbody"
+                >
+                  <tr>
+                    <td>
+                      <input
+                        type="hidden"
+                        name="group[]"
+                        id="group[]"
+                        value=" 1"
+                      />
+                      <input
+                        type="hidden"
+                        name="order[]"
+                        id="order[]"
+                        value="2"
+                      />
+                      <input
+                        type="text"
+                        class="number"
+                        value="1"
+                        name="lane[]"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        class="Relay_groupInput"
+                        id="Country"
+                        value="안동"
+                      />
+                    </td>
+                    <td>
+                      <div id="copy-value">
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="1"
+                          />
+                          <select
+                            class="select-box value select2-hidden-accessible"
+                            name="athlete"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="87" selected="">
+                              정수목(KOR)(삼성중학교)
+                            </option>
+                            <option value="12">선수 선택</option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="1"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="athlete"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="87" selected="">
+                              정수목(KOR)(삼성중학교)
+                            </option>
+                            <option value="12">선수 선택</option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="1"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="athlete"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="87" selected="">
+                              정수목(KOR)(삼성중학교)
+                            </option>
+                            <option value="12">선수 선택</option>
+                          </select>
+                        </div>
+
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="1"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="athlete"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="87" selected="">
+                              정수목(KOR)(삼성중학교)
+                            </option>
+                            <option value="12">선수 선택</option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <button
+                        class="BTN_Blue swapBtn"
+                        id="swapBtn"
+                        type="button"
+                      >
+                        <i class="xi-check"></i>
+                      </button>
+                      <button
+                        type="button"
+                        name="delete_each_row"
+                        class="defaultBtn BIG_btn BTN_Blue"
+                        id="deleteBtn1"
+                      >
+                        <i class="xi-minus"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <input
+                        type="hidden"
+                        name="group[]"
+                        id="group[]"
+                        value=" 1"
+                      />
+                      <input
+                        type="hidden"
+                        name="order[]"
+                        id="order[]"
+                        value="2"
+                      />
+                      <input
+                        type="text"
+                        class="number"
+                        value="1"
+                        name="lane[]"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        class="Relay_groupInput"
+                        id="Country"
+                        value="안동"
+                      />
+                    </td>
+                    <td>
+                      <div id="copy-value">
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="2"
+                          />
+                          <select
+                            class="select-box value select2-hidden-accessible"
+                            name="athlete"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="87" selected="">
+                              정수목(KOR)(삼성중학교)
+                            </option>
+                            <option value="12">선수 선택</option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="2"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="athlete"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="87" selected="">
+                              수(KOR)(삼성중학교)
+                            </option>
+                            <option value="12">선수 선택</option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="2"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="athlete"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="87" selected="">
+                              목(KOR)(삼성중학교)
+                            </option>
+                            <option value="12">선수 선택</option>
+                          </select>
+                        </div>
+
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="2"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="athlete"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="87" selected="">
+                              아(KOR)(삼성중학교)
+                            </option>
+                            <option value="12">선수 선택</option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <button
+                        class="BTN_Blue swapBtn defaultBtn BIG_btn"
+                        id="swapBtn"
+                        type="button"
+                      >
+                        <i class="xi-check"></i>
+                      </button>
+                      <button
+                        type="button"
+                        name="delete_each_row"
+                        class="defaultBtn BIG_btn BTN_Blue"
+                        id="deleteBtn1"
+                      >
+                        <i class="xi-minus"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <button
+                class="BTN_Orange defaultBtn BIG_btn Relay_PlusBtn_1"
+                type="button"
+              >
+                <i class="xi-plus"></i>
+              </button>
+              <table class="Relay_Table_1">
+                <colgroup>
+                  <col width="15%" />
+                  <col width="25%" />
+                  <col width="50%" />
+                  <col width="10%" />
+                </colgroup>
+                <thead class="filed_list filed2_list result_table">
+                  <tr>
+                    <th>순서</th>
+                    <th>소속</th>
+                    <th>선수 이름</th>
+                    <th>PB</th>
+                  </tr>
+                </thead>
+                <tbody class="grouping_body entry_table">
+                  <tr>
+                    <td>
+                      <input
+                        type="hidden"
+                        name="group[]"
+                        id="group[]"
+                        value=" 1"
+                      />
+                      <input
+                        type="text"
+                        class="input_text Relay_groupInput"
+                        value="6"
+                        name="lane[]"
+                      /><input
+                        type="hidden"
+                        class="input_text"
+                        value="6"
+                        name="order[]"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        class="Relay_groupInput"
+                        id="Country"
+                        value="CHN"
+                      />
+                    </td>
+                    <td>
+                      <div id="copy-value">
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="1"
+                          />
+                          <select
+                            class="select-box value select2-hidden-accessible"
+                            name="athlete"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="1">테스트</option>
+                            <option value="2">테스트를위해 넣는것</option>
+
+                            <option value="3">
+                              (103) (M) Chen Jinfeng (KOR)
+                            </option>
+                            <option value="6">
+                              (103) (M) Chen Jinfeng (CHN)
+                            </option>
+                            <option value="8" selected="">
+                              (105) (M) Huang Yi (CHN)
+                            </option>
+                            <option value="12">
+                              (109) (M) Wang Shuang (CHN)
+                            </option>
+                            <option value="13">
+                              (110) (M) Wang Xinkai (CHN)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="1"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="athlete"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="1">테스트</option>
+                            <option value="2">테스트를위해 넣는것</option>
+
+                            <option value="3">
+                              (103) (M) Chen Jinfeng (KOR)
+                            </option>
+                            <option value="6">
+                              (103) (M) Chen Jinfeng (CHN)
+                            </option>
+                            <option value="8" selected="">
+                              (105) (M) Huang Yi (CHN)
+                            </option>
+                            <option value="12">
+                              (109) (M) Wang Shuang (CHN)
+                            </option>
+                            <option value="13">
+                              (110) (M) Wang Xinkai (CHN)
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="1"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="athlete"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="1">테스트</option>
+                            <option value="2">테스트를위해 넣는것</option>
+
+                            <option value="3">
+                              (103) (M) Chen Jinfeng (KOR)
+                            </option>
+                            <option value="6">
+                              (103) (M) Chen Jinfeng (CHN)
+                            </option>
+                            <option value="8" selected="">
+                              (105) (M) Huang Yi (CHN)
+                            </option>
+                            <option value="12">
+                              (109) (M) Wang Shuang (CHN)
+                            </option>
+                            <option value="13">
+                              (110) (M) Wang Xinkai (CHN)
+                            </option>
+                          </select>
+                        </div>
+
+                        <div>
+                          <input
+                            type="hidden"
+                            name="athlete_id[]"
+                            id="athlete_id[]"
+                            value="1"
+                          />
+                          <select
+                            class="select-box select2-hidden-accessible"
+                            name="athlete"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option value="" disabled="" selected="">
+                              선수 선택
+                            </option>
+                            <option value="1">테스트</option>
+                            <option value="2">테스트를위해 넣는것</option>
+
+                            <option value="3">
+                              (103) (M) Chen Jinfeng (KOR)
+                            </option>
+                            <option value="6">
+                              (103) (M) Chen Jinfeng (CHN)
+                            </option>
+                            <option value="8" selected="">
+                              (105) (M) Huang Yi (CHN)
+                            </option>
+                            <option value="12">
+                              (109) (M) Wang Shuang (CHN)
+                            </option>
+                            <option value="13">
+                              (110) (M) Wang Xinkai (CHN)
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="addBtn">
+            <a class="btn btn_02" href="/group_list.html">목록</a>
+            <button
+              onclick="location.href='group_register.html' "
+              class="btn_submit btn"
+              type="submit"
+            >
+              확인
+            </button>
+          </div>
+        </div>
+        <button type="submit" class="changePwBtn defaultBtn">만들기</button>
+      </form>
+    </div>
+    <script>
+      // $("select[name=athlete]").select2();
+    </script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+      if (document.querySelector(".swapBtn")) {
+        const TableLength = document.querySelectorAll(".filed2_Table");
+        // 릴레이 그룹 셀렉트 변경
+        $(document).ready(function () {
+          $("select")
+            .select2()
+            .on("select2:selecting", function (e) {
+              const currentSelect = $(e.target);
+              const selectedValue = e.params.args.data.id; // 클릭한 옵션의 값
+              const targetInput =
+                this.parentElement.querySelector("#athlete_id\\[\\]");
+              currentSelect.find("option").each(function () {
+                if ($(this).val() === selectedValue) {
+                  $(this).attr("selected", "selected");
+                } else {
+                  $(this).removeAttr("selected");
+                }
+              });
+              currentSelect.val(selectedValue).trigger("change");
+
+              // 추가 코드: 해당 값을 숨겨진 input 요소에 업데이트
+              $(targetInput).val(selectedValue);
+            });
+        });
+        // 릴레이 국가 코드를 넣는데 국가코드 가지고 셀렉트를 짜를 수 있냐?
+        document.addEventListener("DOMContentLoaded", function () {
+          for (let i = 1; i <= TableLength.length; i++) {
+            const btn = document.querySelector(`.Relay_PlusBtn_${i}`);
+            if (!btn) continue;
+            btn.addEventListener("click", function () {
+              const targetTable = document.querySelector(`.Relay_Table_${i}`);
+              const targetTbody = document.querySelector(`.Relay_Tbody_${i}`);
+              const rows = targetTable.querySelectorAll(
+                ".grouping_body.entry_table tr"
+              );
+              if (rows && rows.length > 0) {
+                const lastRow = rows[rows.length - 1];
+
+                $(lastRow.querySelector("select")).select2("destroy");
+                const clonedRow = lastRow.cloneNode(true);
+                clonedRow
+                  .querySelectorAll(".select2-container")
+                  .forEach((el) => el.remove());
+                // 밑 테이블을 복사한다
+                const inputInLastRow = lastRow.querySelector(
+                  "td:nth-child(2) input"
+                ).value;
+
+                const lastRowSelect = clonedRow.querySelectorAll("select");
+
+                for (let i = 0; i < lastRowSelect.length; i++) {
+                  for (
+                    let j = lastRowSelect[i].options.length - 1;
+                    j >= 0;
+                    j--
+                  ) {
+                    const optionText = lastRowSelect[i].options[j].label;
+                    if (
+                      inputInLastRow &&
+                      optionText.includes(`(${inputInLastRow})`)
+                    ) {
+                      // inputInLastRow 값이 있고, 해당 값과 일치하는 옵션은 유지
+                      continue;
+                    } else {
+                      // inputInLastRow 값이 없거나 일치하지 않는 옵션은 삭제
+                      lastRowSelect[i].removeChild(lastRowSelect[i].options[j]);
+                    }
+                  }
+                }
+                const td = document.createElement("td");
+
+                const swapButton = document.createElement("button");
+                swapButton.className = "BTN_Blue swapBtn defaultBtn BIG_btn";
+                swapButton.id = "swapBtn";
+                swapButton.type = "button";
+                const swapIcon = document.createElement("i");
+                swapIcon.className = "xi-check";
+                swapButton.appendChild(swapIcon);
+                td.appendChild(swapButton);
+
+                const deleteButton = document.createElement("button");
+                deleteButton.type = "button";
+                deleteButton.name = "delete_each_row";
+                deleteButton.className = "defaultBtn BIG_btn BTN_Blue";
+                const deleteIcon = document.createElement("i");
+                deleteIcon.className = "xi-minus";
+                deleteButton.appendChild(deleteIcon);
+
+                td.appendChild(deleteButton);
+                clonedRow.appendChild(td);
+                targetTbody.appendChild(clonedRow);
+
+                $(lastRow.querySelector("select")).select2();
+                $(clonedRow)
+                  .find("select")
+                  .each(function () {
+                    $(this).select2();
+                  });
+              }
+            });
+          }
+          document.addEventListener("click", function (e) {
+            if (e.target.closest(".swapBtn")) {
+              swapButtonContent(e.target.closest(".swapBtn"));
+            }
+            if (e.target.name === "delete_each_row") {
+              e.target.closest("tr").remove();
+            }
+          });
+        });
+
+        // 릴레이 교환 버튼
+
+        if (document.querySelectorAll(".swapBtn")) {
+          let prevTarget = null;
+          function swapButtonContent(btn) {
+            if (prevTarget) {
+              const prevRow = prevTarget.closest("tr");
+              const currentRow = btn.closest("tr");
+              const prevAthleteIds = prevRow.querySelectorAll(
+                "td:nth-child(3) #athlete_id\\[\\]"
+              );
+              const currentAthleteIds = currentRow.querySelectorAll(
+                "td:nth-child(3) #athlete_id\\[\\]"
+              );
+
+              // Iterate through the athlete_id elements and swap their values
+              prevAthleteIds.forEach((prevAthleteId, index) => {
+                const currentAthleteId = currentAthleteIds[index];
+                const tempAthleteIdValue = prevAthleteId.value;
+                prevAthleteId.value = currentAthleteId.value;
+                currentAthleteId.value = tempAthleteIdValue;
+              });
+
+              const prevSelectBoxes = prevRow.querySelectorAll(
+                "td:nth-child(3) .select-box"
+              );
+              const currentSelectBoxes = currentRow.querySelectorAll(
+                "td:nth-child(3) .select-box"
+              );
+
+              const prevSelectTexts = prevRow.querySelectorAll(
+                "td:nth-child(3) #copy-value .select2-selection__rendered"
+              );
+              const currentSelectTexts = currentRow.querySelectorAll(
+                "td:nth-child(3) #copy-value .select2-selection__rendered"
+              );
+
+              prevSelectBoxes.forEach((prevSelectBox, index) => {
+                const currentSelectBox = currentSelectBoxes[index];
+
+                // Swap select2 values using select2 API
+                const prevSelectedValue = $(prevSelectBox).val();
+                const currentSelectedValue = $(currentSelectBox).val();
+
+                // Swap select2 rendered text
+                const tempText = prevSelectTexts[index].innerText;
+                prevSelectTexts[index].innerText =
+                  currentSelectTexts[index].innerText;
+                currentSelectTexts[index].innerText = tempText;
+                const tempTitle = prevSelectTexts[index].title;
+                prevSelectTexts[index].title = currentSelectTexts[index].title;
+                currentSelectTexts[index].title = tempTitle;
+                const prevOptions = Array.from(prevSelectBox.options).map(
+                  (option) => option.outerHTML
+                );
+                const currentOptions = Array.from(currentSelectBox.options).map(
+                  (option) => option.outerHTML
+                );
+                prevSelectBox.innerHTML = currentOptions.join("");
+                currentSelectBox.innerHTML = prevOptions.join("");
+              });
+
+              // Swap input values
+              const prevInputBox = prevRow.querySelector(
+                "td:nth-child(2) input"
+              );
+              const currentInputBox = currentRow.querySelector(
+                "td:nth-child(2) input"
+              );
+
+              const prevInputValue = $(prevInputBox).val();
+              const currentInputValue = $(currentInputBox).val();
+              $(prevInputBox).val(currentInputValue).trigger("change");
+              $(currentInputBox).val(prevInputValue).trigger("change");
+
+              // Swap input Pb
+              if (document.querySelector("#pb")) {
+                const prevPBBox = prevRow.querySelector(
+                  "td:nth-child(4) input"
+                );
+                const currentPBBox = currentRow.querySelector(
+                  "td:nth-child(4) input"
+                );
+
+                const prevPBValue = $(prevPBBox).val();
+                const currentPBValue = $(currentPBBox).val();
+                $(prevPBBox).val(currentPBValue).trigger("change");
+                $(currentPBBox).val(prevPBValue).trigger("change");
+              }
+              prevTarget.classList.remove("swapBtn_click");
+              prevTarget.querySelector("i").classList.remove("xi-close");
+              prevTarget.querySelector("i").classList.add("xi-check");
+              prevTarget = null;
+            } else {
+              prevTarget = btn;
+              btn.classList.add("swapBtn_click");
+              btn.querySelector("i").classList.remove("xi-check");
+              btn.querySelector("i").classList.add("xi-close");
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

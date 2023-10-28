@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="./assets/js/jquery-1.12.4.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/xeicon.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>조 편성</title>
+</head>
+
+
+<div class="schedule_container">
+  <form action="action/sport/schedule_manual_update.php" method="post" class="form">
+    <div class="schedule schedule_flex">
+      <!-- n조 -->
+      <div class="schedule_filed filed_list_item filed2">
+        <div class="profile_logo">
+          <img src="/assets/images/logo.png">
+        </div>
+        <div class="schedule_filed_tit schedule_green">
+          <p class="tit_left_yellow">1조</p>
+        </div>
+        <div class="filed2_form">
+          <table cellspacing="0" cellpadding="0" class="entry_table filed2_swap" id="dataTable1" name="table_name[]">
+            <thead class="filed_list filed2_list result_table ">
+              <tr>
+                <th>순서</th>
+                <th>선수 이름</th>
+                <th>삭제</th>
+              </tr>
+              <tr class="filed2_bottom">
+              </tr>
+            </thead>
+            <!-- m명 -->
+            <tbody class="grouping_body entry_table">
+              <tr>
+                <td>
+                  <!-- 조 :: record_group -->
+                  <input type="hidden" name="group[]" id="group[]" value="1">
+                  <!-- 순서 :: record_order -->
+                  <input type="hidden" name="order[]" id="order[]" value="1">
+                  <input type="number" class="number" value="1" name="lane[]">
+                </td>
+                <td>
+                  <div id="copy-value">
+                    <!-- 선수 id :: record_athlete_id-->
+                    <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="22">
+                    <!-- 선수 이름 -->
+                    <input type="text" name="name[]" value="장재욱(KOR)(대흥중학교)">
+                </td>
+        </div>
+        <td>
+          <!-- 삭제 버튼 -->
+          <div class="filed_BTN2">
+            <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn1"><i
+                class="xi-minus"></i></button>
+          </div>
+        </td>
+        </tr>
+        </tbody>
+        <tbody class="grouping_body entry_table">
+          <tr>
+            <td>
+              <!-- 조 :: record_group -->
+              <input type="hidden" name="group[]" id="group[]" value="1">
+              <!-- 순서 :: record_order -->
+              <input type="hidden" name="order[]" id="order[]" value="2">
+              <input type="number" class="number" value="2" name="lane[]">
+            </td>
+            <td>
+              <div id="copy-value">
+                <!-- 선수 id :: record_athlete_id-->
+                <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="95">
+                <!-- 선수 이름 -->
+                <input type="text" name="name[]" value="김영서(KOR)(삼성현초등흑교)">
+            </td>
+      </div>
+      <td>
+        <!-- 삭제 버튼 -->
+        <div class="filed_BTN2">
+          <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn1"><i
+              class="xi-minus"></i></button>
+        </div>
+      </td>
+      </tr>
+      </tbody>
+      <tbody class="grouping_body entry_table">
+        <tr>
+          <td>
+            <!-- 조 :: record_group -->
+            <input type="hidden" name="group[]" id="group[]" value="1">
+            <!-- 순서 :: record_order -->
+            <input type="hidden" name="order[]" id="order[]" value="3">
+            <input type="number" class="number" value="3" name="lane[]">
+          </td>
+          <td>
+            <div id="copy-value">
+              <!-- 선수 id :: record_athlete_id-->
+              <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="106">
+              <!-- 선수 이름 -->
+              <input type="text" name="name[]" value="배성우(KOR)(수륜초등학교)">
+          </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn1"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+    </tr>
+    </tbody>
+    <tbody class="grouping_body entry_table">
+      <tr>
+        <td>
+          <!-- 조 :: record_group -->
+          <input type="hidden" name="group[]" id="group[]" value="1">
+          <!-- 순서 :: record_order -->
+          <input type="hidden" name="order[]" id="order[]" value="4">
+          <input type="number" class="number" value="4" name="lane[]">
+        </td>
+        <td>
+          <div id="copy-value">
+            <!-- 선수 id :: record_athlete_id-->
+            <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="103">
+            <!-- 선수 이름 -->
+            <input type="text" name="name[]" value="이유찬(KOR)(김천동신초등학교)">
+        </td>
+</div>
+<td>
+  <!-- 삭제 버튼 -->
+  <div class="filed_BTN2">
+    <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn1"><i
+        class="xi-minus"></i></button>
+  </div>
+</td>
+</tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="1">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="5">
+      <input type="number" class="number" value="5" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="120">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="김기윤(KOR)(포항원동초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn1"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="1">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="6">
+      <input type="number" class="number" value="6" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="117">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="이준호(KOR)(후포초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn1"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="1">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="7">
+      <input type="number" class="number" value="7" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="11">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="김준규(KOR)(남산중학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn1"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="1">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="8">
+      <input type="number" class="number" value="8" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="8">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="노승재(KOR)(김천중학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn1"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="schedule_filed filed_list_item filed2">
+  <div class="profile_logo">
+    <img src="/assets/images/logo.png">
+  </div>
+  <div class="schedule_filed_tit schedule_green">
+    <p class="tit_left_yellow">2조</p>
+  </div>
+  <div class="filed2_form">
+    <table cellspacing="0" cellpadding="0" class="entry_table filed2_swap" id="dataTable2" name="table_name[]">
+      <thead class="filed_list filed2_list result_table ">
+        <tr>
+          <th>순서</th>
+          <th>선수 이름</th>
+          <th>삭제</th>
+        </tr>
+        <tr class="filed2_bottom">
+        </tr>
+      </thead>
+      <!-- m명 -->
+      <tbody class="grouping_body entry_table">
+        <tr>
+          <td>
+            <!-- 조 :: record_group -->
+            <input type="hidden" name="group[]" id="group[]" value="2">
+            <!-- 순서 :: record_order -->
+            <input type="hidden" name="order[]" id="order[]" value="1">
+            <input type="number" class="number" value="1" name="lane[]">
+          </td>
+          <td>
+            <div id="copy-value">
+              <!-- 선수 id :: record_athlete_id-->
+              <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="21">
+              <!-- 선수 이름 -->
+              <input type="text" name="name[]" value="서준혁(KOR)(대흥중학교)">
+          </td>
+  </div>
+  <td>
+    <!-- 삭제 버튼 -->
+    <div class="filed_BTN2">
+      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn2"><i
+          class="xi-minus"></i></button>
+    </div>
+  </td>
+  </tr>
+  </tbody>
+  <tbody class="grouping_body entry_table">
+    <tr>
+      <td>
+        <!-- 조 :: record_group -->
+        <input type="hidden" name="group[]" id="group[]" value="2">
+        <!-- 순서 :: record_order -->
+        <input type="hidden" name="order[]" id="order[]" value="2">
+        <input type="number" class="number" value="2" name="lane[]">
+      </td>
+      <td>
+        <div id="copy-value">
+          <!-- 선수 id :: record_athlete_id-->
+          <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="138">
+          <!-- 선수 이름 -->
+          <input type="text" name="name[]" value="김주찬(KOR)(포항대흥초등학교)">
+      </td>
+</div>
+<td>
+  <!-- 삭제 버튼 -->
+  <div class="filed_BTN2">
+    <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn2"><i
+        class="xi-minus"></i></button>
+  </div>
+</td>
+</tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="2">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="3">
+      <input type="number" class="number" value="3" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="102">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="김범준(KOR)(상모초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn2"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="2">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="4">
+      <input type="number" class="number" value="4" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="116">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="정규원(KOR)(매화초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn2"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="2">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="5">
+      <input type="number" class="number" value="5" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="107">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="김용진(KOR)(수륜초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn2"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="2">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="6">
+      <input type="number" class="number" value="6" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="131">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="남도균(KOR)(성주초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn2"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="2">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="7">
+      <input type="number" class="number" value="7" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="12">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="문정훈(KOR)(남산중학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn2"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="2">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="8">
+      <input type="number" class="number" value="8" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="7">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="노명재(KOR)(김천중학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn2"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="schedule_filed filed_list_item filed2">
+  <div class="profile_logo">
+    <img src="/assets/images/logo.png">
+  </div>
+  <div class="schedule_filed_tit schedule_green">
+    <p class="tit_left_yellow">3조</p>
+  </div>
+  <div class="filed2_form">
+    <table cellspacing="0" cellpadding="0" class="entry_table filed2_swap" id="dataTable3" name="table_name[]">
+      <thead class="filed_list filed2_list result_table ">
+        <tr>
+          <th>순서</th>
+          <th>선수 이름</th>
+          <th>삭제</th>
+        </tr>
+        <tr class="filed2_bottom">
+        </tr>
+      </thead>
+      <!-- m명 -->
+      <tbody class="grouping_body entry_table">
+        <tr>
+          <td>
+            <!-- 조 :: record_group -->
+            <input type="hidden" name="group[]" id="group[]" value="3">
+            <!-- 순서 :: record_order -->
+            <input type="hidden" name="order[]" id="order[]" value="2">
+            <input type="number" class="number" value="2" name="lane[]">
+          </td>
+          <td>
+            <div id="copy-value">
+              <!-- 선수 id :: record_athlete_id-->
+              <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="19">
+              <!-- 선수 이름 -->
+              <input type="text" name="name[]" value="김태양(KOR)(순심중학교)">
+          </td>
+  </div>
+  <td>
+    <!-- 삭제 버튼 -->
+    <div class="filed_BTN2">
+      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn3"><i
+          class="xi-minus"></i></button>
+    </div>
+  </td>
+  </tr>
+  </tbody>
+  <tbody class="grouping_body entry_table">
+    <tr>
+      <td>
+        <!-- 조 :: record_group -->
+        <input type="hidden" name="group[]" id="group[]" value="3">
+        <!-- 순서 :: record_order -->
+        <input type="hidden" name="order[]" id="order[]" value="3">
+        <input type="number" class="number" value="3" name="lane[]">
+      </td>
+      <td>
+        <div id="copy-value">
+          <!-- 선수 id :: record_athlete_id-->
+          <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="114">
+          <!-- 선수 이름 -->
+          <input type="text" name="name[]" value="강범서(KOR)(영천중앙초등학교)">
+      </td>
+</div>
+<td>
+  <!-- 삭제 버튼 -->
+  <div class="filed_BTN2">
+    <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn3"><i
+        class="xi-minus"></i></button>
+  </div>
+</td>
+</tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="3">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="4">
+      <input type="number" class="number" value="4" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="97">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="변하준(KOR)(유림초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn3"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="3">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="5">
+      <input type="number" class="number" value="5" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="109">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="최다원(KOR)(안동용상초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn3"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="3">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="6">
+      <input type="number" class="number" value="6" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="100">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="윤강우(KOR)(다산초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn3"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="3">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="7">
+      <input type="number" class="number" value="7" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="5">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="최준현(KOR)(형곡중학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn3"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="3">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="8">
+      <input type="number" class="number" value="8" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="96">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="주승민(KOR)(옥곡초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn3"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="schedule_filed filed_list_item filed2">
+  <div class="profile_logo">
+    <img src="/assets/images/logo.png">
+  </div>
+  <div class="schedule_filed_tit schedule_green">
+    <p class="tit_left_yellow">4조</p>
+  </div>
+  <div class="filed2_form">
+    <table cellspacing="0" cellpadding="0" class="entry_table filed2_swap" id="dataTable4" name="table_name[]">
+      <thead class="filed_list filed2_list result_table ">
+        <tr>
+          <th>순서</th>
+          <th>선수 이름</th>
+          <th>삭제</th>
+        </tr>
+        <tr class="filed2_bottom">
+        </tr>
+      </thead>
+      <!-- m명 -->
+      <tbody class="grouping_body entry_table">
+        <tr>
+          <td>
+            <!-- 조 :: record_group -->
+            <input type="hidden" name="group[]" id="group[]" value="4">
+            <!-- 순서 :: record_order -->
+            <input type="hidden" name="order[]" id="order[]" value="2">
+            <input type="number" class="number" value="2" name="lane[]">
+          </td>
+          <td>
+            <div id="copy-value">
+              <!-- 선수 id :: record_athlete_id-->
+              <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="18">
+              <!-- 선수 이름 -->
+              <input type="text" name="name[]" value="박창연(KOR)(현서중학교)">
+          </td>
+  </div>
+  <td>
+    <!-- 삭제 버튼 -->
+    <div class="filed_BTN2">
+      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn4"><i
+          class="xi-minus"></i></button>
+    </div>
+  </td>
+  </tr>
+  </tbody>
+  <tbody class="grouping_body entry_table">
+    <tr>
+      <td>
+        <!-- 조 :: record_group -->
+        <input type="hidden" name="group[]" id="group[]" value="4">
+        <!-- 순서 :: record_order -->
+        <input type="hidden" name="order[]" id="order[]" value="3">
+        <input type="number" class="number" value="3" name="lane[]">
+      </td>
+      <td>
+        <div id="copy-value">
+          <!-- 선수 id :: record_athlete_id-->
+          <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="2">
+          <!-- 선수 이름 -->
+          <input type="text" name="name[]" value="김백건(KOR)(경북체육중학교)">
+      </td>
+</div>
+<td>
+  <!-- 삭제 버튼 -->
+  <div class="filed_BTN2">
+    <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn4"><i
+        class="xi-minus"></i></button>
+  </div>
+</td>
+</tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="4">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="4">
+      <input type="number" class="number" value="4" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="111">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="박예훈(KOR)(안동서부초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn4"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="4">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="5">
+      <input type="number" class="number" value="5" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="110">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="이동준(KOR)(안동동부초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn4"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="4">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="6">
+      <input type="number" class="number" value="6" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="113">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="김대윤(KOR)(영천중앙초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn4"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="4">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="7">
+      <input type="number" class="number" value="7" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="4">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="김민준(KOR)(계림중학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn4"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="4">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="8">
+      <input type="number" class="number" value="8" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="15">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="정이준(KOR)(영양중학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn4"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="schedule_filed filed_list_item filed2">
+  <div class="profile_logo">
+    <img src="/assets/images/logo.png">
+  </div>
+  <div class="schedule_filed_tit schedule_green">
+    <p class="tit_left_yellow">5조</p>
+  </div>
+  <div class="filed2_form">
+    <table cellspacing="0" cellpadding="0" class="entry_table filed2_swap" id="dataTable5" name="table_name[]">
+      <thead class="filed_list filed2_list result_table ">
+        <tr>
+          <th>순서</th>
+          <th>선수 이름</th>
+          <th>삭제</th>
+        </tr>
+        <tr class="filed2_bottom">
+        </tr>
+      </thead>
+      <!-- m명 -->
+      <tbody class="grouping_body entry_table">
+        <tr>
+          <td>
+            <!-- 조 :: record_group -->
+            <input type="hidden" name="group[]" id="group[]" value="5">
+            <!-- 순서 :: record_order -->
+            <input type="hidden" name="order[]" id="order[]" value="1">
+            <input type="number" class="number" value="1" name="lane[]">
+          </td>
+          <td>
+            <div id="copy-value">
+              <!-- 선수 id :: record_athlete_id-->
+              <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="23">
+              <!-- 선수 이름 -->
+              <input type="text" name="name[]" value="하헌재(KOR)(의흥중학교)">
+          </td>
+  </div>
+  <td>
+    <!-- 삭제 버튼 -->
+    <div class="filed_BTN2">
+      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn5"><i
+          class="xi-minus"></i></button>
+    </div>
+  </td>
+  </tr>
+  </tbody>
+  <tbody class="grouping_body entry_table">
+    <tr>
+      <td>
+        <!-- 조 :: record_group -->
+        <input type="hidden" name="group[]" id="group[]" value="5">
+        <!-- 순서 :: record_order -->
+        <input type="hidden" name="order[]" id="order[]" value="2">
+        <input type="number" class="number" value="2" name="lane[]">
+      </td>
+      <td>
+        <div id="copy-value">
+          <!-- 선수 id :: record_athlete_id-->
+          <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="94">
+          <!-- 선수 이름 -->
+          <input type="text" name="name[]" value="김승현(KOR)(경산동부초등학교)">
+      </td>
+</div>
+<td>
+  <!-- 삭제 버튼 -->
+  <div class="filed_BTN2">
+    <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn5"><i
+        class="xi-minus"></i></button>
+  </div>
+</td>
+</tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="5">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="3">
+      <input type="number" class="number" value="3" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="105">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="김민현(KOR)(모전초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn5"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="5">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="4">
+      <input type="number" class="number" value="4" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="119">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="김세준(KOR)(오천초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn5"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="5">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="5">
+      <input type="number" class="number" value="5" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="118">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="김도현(KOR)(북삼초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn5"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="5">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="6">
+      <input type="number" class="number" value="6" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="104">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="최혁(KOR)(김천동신초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn5"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="5">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="7">
+      <input type="number" class="number" value="7" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="9">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="박재현(KOR)(점촌중학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn5"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="5">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="8">
+      <input type="number" class="number" value="8" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="10">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="정우성(KOR)(점촌중학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn5"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="schedule_filed filed_list_item filed2">
+  <div class="profile_logo">
+    <img src="/assets/images/logo.png">
+  </div>
+  <div class="schedule_filed_tit schedule_green">
+    <p class="tit_left_yellow">6조</p>
+  </div>
+  <div class="filed2_form">
+    <table cellspacing="0" cellpadding="0" class="entry_table filed2_swap" id="dataTable6" name="table_name[]">
+      <thead class="filed_list filed2_list result_table ">
+        <tr>
+          <th>순서</th>
+          <th>선수 이름</th>
+          <th>삭제</th>
+        </tr>
+        <tr class="filed2_bottom">
+        </tr>
+      </thead>
+      <!-- m명 -->
+      <tbody class="grouping_body entry_table">
+        <tr>
+          <td>
+            <!-- 조 :: record_group -->
+            <input type="hidden" name="group[]" id="group[]" value="6">
+            <!-- 순서 :: record_order -->
+            <input type="hidden" name="order[]" id="order[]" value="2">
+            <input type="number" class="number" value="2" name="lane[]">
+          </td>
+          <td>
+            <div id="copy-value">
+              <!-- 선수 id :: record_athlete_id-->
+              <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="17">
+              <!-- 선수 이름 -->
+              <input type="text" name="name[]" value="박창민(KOR)(매화중학교)">
+          </td>
+  </div>
+  <td>
+    <!-- 삭제 버튼 -->
+    <div class="filed_BTN2">
+      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn6"><i
+          class="xi-minus"></i></button>
+    </div>
+  </td>
+  </tr>
+  </tbody>
+  <tbody class="grouping_body entry_table">
+    <tr>
+      <td>
+        <!-- 조 :: record_group -->
+        <input type="hidden" name="group[]" id="group[]" value="6">
+        <!-- 순서 :: record_order -->
+        <input type="hidden" name="order[]" id="order[]" value="3">
+        <input type="number" class="number" value="3" name="lane[]">
+      </td>
+      <td>
+        <div id="copy-value">
+          <!-- 선수 id :: record_athlete_id-->
+          <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="98">
+          <!-- 선수 이름 -->
+          <input type="text" name="name[]" value="고가곤(KOR)(유림초등학교)">
+      </td>
+</div>
+<td>
+  <!-- 삭제 버튼 -->
+  <div class="filed_BTN2">
+    <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn6"><i
+        class="xi-minus"></i></button>
+  </div>
+</td>
+</tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="6">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="4">
+      <input type="number" class="number" value="4" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="112">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="홍윤서(KOR)(영주서부초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn6"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="6">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="5">
+      <input type="number" class="number" value="5" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="13">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="이승주(KOR)(성주중학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn6"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="6">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="6">
+      <input type="number" class="number" value="6" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="1">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="서예준 정태(KOR)(압량중학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn6"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="6">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="7">
+      <input type="number" class="number" value="7" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="3">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="이지환(KOR)(불국중학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn6"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="6">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="8">
+      <input type="number" class="number" value="8" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="16">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="이예준(KOR)(영광중학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn6"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="schedule_filed filed_list_item filed2">
+  <div class="profile_logo">
+    <img src="/assets/images/logo.png">
+  </div>
+  <div class="schedule_filed_tit schedule_green">
+    <p class="tit_left_yellow">7조</p>
+  </div>
+  <div class="filed2_form">
+    <table cellspacing="0" cellpadding="0" class="entry_table filed2_swap" id="dataTable7" name="table_name[]">
+      <thead class="filed_list filed2_list result_table ">
+        <tr>
+          <th>순서</th>
+          <th>선수 이름</th>
+          <th>삭제</th>
+        </tr>
+        <tr class="filed2_bottom">
+        </tr>
+      </thead>
+      <!-- m명 -->
+      <tbody class="grouping_body entry_table">
+        <tr>
+          <td>
+            <!-- 조 :: record_group -->
+            <input type="hidden" name="group[]" id="group[]" value="7">
+            <!-- 순서 :: record_order -->
+            <input type="hidden" name="order[]" id="order[]" value="2">
+            <input type="number" class="number" value="2" name="lane[]">
+          </td>
+          <td>
+            <div id="copy-value">
+              <!-- 선수 id :: record_athlete_id-->
+              <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="20">
+              <!-- 선수 이름 -->
+              <input type="text" name="name[]" value="김준희(KOR)(왜관중학교)">
+          </td>
+  </div>
+  <td>
+    <!-- 삭제 버튼 -->
+    <div class="filed_BTN2">
+      <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn7"><i
+          class="xi-minus"></i></button>
+    </div>
+  </td>
+  </tr>
+  </tbody>
+  <tbody class="grouping_body entry_table">
+    <tr>
+      <td>
+        <!-- 조 :: record_group -->
+        <input type="hidden" name="group[]" id="group[]" value="7">
+        <!-- 순서 :: record_order -->
+        <input type="hidden" name="order[]" id="order[]" value="3">
+        <input type="number" class="number" value="3" name="lane[]">
+      </td>
+      <td>
+        <div id="copy-value">
+          <!-- 선수 id :: record_athlete_id-->
+          <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="99">
+          <!-- 선수 이름 -->
+          <input type="text" name="name[]" value="박종훈(KOR)(다산초등학교)">
+      </td>
+</div>
+<td>
+  <!-- 삭제 버튼 -->
+  <div class="filed_BTN2">
+    <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn7"><i
+        class="xi-minus"></i></button>
+  </div>
+</td>
+</tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="7">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="4">
+      <input type="number" class="number" value="4" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="101">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="이상원(KOR)(황상초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn7"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="7">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="5">
+      <input type="number" class="number" value="5" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="115">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="최원준(KOR)(포은초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn7"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="7">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="6">
+      <input type="number" class="number" value="6" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="108">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="전재호(KOR)(성주초등학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn7"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="7">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="7">
+      <input type="number" class="number" value="7" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="14">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="양태훈(KOR)(벽진중학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn7"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+<tbody class="grouping_body entry_table">
+  <tr>
+    <td>
+      <!-- 조 :: record_group -->
+      <input type="hidden" name="group[]" id="group[]" value="7">
+      <!-- 순서 :: record_order -->
+      <input type="hidden" name="order[]" id="order[]" value="8">
+      <input type="number" class="number" value="8" name="lane[]">
+    </td>
+    <td>
+      <div id="copy-value">
+        <!-- 선수 id :: record_athlete_id-->
+        <input type="hidden" name="athlete_id[]" id="athlete_id[]" value="6">
+        <!-- 선수 이름 -->
+        <input type="text" name="name[]" value="나예준(KOR)(선주중학교)">
+    </td>
+    </div>
+    <td>
+      <!-- 삭제 버튼 -->
+      <div class="filed_BTN2">
+        <button type="button" name="delete_each_row" class="defaultBtn BIG_btn BTN_Blue filedBTN" id="deleteBtn7"><i
+            class="xi-minus"></i></button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="schedule_filed filed_list_item grouping_table">
+  <div class="profile_logo">
+    <img src="./assets/images/logo.png">
+  </div>
+  <div class="schedule_filed_tit schedule_green">
+    <p class="tit_left_yellow">제외된 선수</p>
+  </div>
+  <div class="filed2_form">
+    <table cellspacing="0" cellpadding="0" class="entry_table filed2_swap" id="targetTable" name="table_name[]">
+      <thead class="filed_list filed2_list result_table ">
+        <tr>
+          <th>순서</th>
+          <th>선수 이름</th>
+          <th>삭제</th>
+        </tr>
+        <tr class="filed2_bottom">
+        </tr>
+      </thead>
+      <!-- m명 -->
+    </table>
+  </div>
+</div>
+<button type="submit" class="changePwBtn defaultBtn">만들기</button>
+</div>
+</form>
+</div>
+<script src="assets/js/main.js?ver=18"></script>
+</body>
+
+</html>

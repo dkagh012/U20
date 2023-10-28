@@ -1,0 +1,249 @@
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css?v=1">
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <script src="../assets/fontawesome/js/all.min.js"></script>
+  <!--Data Tables-->
+  <script type="text/javascript" src="../assets/js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="../assets/js/onlynumber.js"></script>
+  <script type="text/javascript" src="../assets/js/change_athletics.js"></script>
+  <script type="text/javascript" src="../action/record/result_field_vertical_execute_excel.js"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      for (k = 0; k < document.querySelectorAll('#name').length; k++) {
+        let a = document.querySelectorAll('#name')[k];
+        const rain = a.parentElement.parentElement.className.split("_")[1];
+        //성공시 처리 부분
+        let high = document.querySelectorAll('[name="trial[]"]'); // 높이 배열 가져오기
+        let index = document.querySelectorAll("#result");
+        let calcal = 0.0;
+        for (i = 1; i <= high.length; i++) {
+          let k = '[name="gameresult' + i + '[]"]';
+          let temp = document.querySelectorAll(k)[rain - 1].value;
+          if (temp.search("O") != -1) {
+            if (
+              calcal < parseFloat(high[i - 1].value) ||
+              isNaN(parseFloat(index[rain - 1].value))
+            ) {
+              calcal = parseFloat(high[i - 1].value);
+            }
+          }
+        }
+        index[rain - 1].value = calcal; // 기존 값과 비교 후 성공 시 기록이 크면 바꾸기
+      }
+      rankcal2()
+    }
+    $(document).on("click", "button[name='addtempresult']", function () {
+      $("#submit_div_gwoan_san").append("<input type='hidden' name=tempstore value='1'>");
+    });
+    $(document).on("click", "button[name='addresult']", function () {
+      $("#submit_div_gwoan_san").append("<input type='hidden' name=tempstore value='0'>");
+    });
+
+    function input_time() {
+      var today = new Date();
+      var year = today.getFullYear();
+      var month = ('0' + (today.getMonth() + 1)).slice(-2);
+      var day = ('0' + today.getDate()).slice(-2);
+      var dateString = year + '-' + month + '-' + day;
+      var hours = ('0' + today.getHours()).slice(-2);
+      var minutes = ('0' + today.getMinutes()).slice(-2);
+      var seconds = ('0' + today.getSeconds()).slice(-2);
+      var timeString = hours + ':' + minutes + ':' + seconds;
+      let total = dateString + " " + timeString;
+      let intime = document.querySelector("input[name='starttime']")
+      intime.value = total
+    }
+  </script>
+</head>
+
+<body>
+  <!-- contents 본문 내용 -->
+  <div class="container">
+    <div class="athlete">
+      <div class="profile_logo">
+        <img src="../assets/images/logo.png">
+      </div>
+      <div class="UserProfile">
+        <p class="UserProfile_tit tit_left_blue">
+          High Jump </p>
+        <form action="../action/record/field_vertical_result_insert.php" method="post">
+          <input type="hidden" name="sports" value="highjump">
+          <input type="hidden" name="gender" value="m">
+          <input type="hidden" name="round" value="final">
+          <input type="hidden" name="group" value="1">
+          <div class="UserProfile_modify UserProfile_input thorw_main">
+            <div>
+              <ul class="UserDesc throwDesc">
+                <li class="row input_row throw_row">
+                  <span>경기 이름</span>
+                  <input placeholder="경기 이름" type="text" name="gamename" value="High Jump" maxlength="16" required=""
+                    readonly="">
+                </li>
+                <li class="row input_row throw_row">
+                  <span>라운드</span>
+                  <input placeholder="라운드" type="text" name="round" value="final" maxlength="16" required=""
+                    readonly="">
+                </li>
+                <li class="row input_row throw_row">
+                  <span>심판 이름</span>
+                  <input placeholder="심판 이름" type="text" name="refereename" value="huck LEE" maxlength="30" required=""
+                    readonly="">
+                </li>
+                <li class="row input_row throw_row">
+                  <span>경기 시작 시간</span>
+                  <input placeholder="시작 시간" type="text" name="starttime" value="" maxlength="30" required="">
+                  <div class="full_div">
+                    <button type="button" class="defaultBtn BTN_Blue" onclick="input_time()">현재시간</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="vertical_Btn">높이 늘리기</button>
+          </div>
+          <div class="Thorw_result">
+            <div class="relay_result">
+              <div class="result_BTN">
+                <h1 class="UserProfile_tit tit_left_green tit_padding">결과</h1>
+              </div>
+            </div>
+          </div>
+          <table class="box_table">
+            <thead class="result_table entry_table">
+              <tr id="col1">
+                <th rowspan="2">등수</th>
+                <th rowspan="2">순서</th>
+                <th rowspan="2">이름</th>
+                <th style="background: none"><input placeholder="높이" type="text" name="trial[]" class="input_trial"
+                    id="trial" value="" maxlength="4" onkeyup="heightFormat(this)"></th>
+                <th rowspan="2">기록</th>
+                <th>비고</th>
+              </tr>
+            </thead>
+            <tbody class="high_jump_table field3_hover entry_table">
+              <tr id="col1" class="col1_1">
+                <td rowspan="2"><input type="number" name="rank[]" class="input_text" id="rank" value="" min="1"
+                    required=""></td>
+                <td rowspan="2"><input type="number" name="rain[]" class="input_text" value="1" min="1" required=""
+                    readonly=""></td>
+                <td rowspan="2"><input placeholder="선수 이름" type="text" name="playername[]" id="name" class="input_text"
+                    value="CHOI JINWOO" maxlength="30" required="" readonly=""></td>
+                <td><input placeholder="" type="text" name="gameresult1[]" class="input_text" value="" maxlength="3"
+                    onkeyup="highFormat(this)"></td>
+                <td rowspan="2"><input placeholder="결과" id="result" type="text" name="gameresult[]" class="input_text"
+                    value="" maxlength="5" required=""></td><input type="hidden" name="compresult[]" value="">
+                <td><input placeholder="비고" type="text" name="bigo[]" class="input_text" value="" maxlength="100"></td>
+              </tr>
+            </tbody>
+            <tbody class="high_jump_table field3_hover entry_table">
+              <tr id="col1" class="col1_2">
+                <td rowspan="2"><input type="number" name="rank[]" class="input_text" id="rank" value="" min="1"
+                    required=""></td>
+                <td rowspan="2"><input type="number" name="rain[]" class="input_text" value="2" min="1" required=""
+                    readonly=""></td>
+                <td rowspan="2"><input placeholder="선수 이름" type="text" name="playername[]" id="name" class="input_text"
+                    value="LEE SEONGJIN" maxlength="30" required="" readonly=""></td>
+                <td><input placeholder="" type="text" name="gameresult1[]" class="input_text" value="" maxlength="3"
+                    onkeyup="highFormat(this)"></td>
+                <td rowspan="2"><input placeholder="결과" id="result" type="text" name="gameresult[]" class="input_text"
+                    value="" maxlength="5" required=""></td><input type="hidden" name="compresult[]" value="">
+                <td><input placeholder="비고" type="text" name="bigo[]" class="input_text" value="" maxlength="100"></td>
+              </tr>
+
+            </tbody>
+            <tbody class="high_jump_table field3_hover entry_table">
+              <tr id="col1" class="col1_3">
+                <td rowspan="2"><input type="number" name="rank[]" class="input_text" id="rank" value="" min="1"
+                    required=""></td>
+                <td rowspan="2"><input type="number" name="rain[]" class="input_text" value="3" min="1" required=""
+                    readonly=""></td>
+                <td rowspan="2"><input placeholder="선수 이름" type="text" name="playername[]" id="name" class="input_text"
+                    value="KIM DONGKUN" maxlength="30" required="" readonly=""></td>
+                <td><input placeholder="" type="text" name="gameresult1[]" class="input_text" value="" maxlength="3"
+                    onkeyup="highFormat(this)"></td>
+                <td rowspan="2"><input placeholder="결과" id="result" type="text" name="gameresult[]" class="input_text"
+                    value="" maxlength="5" required=""></td><input type="hidden" name="compresult[]" value="">
+                <td><input placeholder="비고" type="text" name="bigo[]" class="input_text" value="" maxlength="100"></td>
+              </tr>
+            </tbody>
+            <tbody class="high_jump_table field3_hover entry_table">
+              <tr id="col1" class="col1_4">
+                <td rowspan="2"><input type="number" name="rank[]" class="input_text" id="rank" value="" min="1"
+                    required=""></td>
+                <td rowspan="2"><input type="number" name="rain[]" class="input_text" value="4" min="1" required=""
+                    readonly=""></td>
+                <td rowspan="2"><input placeholder="선수 이름" type="text" name="playername[]" id="name" class="input_text"
+                    value="PARK JUNUI" maxlength="30" required="" readonly=""></td>
+                <td><input placeholder="" type="text" name="gameresult1[]" class="input_text" value="" maxlength="3"
+                    onkeyup="highFormat(this)"></td>
+                <td rowspan="2"><input placeholder="결과" id="result" type="text" name="gameresult[]" class="input_text"
+                    value="" maxlength="5" required=""></td><input type="hidden" name="compresult[]" value="">
+                <td><input placeholder="비고" type="text" name="bigo[]" class="input_text" value="" maxlength="100"></td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="UserProfile_tit tit_left_red tit_padding">경기 비고</h3>
+          <input placeholder="비고를 입력해주세요." type="text" name="bibigo" class="note_text" value="" maxlength=" 100">
+          <div class="modify_Btn input_Btn result_Btn">
+            <div class="modify_Btn input_Btn result_Btn" id="submit_div_gwoan_san">
+              <button type="submit" class="defaultBtn BTN_Blue full_width" name="addresult"
+                formaction="../action/record/field_vertical_result_insert.php">
+                <span>확인</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    const addButton = document.querySelector('.vertical_Btn');
+    const thead = document.querySelector('.result_table');
+    const high_jump_table = document.querySelector('.high_jump_table ');
+    const thead_th = document.querySelectorAll('.result_table>tr>th')[3];
+    let inputCount = 1;
+    let Count = 3;
+
+    addButton.addEventListener('click', function () {
+      inputCount++;
+      const newTh = document.createElement('th');
+      newTh.setAttribute('style', 'background: none');
+      const newInput = document.createElement('input');
+      newInput.setAttribute('placeholder', '높이');
+      newInput.setAttribute('type', 'text');
+      newInput.setAttribute('name', 'trial[]');
+      newInput.setAttribute('class', 'input_trial');
+      newInput.setAttribute('id', 'trial');
+      newInput.setAttribute('value', '');
+      newInput.setAttribute('maxlength', '4');
+      newInput.setAttribute('onkeyup', 'heightFormat(this)');
+      newTh.appendChild(newInput);
+      thead_th.insertAdjacentElement('afterend', newTh);
+
+      const tbody_td = document.querySelectorAll('.high_jump_table>tr>td')[`${Count}`];
+      const newTd = document.createElement('td');
+      const newInput2 = document.createElement('input');
+      newInput2.setAttribute('type', 'text');
+      newInput2.setAttribute('name', `gameresult${inputCount}[]`);
+      newInput2.setAttribute('class', 'input_text');
+      newInput2.setAttribute('value', '');
+      newInput2.setAttribute('maxlength', '3');
+      newInput2.setAttribute('onkeyup', 'highFormat(this)');
+      newTd.appendChild(newInput2);
+      tbody_td.insertAdjacentElement('afterend', newTd)
+      Count++;
+    });
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/xeicon.min.css">
+  <link rel="stylesheet" href="assets/css/swiper.min.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>필드결과입력 | 필드경기 | 제20회 예천아시아 U20 육상경기 선수권대회</title>
+
+  <script type="text/javascript" src="assets/js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+  <script type="text/javascript" src="assets/js/onlynumber.js?v=1682994454"></script>
+  <script type="text/javascript" src="assets/js/change_athletics.js"></script>
+  <script type="text/javascript">
+    $(document).on("click", "button[name='addtempresult']", function () {
+      $("#submit_div_gwoan_san").append("<input type='hidden' name=tempstore value='1'>");
+    });
+    $(document).on("click", "button[name='addresult']", function () {
+      $("#submit_div_gwoan_san").append("<input type='hidden' name=tempstore value='0'>");
+    });
+
+    function input_time() {
+      var today = new Date();
+      var year = today.getFullYear();
+      var month = ('0' + (today.getMonth() + 1)).slice(-2);
+      var day = ('0' + today.getDate()).slice(-2);
+      var dateString = year + '-' + month + '-' + day;
+      var hours = ('0' + today.getHours()).slice(-2);
+      var minutes = ('0' + today.getMinutes()).slice(-2);
+      var seconds = ('0' + today.getSeconds()).slice(-2);
+      var timeString = hours + ':' + minutes + ':' + seconds;
+      let total = dateString + " " + timeString;
+      let intime = document.querySelector("input[name='starttime']")
+      intime.value = total
+    }
+  </script>
+
+  <div class="container">
+    <div class="athlete">
+      <div class="profile_logo">
+        <img src="assets/images/logo.png">
+      </div>
+      <div class="UserProfile">
+        <p class="UserProfile_tit tit_left_blue">
+          Heptathlon </p>
+        <form action="" method="post">
+          <input type="hidden" name="sports" value="heptathlon">
+          <input type="hidden" name="gender" value="f">
+          <input type="hidden" name="round" value="shotput">
+          <input type="hidden" name="group" value="1">
+          <div class="UserProfile_modify UserProfile_input thorw_main">
+            <div>
+              <ul class="UserDesc throwDesc">
+                <li class="row input_row throw_row">
+                  <span>경기 이름</span>
+                  <input placeholder="경기 이름" type="text" value="Heptathlon" maxlength="16" required readonly />
+                </li>
+                <li class="row input_row throw_row">
+                  <span>라운드</span>
+                  <input placeholder="라운드" type="text" value="shotput" maxlength="16" required readonly />
+                </li>
+                <li class="row input_row throw_row">
+                  <span>심판 이름</span>
+                  <input placeholder="심판 이름" type="text" name="refereename" value="" maxlength="30" required readonly />
+                </li>
+                <li class="row input_row throw_row">
+                  <span>경기 시작 시간</span>
+                  <input placeholder="시작 시간" type="text" name="starttime" class="input_text" value="2023-01-01 00:00:00"
+                    maxlength="30" required />
+                  <div class="full_div">
+                    <button type="button" class="defaultBtn BTN_Blue" onclick="input_time()">현재시간</button>
+                  </div>
+                </li>
+                <li class="row input_row throw_row">
+                  <span>용기구</span>
+                  <input placeholder="용기구" type="text" name="weight" class="input_text" value="" maxlength="16"
+                    required />
+                </li>
+              </ul>
+              <div class="Thorw_result">
+                <div class="result_BTN">
+                  <h1 class="tit_padding tit_left_green">결과</h1>
+                  <div>
+                  </div>
+                </div>
+              </div>
+              <table class="box_table">
+                <colgroup>
+                  <col style="width: 7%" />
+                  <col style="width: 7%" />
+                  <col style="width: 7%" />
+                  <col style="width: 15%" />
+                  <col style="width: 12%" />
+                  <col style="width: 12%" />
+                  <col style="width: 12%" />
+                  <col style="width: 12%" />
+                  <col style="width: 7%" />
+                  <col style="width: 15%" />
+                </colgroup>
+                <thead class="result_table De_tbody entry_table">
+                  <tr>
+                    <th>등수</th>
+                    <th>순서</th>
+                    <th>BIB</th>
+                    <th>이름</th>
+                    <th>1차 시기</th>
+                    <th>2차 시기</th>
+                    <th>3차 시기</th>
+                    <th>기록</th>
+                    <th rowspan="2">비고</th>
+
+                    <th>신기록</th>
+                  </tr>
+                  <tr class="filed2_bottom"></tr>
+                </thead>
+                <tbody class="table_tbody De_tbody entry_table">
+                  <tr>
+                    <td><input type="number" name="rank[569]" id="rank" value="" min="1" required></td>
+                    <td><input type="number" name="rain[569]" value="1" required></td>
+                    <td><input placeholder="BIB" type="text" name="playerbib[]" value="00414" required readonly></td>
+                    <td><input placeholder="선수 이름" type="text" id="name" name="playername[]" value="JUNG JIIN" required
+                        readonly></td>
+
+                    <td><input type="text" name="game_trial_result[569][1]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[569][2]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[569][3]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input id="result" type="text" name="gameresult[569]" value="" required
+                        onkeyup="field1Format(this)"></td>
+                    <td><input type="text" name="bigo[569]" value=""></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><input type="number" name="rank[583]" id="rank" value="" min="1" required></td>
+                    <td><input type="number" name="rain[583]" value="2" required></td>
+                    <td><input placeholder="BIB" type="text" name="playerbib[]" value="00428" required readonly></td>
+                    <td><input placeholder="선수 이름" type="text" id="name" name="playername[]" value="KIM SORYEON"
+                        required readonly></td>
+
+                    <td><input type="text" name="game_trial_result[583][1]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[583][2]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[583][3]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input id="result" type="text" name="gameresult[583]" value="" required
+                        onkeyup="field1Format(this)"></td>
+                    <td><input type="text" name="bigo[583]" value=""></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><input type="number" name="rank[446]" id="rank" value="" min="1" required></td>
+                    <td><input type="number" name="rain[446]" value="3" required></td>
+                    <td><input placeholder="BIB" type="text" name="playerbib[]" value="00291" required readonly></td>
+                    <td><input placeholder="선수 이름" type="text" id="name" name="playername[]" value="LEE CHAEWON"
+                        required readonly></td>
+
+                    <td><input type="text" name="game_trial_result[446][1]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[446][2]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[446][3]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input id="result" type="text" name="gameresult[446]" value="" required
+                        onkeyup="field1Format(this)"></td>
+                    <td><input type="text" name="bigo[446]" value=""></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><input type="number" name="rank[514]" id="rank" value="" min="1" required></td>
+                    <td><input type="number" name="rain[514]" value="4" required></td>
+                    <td><input placeholder="BIB" type="text" name="playerbib[]" value="00359" required readonly></td>
+                    <td><input placeholder="선수 이름" type="text" id="name" name="playername[]" value="LEE JUNGEUN"
+                        required readonly></td>
+
+                    <td><input type="text" name="game_trial_result[514][1]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[514][2]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[514][3]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input id="result" type="text" name="gameresult[514]" value="" required
+                        onkeyup="field1Format(this)"></td>
+                    <td><input type="text" name="bigo[514]" value=""></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><input type="number" name="rank[490]" id="rank" value="" min="1" required></td>
+                    <td><input type="number" name="rain[490]" value="5" required></td>
+                    <td><input placeholder="BIB" type="text" name="playerbib[]" value="00335" required readonly></td>
+                    <td><input placeholder="선수 이름" type="text" id="name" name="playername[]" value="SON YOUNGBIN"
+                        required readonly></td>
+
+                    <td><input type="text" name="game_trial_result[490][1]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[490][2]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[490][3]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input id="result" type="text" name="gameresult[490]" value="" required
+                        onkeyup="field1Format(this)"></td>
+                    <td><input type="text" name="bigo[490]" value=""></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><input type="number" name="rank[443]" id="rank" value="" min="1" required></td>
+                    <td><input type="number" name="rain[443]" value="6" required></td>
+                    <td><input placeholder="BIB" type="text" name="playerbib[]" value="00288" required readonly></td>
+                    <td><input placeholder="선수 이름" type="text" id="name" name="playername[]" value="PARK DAHAE" required
+                        readonly></td>
+
+                    <td><input type="text" name="game_trial_result[443][1]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[443][2]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[443][3]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input id="result" type="text" name="gameresult[443]" value="" required
+                        onkeyup="field1Format(this)"></td>
+                    <td><input type="text" name="bigo[443]" value=""></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><input type="number" name="rank[525]" id="rank" value="" min="1" required></td>
+                    <td><input type="number" name="rain[525]" value="7" required></td>
+                    <td><input placeholder="BIB" type="text" name="playerbib[]" value="00370" required readonly></td>
+                    <td><input placeholder="선수 이름" type="text" id="name" name="playername[]" value="CHOI YOONAH"
+                        required readonly></td>
+
+                    <td><input type="text" name="game_trial_result[525][1]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[525][2]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[525][3]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input id="result" type="text" name="gameresult[525]" value="" required
+                        onkeyup="field1Format(this)"></td>
+                    <td><input type="text" name="bigo[525]" value=""></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><input type="number" name="rank[645]" id="rank" value="" min="1" required></td>
+                    <td><input type="number" name="rain[645]" value="8" required></td>
+                    <td><input placeholder="BIB" type="text" name="playerbib[]" value="00490" required readonly></td>
+                    <td><input placeholder="선수 이름" type="text" id="name" name="playername[]" value="KIM SOOJI" required
+                        readonly></td>
+
+                    <td><input type="text" name="game_trial_result[645][1]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[645][2]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[645][3]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input id="result" type="text" name="gameresult[645]" value="" required
+                        onkeyup="field1Format(this)"></td>
+                    <td><input type="text" name="bigo[645]" value=""></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><input type="number" name="rank[670]" id="rank" value="" min="1" required></td>
+                    <td><input type="number" name="rain[670]" value="9" required></td>
+                    <td><input placeholder="BIB" type="text" name="playerbib[]" value="00515" required readonly></td>
+                    <td><input placeholder="선수 이름" type="text" id="name" name="playername[]" value="KIM SEONGA" required
+                        readonly></td>
+
+                    <td><input type="text" name="game_trial_result[670][1]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[670][2]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[670][3]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input id="result" type="text" name="gameresult[670]" value="" required
+                        onkeyup="field1Format(this)"></td>
+                    <td><input type="text" name="bigo[670]" value=""></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><input type="number" name="rank[563]" id="rank" value="" min="1" required></td>
+                    <td><input type="number" name="rain[563]" value="10" required></td>
+                    <td><input placeholder="BIB" type="text" name="playerbib[]" value="00408" required readonly></td>
+                    <td><input placeholder="선수 이름" type="text" id="name" name="playername[]" value="PARK SEOHYUN"
+                        required readonly></td>
+
+                    <td><input type="text" name="game_trial_result[563][1]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[563][2]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input type="text" name="game_trial_result[563][3]" value="" onkeyup="field1Format(this)"></td>
+
+
+                    <td><input id="result" type="text" name="gameresult[563]" value="" required
+                        onkeyup="field1Format(this)"></td>
+                    <td><input type="text" name="bigo[563]" value=""></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h3 class="UserProfile_tit tit_left_red tit_padding">경기 비고</h3>
+            <input placeholder="비고를 입력해주세요." type="text" name="bibigo" class="note_text" value="" maxlength="100" />
+            <div class="modify_Btn input_Btn result_Btn" id="submit_div_gwoan_san">
+              <button type="submit" class="defaultBtn BTN_Blue full_width" name="addresult"
+                formaction="action/competition/schedule_field_normal_result_insert.php">
+                <span>확인</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="assets/js/main.js?v=1682994454"></script>
+</body>
+
+</html>

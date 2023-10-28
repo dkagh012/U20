@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/xeicon.min.css">
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>자원봉사자 등록</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="athlete">
+      <div class="profile_logo">
+        <img src="./assets/images/logo.png">
+      </div>
+      <div class="UserProfile">
+        <p class="UserProfile_tit tit_left_blue">
+          자원봉사자 정보
+        </p>
+        <form action="">
+          <div class="UserProfile_modify UserProfile_input">
+            <div>
+              <ul class="UserDesc Participant_list Participant_padding">
+                <li class="row input_row row_item">
+                  <span>이름</span>
+                  <input type="text" placeholder="이름을 입력하세요" value="">
+                </li>
+                <li class="row input_row row_item">
+                  <span>성</span>
+                  <input type="text" placeholder="성을 입력하세요" value="">
+                </li>
+                <li class="row input_row row_item">
+                  <span>지역</span>
+                  <input type="text" placeholder="지역을 입력하세요" value="">
+                </li>
+                <li class="row input_row row_item">
+                  <span>소속</span>
+                  <input type="text" placeholder="소속을 입력하세요" value="">
+                </li>
+                <li class="row input_row row_item input_width">
+                  <span>성별</span>
+                  <select title="성별" name="gender">
+                    <option value="Man">남성</option>
+                    <option value="Woman">여성</option>
+                  </select>
+                </li>
+                <li class="row input_row row_item row_date">
+                  <span>생년월일</span>
+                  <input type="text" name="athlete_birth_year" class="input_text_row_b" placeholder="연" required="">
+                  <input type="text" name="athlete_birth_month" class="input_text_row_b" placeholder="월" required="">
+                  <input type="text" name="athlete_birth_day" class="input_text_row_b" placeholder="일" required="">
+                </li>
+                <li class="row input_row row_item full_width">
+                  <span class="full_span">직종</span>
+                  <input class="full_width2" type="number" name="athlete_bib" id="athlete_bib" value=""
+                    placeholder="직종을 입력하세요">
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div>
+      </form>
+    </div>
+    <div class="modify_Btn input_Btn Participant_Btn">
+      <button class="BTN_blue2" type="button">등록하기</button>
+    </div>
+  </div>
+  </div>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

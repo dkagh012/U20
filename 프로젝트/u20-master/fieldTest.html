@@ -1,0 +1,504 @@
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/xeicon.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper.min.css">
+    <link rel="stylesheet" href="../assets/css/reset.css?v=3">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <script type="text/javascript" src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../assets/js/onlynumber.js"></script>
+    <script type="text/javascript" src="../assets/js/change_athletics.js"></script>
+    <script type="text/javascript" src="../action/record/result_field_horizontal_execute_excel(exclude_wind).js">
+    </script>
+
+    <title>u20 관리자 페이지</title>
+    <script type="text/javascript">
+
+        function input_time() {
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = ('0' + (today.getMonth() + 1)).slice(-2);
+            var day = ('0' + today.getDate()).slice(-2);
+            var dateString = year + '-' + month + '-' + day;
+            var hours = ('0' + today.getHours()).slice(-2);
+            var minutes = ('0' + today.getMinutes()).slice(-2);
+            var seconds = ('0' + today.getSeconds()).slice(-2);
+            var timeString = hours + ':' + minutes + ':' + seconds;
+            let total = dateString + " " + timeString;
+            let intime = document.querySelector("input[name='starttime']")
+            intime.value = total
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="athlete">
+            <div class="profile_logo">
+                <img src="../assets/images/logo.png">
+            </div>
+            <div class="UserProfile">
+                <p class="UserProfile_tit tit_left_blue">
+                    Discus Throw </p>
+                <form action="" method="post">
+                    <input type="hidden" name="sports" value="discusthrow">
+                    <input type="hidden" name="gender" value="f">
+                    <input type="hidden" name="round" value="final">
+                    <input type="hidden" name="group" value="1">
+                    <div class="UserProfile_modify UserProfile_input thorw_main">
+                        <div>
+                            <ul class="UserDesc throwDesc">
+                                <li class="row input_row throw_row">
+                                    <span>경기 이름</span>
+                                    <input placeholder="경기 이름" type="text" name="gamename" value="Discus Throw"
+                                        maxlength="16" required="" readonly="">
+                                </li>
+                                <li class="row input_row throw_row">
+                                    <span>라운드</span>
+                                    <input placeholder="라운드" type="text" name="round" value="final" maxlength="16"
+                                        required="" readonly="">
+                                </li>
+                                <li class="row input_row throw_row">
+                                    <span>심판 이름</span>
+                                    <input placeholder="심판 이름" type="text" name="refereename" value="huck LEE"
+                                        maxlength="30" required="" readonly="">
+                                </li>
+                                <li class="row input_row throw_row">
+                                    <span>경기 시작 시간</span>
+                                    <input placeholder="시작 시간" type="text" name="starttime" value="" maxlength="30"
+                                        required="">
+                                    <div class="full_div">
+                                        <button type="button" class="defaultBtn BTN_Blue"
+                                            onclick="input_time()">현재시간</button>
+                                    </div>
+                                </li>
+                                <li class="row input_row throw_row">
+                                    <span>용기구</span>
+                                    <input placeholder="용기구" type="text" name="weight" class="input_text" value="KG"
+                                        maxlength="16" required="">
+                                </li>
+                            </ul>
+                            <div class="Thorw_result">
+                                <div class="result_BTN">
+                                    <h1 class="tit_padding tit_left_green">결과</h1>
+                                    <div>
+                                        <button class="defaultBtn BIG_btn BTN_blue4" type="submit"
+                                            formaction="../action/record/three_try_after_reverse.php">순서 재정렬</button>
+                                    </div>
+                                </div>
+                                <div class="relay_result">
+                                    <h3 class="UserProfile_tit tit_left_green tit_padding">결과</h3>
+                                </div>
+                                <input type="hidden" name="count" value="3">
+                            </div>
+                            <table class="box_table">
+                                <colgroup>
+                                    <col style="width: 7%">
+                                    <col style="width: 7%">
+                                    <col style="width: 7%">
+                                    <col style="width: 15%">
+                                    <col style="width: 6%">
+                                    <col style="width: 6%">
+                                    <col style="width: 6%">
+                                    <col style="width: 6%">
+                                    <col style="width: 6%">
+                                    <col style="width: 6%">
+                                    <col style="width: 6%">
+                                    <col style="width: 6%">
+                                    <col style="width: 6%">
+                                    <col style="width: 6%">
+                                    <col style="width: 7%">
+                                    <col style="width: 15%">
+                                </colgroup>
+                                <thead class="result_table De_tbody entry_table">
+                                    <tr>
+                                        <th>등수</th>
+                                        <th>순서</th>
+                                        <th>BIB</th>
+                                        <th>이름</th>
+                                        <th>1차 시기</th>
+                                        <th>2차 시기</th>
+                                        <th>3차 시기</th>
+                                        <th>3회 시기중 최고 기록</th>
+                                        <th>3회 시기에 따른 등수</th>
+                                        <th>3회 시기에 따른 다음시기 순서</th>
+                                        <th>4차 시기</th>
+                                        <th>5차 시기</th>
+                                        <th>6차 시기</th>
+                                        <th>기록</th>
+                                        <th>비고</th>
+                                        <th>신기록</th>
+                                    </tr>
+                                    <tr class="filed2_bottom"></tr>
+                                </thead>
+                                <tbody class="table_tbody De_tbody entry_table">
+                                    <tr>
+                                        <td><input type="number" name="rank[]" class="input_text" id="rank" value=""
+                                                min="1" required="">
+                                        </td>
+                                        <td><input type="text" name="rain[]" class="input_text" value="1" min="1"
+                                                max="12" required="" readonly=""></td>
+                                        <td><input placeholder="등번호" type="text" id="bib" name="playerbib[]"
+                                                class="input_text" value="00011" maxlength="30" required="" readonly="">
+                                        </td>
+                                        <td><input placeholder="선수 이름" type="text" id="name" name="playername[]"
+                                                class="input_text" value="HYUNG AYOUNG" maxlength="30" required=""
+                                                readonly=""></td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult1[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult2[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult3[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="최고기록" id="threetop" type="text" class="input_text"
+                                                value="0" maxlength="5" readonly=""></td>
+                                        <td><input type="text" id="middlerank" class="input_text" value="" maxlength="5"
+                                                readonly=""></td>
+                                        <td><input placeholder="두번째 순서" type="text" class="input_text" value=""
+                                                maxlength="5" readonly="">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult4[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult5[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult6[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" id="result" type="text" name="gameresult[]"
+                                                class="input_text" value="" maxlength="6" required=""
+                                                onkeyup="field1Format(this)"><input type="hidden" name="compresult[]"
+                                                value=""></td>
+                                        <td><input type="text" placeholder="비고" name="bigo[]" class="input_text"
+                                                value="" maxlength="100">
+                                        </td>
+                                        <td><input placeholder="" type="text" name="newrecord[]" class="input_text"
+                                                value="" maxlength="100" ath="HYUNG AYOUNG" sports="discusthrow"
+                                                record_round="final" and="" record_gender="f" record_group="1" record=""
+                                                readonly=""></td>
+                                    </tr>
+                                    <tr class="Ranklist_Background">
+                                        <td><input type="number" name="rank[]" class="input_text" id="rank" value=""
+                                                min="1" required="">
+                                        </td>
+                                        <td><input type="text" name="rain[]" class="input_text" value="2" min="1"
+                                                max="12" required="" readonly=""></td>
+                                        <td><input placeholder="등번호" type="text" id="bib" name="playerbib[]"
+                                                class="input_text" value="00008" maxlength="30" required="" readonly="">
+                                        </td>
+                                        <td><input placeholder="선수 이름" type="text" id="name" name="playername[]"
+                                                class="input_text" value="KIM YEBHIN" maxlength="30" required=""
+                                                readonly=""></td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult1[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult2[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult3[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="최고기록" id="threetop" type="text" class="input_text"
+                                                value="0" maxlength="5" readonly=""></td>
+                                        <td><input type="text" id="middlerank" class="input_text" value="" maxlength="5"
+                                                readonly=""></td>
+                                        <td><input placeholder="두번째 순서" type="text" class="input_text" value=""
+                                                maxlength="5" readonly="">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult4[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult5[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult6[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" id="result" type="text" name="gameresult[]"
+                                                class="input_text" value="" maxlength="6" required=""
+                                                onkeyup="field1Format(this)"><input type="hidden" name="compresult[]"
+                                                value=""></td>
+                                        <td><input type="text" placeholder="비고" name="bigo[]" class="input_text"
+                                                value="" maxlength="100">
+                                        </td>
+                                        <td><input placeholder="" type="text" name="newrecord[]" class="input_text"
+                                                value="" maxlength="100" ath="KIM YEBHIN" sports="discusthrow"
+                                                record_round="final" and="" record_gender="f" record_group="1" record=""
+                                                readonly=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="number" name="rank[]" class="input_text" id="rank" value=""
+                                                min="1" required="">
+                                        </td>
+                                        <td><input type="text" name="rain[]" class="input_text" value="3" min="1"
+                                                max="12" required="" readonly=""></td>
+                                        <td><input placeholder="등번호" type="text" id="bib" name="playerbib[]"
+                                                class="input_text" value="00524" maxlength="30" required="" readonly="">
+                                        </td>
+                                        <td><input placeholder="선수 이름" type="text" id="name" name="playername[]"
+                                                class="input_text" value="SON JIWOO" maxlength="30" required=""
+                                                readonly=""></td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult1[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult2[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult3[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="최고기록" id="threetop" type="text" class="input_text"
+                                                value="0" maxlength="5" readonly=""></td>
+                                        <td><input type="text" id="middlerank" class="input_text" value="" maxlength="5"
+                                                readonly=""></td>
+                                        <td><input placeholder="두번째 순서" type="text" class="input_text" value=""
+                                                maxlength="5" readonly="">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult4[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult5[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult6[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" id="result" type="text" name="gameresult[]"
+                                                class="input_text" value="" maxlength="6" required=""
+                                                onkeyup="field1Format(this)"><input type="hidden" name="compresult[]"
+                                                value=""></td>
+                                        <td><input type="text" placeholder="비고" name="bigo[]" class="input_text"
+                                                value="" maxlength="100">
+                                        </td>
+                                        <td><input placeholder="" type="text" name="newrecord[]" class="input_text"
+                                                value="" maxlength="100" ath="SON JIWOO" sports="discusthrow"
+                                                record_round="final" and="" record_gender="f" record_group="1" record=""
+                                                readonly=""></td>
+                                    </tr>
+                                    <tr class="Ranklist_Background">
+                                        <td><input type="number" name="rank[]" class="input_text" id="rank" value=""
+                                                min="1" required="">
+                                        </td>
+                                        <td><input type="text" name="rain[]" class="input_text" value="4" min="1"
+                                                max="12" required="" readonly=""></td>
+                                        <td><input placeholder="등번호" type="text" id="bib" name="playerbib[]"
+                                                class="input_text" value="00104" maxlength="30" required="" readonly="">
+                                        </td>
+                                        <td><input placeholder="선수 이름" type="text" id="name" name="playername[]"
+                                                class="input_text" value="OH YOOJJUNG" maxlength="30" required=""
+                                                readonly=""></td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult1[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult2[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult3[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="최고기록" id="threetop" type="text" class="input_text"
+                                                value="0" maxlength="5" readonly=""></td>
+                                        <td><input type="text" id="middlerank" class="input_text" value="" maxlength="5"
+                                                readonly=""></td>
+                                        <td><input placeholder="두번째 순서" type="text" class="input_text" value=""
+                                                maxlength="5" readonly="">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult4[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult5[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult6[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" id="result" type="text" name="gameresult[]"
+                                                class="input_text" value="" maxlength="6" required=""
+                                                onkeyup="field1Format(this)"><input type="hidden" name="compresult[]"
+                                                value=""></td>
+                                        <td><input type="text" placeholder="비고" name="bigo[]" class="input_text"
+                                                value="" maxlength="100">
+                                        </td>
+                                        <td><input placeholder="" type="text" name="newrecord[]" class="input_text"
+                                                value="" maxlength="100" ath="OH YOOJJUNG" sports="discusthrow"
+                                                record_round="final" and="" record_gender="f" record_group="1" record=""
+                                                readonly=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="number" name="rank[]" class="input_text" id="rank" value=""
+                                                min="1" required="">
+                                        </td>
+                                        <td><input type="text" name="rain[]" class="input_text" value="5" min="1"
+                                                max="12" required="" readonly=""></td>
+                                        <td><input placeholder="등번호" type="text" id="bib" name="playerbib[]"
+                                                class="input_text" value="00064" maxlength="30" required="" readonly="">
+                                        </td>
+                                        <td><input placeholder="선수 이름" type="text" id="name" name="playername[]"
+                                                class="input_text" value="CHOI ABIN" maxlength="30" required=""
+                                                readonly=""></td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult1[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult2[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult3[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="최고기록" id="threetop" type="text" class="input_text"
+                                                value="0" maxlength="5" readonly=""></td>
+                                        <td><input type="text" id="middlerank" class="input_text" value="" maxlength="5"
+                                                readonly=""></td>
+                                        <td><input placeholder="두번째 순서" type="text" class="input_text" value=""
+                                                maxlength="5" readonly="">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult4[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult5[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult6[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" id="result" type="text" name="gameresult[]"
+                                                class="input_text" value="" maxlength="6" required=""
+                                                onkeyup="field1Format(this)"><input type="hidden" name="compresult[]"
+                                                value=""></td>
+                                        <td><input type="text" placeholder="비고" name="bigo[]" class="input_text"
+                                                value="" maxlength="100">
+                                        </td>
+                                        <td><input placeholder="" type="text" name="newrecord[]" class="input_text"
+                                                value="" maxlength="100" ath="CHOI ABIN" sports="discusthrow"
+                                                record_round="final" and="" record_gender="f" record_group="1" record=""
+                                                readonly=""></td>
+                                    </tr>
+                                    <tr class="Ranklist_Background">
+                                        <td><input type="number" name="rank[]" class="input_text" id="rank" value=""
+                                                min="1" required="">
+                                        </td>
+                                        <td><input type="text" name="rain[]" class="input_text" value="6" min="1"
+                                                max="12" required="" readonly=""></td>
+                                        <td><input placeholder="등번호" type="text" id="bib" name="playerbib[]"
+                                                class="input_text" value="00140" maxlength="30" required="" readonly="">
+                                        </td>
+                                        <td><input placeholder="선수 이름" type="text" id="name" name="playername[]"
+                                                class="input_text" value="PARK JIHYUN" maxlength="30" required=""
+                                                readonly=""></td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult1[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult2[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult3[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="최고기록" id="threetop" type="text" class="input_text"
+                                                value="0" maxlength="5" readonly=""></td>
+                                        <td><input type="text" id="middlerank" class="input_text" value="" maxlength="5"
+                                                readonly=""></td>
+                                        <td><input placeholder="두번째 순서" type="text" class="input_text" value=""
+                                                maxlength="5" readonly="">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult4[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult5[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult6[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" id="result" type="text" name="gameresult[]"
+                                                class="input_text" value="" maxlength="6" required=""
+                                                onkeyup="field1Format(this)"><input type="hidden" name="compresult[]"
+                                                value=""></td>
+                                        <td><input type="text" placeholder="비고" name="bigo[]" class="input_text"
+                                                value="" maxlength="100">
+                                        </td>
+                                        <td><input placeholder="" type="text" name="newrecord[]" class="input_text"
+                                                value="" maxlength="100" ath="PARK JIHYUN" sports="discusthrow"
+                                                record_round="final" and="" record_gender="f" record_group="1" record=""
+                                                readonly=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="number" name="rank[]" class="input_text" id="rank" value=""
+                                                min="1" required="">
+                                        </td>
+                                        <td><input type="text" name="rain[]" class="input_text" value="7" min="1"
+                                                max="12" required="" readonly=""></td>
+                                        <td><input placeholder="등번호" type="text" id="bib" name="playerbib[]"
+                                                class="input_text" value="00041" maxlength="30" required="" readonly="">
+                                        </td>
+                                        <td><input placeholder="선수 이름" type="text" id="name" name="playername[]"
+                                                class="input_text" value="MA SO-YOUNG" maxlength="30" required=""
+                                                readonly=""></td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult1[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult2[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult3[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="최고기록" id="threetop" type="text" class="input_text"
+                                                value="0" maxlength="5" readonly=""></td>
+                                        <td><input type="text" id="middlerank" class="input_text" value="" maxlength="5"
+                                                readonly=""></td>
+                                        <td><input placeholder="두번째 순서" type="text" class="input_text" value=""
+                                                maxlength="5" readonly="">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult4[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult5[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" type="text" name="gameresult6[]"
+                                                class="input_text" value="" maxlength="6" onkeyup="field1Format(this)">
+                                        </td>
+                                        <td><input placeholder="경기 결과" id="result" type="text" name="gameresult[]"
+                                                class="input_text" value="" maxlength="6" required=""
+                                                onkeyup="field1Format(this)"><input type="hidden" name="compresult[]"
+                                                value=""></td>
+                                        <td><input type="text" placeholder="비고" name="bigo[]" class="input_text"
+                                                value="" maxlength="100">
+                                        </td>
+                                        <td><input placeholder="" type="text" name="newrecord[]" class="input_text"
+                                                value="" maxlength="100" ath="MA SO-YOUNG" sports="discusthrow"
+                                                record_round="final" and="" record_gender="f" record_group="1" record=""
+                                                readonly=""></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="UserProfile_tit tit_left_red tit_padding">경기 비고</h3>
+                        <input placeholder="비고를 입력해주세요." type="text" name="bibigo" class="note_text" value=""
+                            maxlength=" 100">
+                        <div class="modify_Btn input_Btn result_Btn" id="submit_div_gwoan_san">
+                            <button type="submit" class="defaultBtn BTN_Blue full_width" name="addresult"
+                                formaction="../action/record/field_normal_result_insert.php">
+                                <span>확인</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="../assets/js/main.js?ver=16"></script>
+
+
+    </div>
+</body>
+
+</html>

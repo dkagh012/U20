@@ -1,0 +1,266 @@
+/* font */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Noto Sans Light'), local('NotoSans-Light'), url(fonts/NotoSans-Light.eot);
+  src: url(fonts/NotoSans-Light.eot?#iefix) format('embedded-opentype'),
+    url(fonts/NotoSans-Light.woff2) format('woff2'),
+    url(fonts/NotoSans-Light.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Noto Sans Regular'), local('NotoSans-Regular'), url(fonts/NotoSans-Regular.eot);
+  src: url(fonts/NotoSans-Regular.eot?#iefix) format('embedded-opentype'),
+    url(fonts/NotoSans-Regular.woff2) format('woff2'),
+    url(fonts/NotoSans-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Noto Sans Medium'), local('NotoSans-Medium'), url(fonts/NotoSans-Medium.eot);
+  src: url(fonts/NotoSans-Medium.eot?#iefix) format('embedded-opentype'),
+    url(fonts/NotoSans-Medium.woff2) format('woff2'),
+    url(fonts/NotoSans-Medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(fonts/NotoSans-Bold.eot);
+  src: url(fonts/NotoSans-Bold.eot?#iefix) format('embedded-opentype'),
+    url(fonts/NotoSans-Bold.woff2) format('woff2'),
+    url(fonts/NotoSans-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Nanum Myeongjo';
+  font-style: normal;
+  font-weight: 900;
+  src: local('※'), url(fonts/NanumMyeongjoEB.eot);
+  src: url(fonts/NanumMyeongjoEB.eot?#iefix) format('embedded-opentype'),
+    url(fonts/NanumMyeongjoEB.woff2) format('woff2'),
+    url(fonts/NanumMyeongjoEB.woff) format('woff');
+}
+
+/* common */
+.container {
+  color: #fff;
+  display: none;
+  height: 1040px;
+  overflow: hidden;
+}
+
+body {
+  background: #4064AE;
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.titleArea {
+  position: absolute;
+  width: 1500px;
+  height: 80px;
+  top: 65px;
+  left: 286px;
+}
+
+.title {
+  display: inline-block;
+  font-size: 80px;
+  line-height: 0.85em;
+  font-weight: 900;
+  letter-spacing: -5px;
+  word-spacing: 9px;
+  margin-right: 15px;
+  transform: translate(0, 6px);
+}
+
+.recordType {
+  display: inline-block;
+  width: 380px;
+  font-size: 50px;
+  line-height: 1em;
+  letter-spacing: -1px;
+  word-spacing: 5px;
+  color: #005BAC;
+  text-align: center;
+  background: url(../images/recode_type_background.png) no-repeat;
+  transform: translate(0, 3px);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding-left: 15px;
+}
+
+.round {
+  color: #005BAC;
+  position: absolute;
+  line-height: 1em;
+  top: 158px;
+  left: 297px;
+  font-size: 40px;
+}
+
+.roundDetail {
+  position: absolute;
+  line-height: 1em;
+  top: 158px;
+  left: 520px;
+  font-size: 40px;
+  color: #005BAC;
+  word-spacing: 19px;
+}
+
+.windSpeed {
+  position: absolute;
+  line-height: 1em;
+  top: 158px;
+  left: 750px;
+  font-size: 40px;
+  color: #005BAC;
+}
+
+.windSpeedValue {
+  position: absolute;
+  line-height: 1em;
+  top: 158px;
+  left: 1005px;
+  font-size: 40px;
+  color: #005BAC;
+}
+
+.page {
+  position: absolute;
+  line-height: 1em;
+  top: 158px;
+  left: 1310px;
+  font-size: 40px;
+  color: #005BAC;
+  word-spacing: 9px;
+}
+
+.pictogram {
+  position: absolute;
+  top: 85px;
+  left: 1685px;
+  width: 120px;
+  height: 120px;
+}
+
+.rankingBox {
+  position: absolute;
+  top: 237px;
+  left: 45px;
+  overflow: hidden;
+  font-weight: 900;
+}
+
+.rankingItem {
+  position: relative;
+  border-radius: 35px;
+  font-size: 70px;
+  line-height: 1em;
+  width: 1800px;
+  height: 91px;
+  margin-bottom: 9.7px;
+  background: url(../images/recode_container.png);
+}
+
+.rankingItemWrapper {
+  display: flex;
+  padding: 8px;
+  /* display: none; */
+}
+
+.rankingItemWrapper2 {
+  display: flex;
+  padding: 8px;
+  display: none;
+}
+
+.rankingItemWrapper>span:nth-child(1) {
+  margin-left: 5px;
+  text-align: center;
+  width: 7.4%;
+  line-height: 0.95em;
+}
+
+.rankingItemWrapper>span:nth-child(2) {
+  padding: 0 0 0 202px;
+  width: 67%;
+  font-size: 65px;
+  line-height: 0.89em;
+  letter-spacing: -0.1px;
+}
+
+.rankingItemWrapper>span:nth-child(3) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  padding-right: 20px;
+  width: 25.6%;
+  line-height: 1em;
+}
+
+.CR {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  line-height: 1em;
+  width: 96px;
+  height: 63px;
+  background: #f5b116;
+  border-radius: 15px;
+  margin-right: 15px;
+  margin-top: 5px;
+  color: #000;
+}
+
+.rankingItemWrapper>div:nth-child(4) {
+  position: absolute;
+  width: 120px;
+  height: 80px;
+  left: 188px;
+  top: 5.8px;
+}
+
+.rankingItemWrapper2>span:nth-child(1) {
+  margin-left: 5px;
+  text-align: center;
+  width: 7.4%;
+  line-height: 0.95em;
+}
+
+.rankingItemWrapper2>span:nth-child(2) {
+  padding: 0 0 0 202px;
+  width: 67%;
+  font-size: 70px;
+  line-height: 0.89em;
+  letter-spacing: -0.1px;
+}
+
+.rankingItemWrapper2>span:nth-child(3) {
+  text-align: right;
+  padding-right: 20px;
+  width: 25.6%;
+  line-height: 1em;
+}
+
+.rankingItemWrapper2>div:nth-child(4) {
+  position: absolute;
+  width: 120px;
+  height: 80px;
+  left: 188px;
+  top: 5.8px;
+}

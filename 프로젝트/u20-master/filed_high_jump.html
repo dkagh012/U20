@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/xeicon.min.css">
+    <link rel="stylesheet" href="./assets/css/swiper.min.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>높이뛰기 상세보기</title>
+</head>
+
+<body>
+
+    <div class="schedule_container">
+        <div class="result_tit">
+            <div class="result_list2">
+                <p class=" tit_left_blue hide">높이뛰기 예선전</p>
+                <p class=" tit_left_blue">높이뛰기 준결승전</p>
+                <p class="tit_left_blue  hide">높이뛰기 결승전</p>
+            </div>
+            <div class="result_list">
+                <p class="defaultBtn BTN_yellow ">대기중</p>
+                <p class="defaultBtn BTN_Blue hide">진행중</p>
+                <p class="defaultBtn BTN_DarkBlue hide">마감중</p>
+            </div>
+        </div>
+        <div class="schedule schedule_flex filed_high_flex">
+            <div class="schedule_filed filed_list_item filed_container">
+                <div>
+                    <div class="schedule_filed_tit">
+                        <p class="tit_left_yellow">1조</p>
+                        <span class="defaultBtn BTN_green hide">Start List</span>
+                        <span class="defaultBtn BTN_yellow hide">Live Result</span>
+                        <span class="defaultBtn BTN_Orange">Official Result</span>
+                    </div>
+                    <!-- trorw_result 지우시고 테이블 넣으시면 됩니다! -->
+                    <div class="Thorw_result high_jump">
+                        <table class="box_table">
+                            <!-- 달리기 테이블  -->
+                            <colgroup>
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="15%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="15%">
+                            </colgroup>
+                            <thead class=" result_table entry_table">
+                                <tr>
+                                    <th rowspan="2">등수</th>
+                                    <th rowspan="2">순서</th>
+                                    <th rowspan="2">이름</th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th rowspan="2">기록</th>
+                                    <th>비고</th>
+                                </tr>
+                                <tr>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th>신기록</th>
+                                </tr>
+                                <tr class="filed2_bottom">
+                                </tr>
+                            </thead>
+                            <tbody class=" high_jump_table field3_hover entry_table">
+                                <tr>
+                                    <td rowspan="2"><input type="text" value="1" readonly></td>
+                                    <td rowspan="2"><input type="text" value="1" readonly></td>
+                                    <td rowspan="2"><input type="text" value="J" readonly></td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td rowspan="2"><input type="text" value="기록" readonly></td>
+                                    <td><input type="text" value="비고" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="아시아U20신기록" readonly></td>
+                                </tr>
+                            </tbody>
+                            <tbody class=" high_jump_table field3_hover entry_table Ranklist_Background">
+                                <tr>
+                                    <td rowspan="2"><input type="text" value="1" readonly></td>
+                                    <td rowspan="2"><input type="text" value="1" readonly></td>
+                                    <td rowspan="2"><input type="text" value="J" readonly></td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td rowspan="2"><input type="text" value="기록" readonly></td>
+                                    <td><input type="text" value="비고" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="아시아U20신기록" readonly></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="filed_BTN">
+                    <div>
+                        <button type="button" class="defaultBtn BIG_btn BTN_DarkBlue filedBTN"
+                            onclick="window.open('/award_ceremony.html')">전광판 보기</button>
+                        <button type="button" class="defaultBtn BIG_btn BTN_purple filedBTN"
+                            onclick="window.open('/electronic_display.html')">시상식
+                            보기</button>
+                        <button type="button" class="defaultBtn BIG_btn BTN_Red filedBTN">PDF
+                            출력</button>
+                        <button type="button" class="defaultBtn BIG_btn excel_Print filedBTN">엑셀
+                            출력</button>
+                    </div>
+                    <div>
+                        <button type="button" class="defaultBtn BIG_btn BTN_Blue filedBTN">기록
+                            입력</button>
+                    </div>
+                </div>
+            </div>
+            <div class="schedule_filed filed_list_item filed_container">
+                <div>
+                    <div class="schedule_filed_tit">
+                        <p class="tit_left_yellow">1조</p>
+                        <span class="defaultBtn BTN_green hide">Start List</span>
+                        <span class="defaultBtn BTN_yellow hide">Live Result</span>
+                        <span class="defaultBtn BTN_Orange">Official Result</span>
+                    </div>
+                    <!-- trorw_result 지우시고 테이블 넣으시면 됩니다! -->
+                    <div class="Thorw_result high_jump">
+                        <table class="box_table">
+                            <!-- 달리기 테이블  -->
+                            <colgroup>
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="15%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="5%">
+                                <col width="15%">
+                            </colgroup>
+                            <thead class=" result_table entry_table">
+                                <tr>
+                                    <th rowspan="2">등수</th>
+                                    <th rowspan="2">순서</th>
+                                    <th rowspan="2">이름</th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th rowspan="2">기록</th>
+                                    <th>비고</th>
+                                </tr>
+                                <tr>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th><input type="text" value="1" readonly></th>
+                                    <th>신기록</th>
+                                </tr>
+                                <tr class="filed2_bottom">
+                                </tr>
+                            </thead>
+                            <tbody class=" high_jump_table field3_hover entry_table">
+                                <tr>
+                                    <td rowspan="2"><input type="text" value="1" readonly></td>
+                                    <td rowspan="2"><input type="text" value="1" readonly></td>
+                                    <td rowspan="2"><input type="text" value="J" readonly></td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td rowspan="2"><input type="text" value="기록" readonly></td>
+                                    <td><input type="text" value="비고" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="아시아U20신기록" readonly></td>
+                                </tr>
+
+                            </tbody>
+                            <tbody class=" high_jump_table field3_hover entry_table Ranklist_Background">
+                                <tr>
+                                    <td rowspan="2"><input type="text" value="1" readonly></td>
+                                    <td rowspan="2"><input type="text" value="1" readonly></td>
+                                    <td rowspan="2"><input type="text" value="J" readonly></td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td rowspan="2"><input type="text" value="기록" readonly></td>
+                                    <td><input type="text" value="비고" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="7.41" readonly>
+                                    </td>
+                                    <td><input type="text" value="아시아U20신기록" readonly></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="filed_BTN">
+                    <div>
+                        <button type="button" class="defaultBtn BIG_btn BTN_DarkBlue filedBTN"
+                            onclick="window.open('/award_ceremony.html')">전광판 보기</button>
+                        <button type="button" class="defaultBtn BIG_btn BTN_purple filedBTN"
+                            onclick="window.open('/electronic_display.html')">시상식
+                            보기</button>
+                        <button type="button" class="defaultBtn BIG_btn BTN_Red filedBTN">PDF
+                            출력</button>
+                        <button type="button" class="defaultBtn BIG_btn excel_Print filedBTN">엑셀
+                            출력</button>
+                    </div>
+                    <div>
+                        <button type="button" class="defaultBtn BIG_btn BTN_Blue filedBTN">기록
+                            입력</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="BTNform">
+            <button type="button" class="nextBTN BTN_blue2 defaultBtn"
+                onclick="window.open('/forming_group.html', 'window_name', 'width=800, height=750, location=no, status=no, scrollbars=yes')">다음
+                조 편성</button>
+            <button type="button" class="resetBTN BTN_Orange2 defaultBtn">모든 조 초기화</button>
+        </div>
+        <button type="button" class="changePwBtn defaultBtn">확인</button>
+        <script src="assets/js/main.js"></script>
+</body>
+
+</html>

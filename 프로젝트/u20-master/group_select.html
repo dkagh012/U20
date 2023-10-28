@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script type="text/javascript" src="./assets/js/jquery-1.12.4.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/xeicon.min.css">
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/select2.min.css">
+  <script type="text/javascript" src="assets/js/select2.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>조 편성</title>
+</head>
+
+
+<body>
+  <!-- contents 본문 내용 -->
+  <div class="container pbottom--0">
+    <!-- <div class="contents something"> -->
+    <div class="something ptop--40 athlete">
+      <div class="groupSelect">
+        <div class="result_list2">
+          <p class="tit_left_blue ">참가 선수 목록</p>
+        </div>
+        <form action="./sport_group_manual_group_org.php" method="post" class="form">
+          <div class="groupSelect_tit">
+            <ul class="headerBody">
+              <li>
+                <p>총 인원 </p>
+              </li>
+              <li>
+                <p>편성 가능한 조 </p>
+              </li>
+              <li>
+                <p>조 당 인원 </p>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <input type="number" name="playercount" value="54" readonly="">
+              </li>
+              <li>
+                <input type="number" name="groupcount" value="7" readonly="">
+
+              </li>
+              <li>
+                <input type="number" name="groupnumber" value="8">
+
+              </li>
+            </ul>
+          </div>
+
+          <div class="grouptSelectList">
+            <div><label>
+                <div style=""><input type="checkbox" name="athlete_id[]" value="1118" checked="">1118<span>이름: </span>
+                </div><span>Ramil GULIYEV(TUR)Ramil GULIYEV(TUR)Ramil GULIYEV(TUR)Ramil GULIYEV(TUR)Ramil
+                  GULIYEV(TUR)Ramil GULIYEV(TUR)Ramil GULIYEV(TUR)</span>
+              </label></div>
+            <div><label>
+                <div style=""><input type="checkbox" name="athlete_id[]" value="1118" checked="">1118<span>이름: </span>
+                </div><span>Ramil GULIYEV(TUR)</span>
+              </label></div>
+            <div><label><input type="checkbox" name="athlete_id[]" value="7" checked="">이름: Ronald Lawrence
+                FOTOFILI</label></div>
+            <div><label><input type="checkbox" name="athlete_id[]" value="13" checked="">이름: Tirioro Kamoriki
+                WILLIE</label></div>
+            <div><label><input type="checkbox" name="athlete_id[]" value="18" checked="">이름: Brandon JONES</label></div>
+            <div><label><input type="checkbox" name="athlete_id[]" value="19" checked="">이름: Paul MAUNIKENI</label>
+            </div>
+            <div><label><input type="checkbox" name="athlete_id[]" value="20" checked="">이름: Scott James FITI</label>
+            </div>
+            <div><label><input type="checkbox" name="athlete_id[]" value="21" checked="">이름: Don MOTELLANG</label></div>
+            <div><label><input type="checkbox" name="athlete_id[]" value="22" checked="">이름: Bleu Michael PEREZ</label>
+            </div>
+            <div><label><input type="checkbox" name="athlete_id[]" value="24" checked="">이름: Melique GARCIA</label>
+            </div>
+            <div><label><input type="checkbox" name="athlete_id[]" value="25" checked="">이름: Zhouzheng XU</label></div>
+            <div><label><input type="checkbox" name="athlete_id[]" value="26" checked="">이름: Stern Noel LIFFA</label>
+            </div>
+            <div><label><input type="checkbox" name="athlete_id[]" value="27" checked="">이름: Ratu Banuve
+                TABAKAUCORO</label></div>
+            <div><label><input type="checkbox" name="athlete_id[]" value="29" checked="">이름: Nainoa Soto
+                THOMPSON</label></div>
+            <div><label><input type="checkbox" name="athlete_id[]" value="30" checked="">이름: Adrian Justin Jimena ILILAU
+              </label></div>
+            <input type="hidden" name="mode" value="수동">
+            <input type="hidden" name="sports" value="100m">
+            <input type="hidden" name="round" value="qualification">
+            <input type="hidden" name="gender" value="m">
+          </div>
+          <div class=" signup_submit">
+            <button type="submit" class="btn_login" name="signup">
+              <span>확인</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>

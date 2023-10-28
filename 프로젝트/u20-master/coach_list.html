@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/xeicon.min.css">
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>코치 목록</title>
+</head>
+
+<body>
+  <!-- header -->
+  <div class="headerWrapper">
+    <header class="headerBody">
+      <div class="headerBodyLayout">
+        <div class="headerBodyArea">
+          <h1 class="logo"><a href="./index.html">예천U20</a></h1>
+          <div class="gnbMask menuhide">
+            <div class="gnbsied">
+              <div class="gnb">
+                <ul class="gnbList">
+                  <li class="gnbItem gnb_active">
+                    <div>
+                      <span>
+                        <i class="xi-user menu_red"></i>
+                        <i class="xi-group"></i>
+                        참가자 관리
+                        <i class="xi-angle-up"></i>
+                      </span>
+                      <i class="xi-man"></i>
+                      <i class="xi-run"></i>
+                    </div>
+                    <div class="gnbDetailMenuList">
+                      <ul>
+                        <li><a href="./athlete_list.html">선수 목록</a></li>
+                        <li><a href="./coach_list.html">코치 목록</a></li>
+                        <li><a href="./referee_list.html">심판 목록</a></li>
+                        <li><a href="./director_list.html">임원 목록</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="gnbItem">
+                    <div>
+                      <span>
+                        <i class="xi-run menu_Orange"></i>
+                        <i class="xi-bicycle"></i>
+                        경기 관리
+                        <i class="xi-angle-up"></i>
+                      </span>
+                      <i class="xi-man"></i>
+                      <i class="xi-run"></i>
+                    </div>
+                    <div class="gnbDetailMenuList">
+                      <ul>
+                        <li><a href="./match_list.html">경기 목록</a></li>
+                        <li><a href="./country_list.html">국가 목록</a></li>
+                        <li><a href="./schedule_list.html">일정목록</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="gnbItem">
+                    <div>
+                      <span>
+                        <i class="xi-timer-o menu_yellow"></i>
+                        <i class="xi-alarm-clock-o"></i>
+                        기록 관리
+                        <i class="xi-angle-up"></i>
+                      </span>
+                      <i class="xi-man"></i>
+                      <i class="xi-run"></i>
+                    </div>
+                    <div class="gnbDetailMenuList">
+                      <ul>
+                        <li><a href="./record_list.html">경기결과 목록</a></li>
+                        <li><a href="./historical_list.html">역대기록 목록</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="gnbItem">
+                    <div>
+                      <span>
+                        <i class="xi-paper-o menu_green"></i>
+                        <i class="xi-equalizer-thin"></i>
+                        통계 관리
+                        <i class="xi-angle-up"></i>
+                      </span>
+                      <i class="xi-man"></i>
+                      <i class="xi-run"></i>
+                    </div>
+                    <div class="gnbDetailMenuList">
+                      <ul>
+                        <li><a href="./player_ranking.html">선수별 순위보기</a></li>
+                        <li><a href="./best_player.html">신기록 경기기록</a></li>
+                        <li><a href="./match_standings.html">경기별 순위보기</a></li>
+                        <li><a href="./match_medals.html">경기별 메달보기</a></li>
+                        <li><a href="./country_rank.html">국가별 순위보기</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="gnbItem">
+                    <div>
+                      <span>
+                        <i class="xi-key menu_blue"></i>
+                        <i class="xi-security"></i>
+                        계정 관리
+                        <i class="xi-angle-up"></i>
+                      </span>
+                      <i class="xi-man"></i>
+                      <i class="xi-run"></i>
+                    </div>
+                    <div class="gnbDetailMenuList">
+                      <ul>
+                        <li><a href="./account_mypage.html">계정 정보</a></li>
+                        <li><a href="./account_change_pw.html">비빌번호 변경</a></li>
+                        <li><a href="./account_signup.html">계정 생성</a></li>
+                        <li><a href="./account_list.html">계정 목록</a></li>
+                        <li><a href="./log_list.html">로그 목록</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="gnbMask_right">
+            </div>
+          </div>
+          <div class="UserPage">
+            <a href="./account_mypage.html"><i class="xi-profile xi-1x"></i>
+              <p>마이페이지</p>
+            </a>
+            <a href="./login.html"><i class="xi-power-off xi-1x"></i>
+              <p>로그아웃</p>
+            </a>
+            <button type="button" class="menuBtn" type="button"><i class="xi-bars"></i></button>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div class="top">
+    <div id="js-scroll"><i class="xi-arrow-up topBtn"></i></div>
+  </div>
+
+  <!-- rank -->
+  <div class="Area">
+    <div class="Wrapper TopWrapper">
+      <div class="MainRank coachList defaultList">
+        <div class="MainRank_tit">
+          <h1>코치진<i class="xi-group group"></i></h1>
+        </div>
+        <div class="searchArea ">
+          <form action="" name="judge_searchForm" method="get" class="searchForm pageArea">
+            <div class="page_size">
+              <select name="entry_size" onchange="changeTableSize(this);" id="changePageSize" class="changePageSize">
+                <option value="non" hidden="">페이지</option>
+                <option value="10">10개씩</option>"<option value="15">15개씩</option>"<option value="20">20개씩</option>"
+                <option value="157">모두</option>"
+              </select>
+            </div>
+            <div class="selectArea defaultSelectArea">
+              <div class="defaultSelectBox">
+                <select title="국가" name="coach_country">
+                  <option value="non" hidden="">국가</option>
+                  <option value="non">전체</option>
+                  <option value="AFG">AFG</option>
+                  <option value="ALB">ALB</option>
+                  <option value="ANT">ANT</option>
+                  <option value="AUT">AUT</option>
+                  <option value="CHN">CHN</option>
+                  <option value="IND">IND</option>
+                  <option value="IRQ">IRQ</option>
+                  <option value="JOR">JOR</option>
+                  <option value="JPN">JPN </option>
+                  <option value="KOR">KOR</option>
+                  <option value="LBN">LBN</option>
+                  <option value="MAC">MAC</option>
+                </select>
+              </div>
+              <div class="defaultSelectBox">
+                <select title="지역" name="coach_region">
+                  <option value="non" hidden="">지역</option>
+                  <option value="non">전체</option>
+                  <option value="Seoul">Seoul</option>
+                  <option value="Manima">Manima</option>
+                  <option value="Macaw">Macaw</option>
+                  <option value="Lebanon">Lebanon</option>
+                  <option value="Muscat">Muscat</option>
+                  <option value="Tokyo">Tokyo</option>
+                  <option value="Actaha">Actaha</option>
+                  <option value="Amman">Amman</option>
+                  <option value="Dacca">Dacca</option>
+                  <option value="Kuwait city">Kuwait city</option>
+                  <option value="Burma">Burma</option>
+                  <option value="Beijing">Beijing</option>
+                  <option value="Ulaanbaatar">Ulaanbaatar</option>
+                  <option value="Kathmandu">Kathmandu</option>
+                  <option value="Tian">Tian</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="gumi">gumi</option>
+                  <option value="3123">3123</option>
+                </select>
+              </div>
+              <div class="defaultSelectBox">
+                <select title="소속" name="coach_division">
+                  <option value="non" hidden="">소속</option>
+                  <option value="non">전체</option>
+                  <option value="KAAF">KAAF</option>
+                  <option value="BDEO">BDEO</option>
+                  <option value="MAC">MAC</option>
+                  <option value="MSC">MSC</option>
+                  <option value="JAPE">JAPE</option>
+                  <option value="KAJJ">KAJJ</option>
+                  <option value="AM">AM</option>
+                  <option value="LEBAM">LEBAM</option>
+                  <option value="MANIN">MANIN</option>
+                  <option value="EDSS">EDSS</option>
+                  <option value="DAAE">DAAE</option>
+                  <option value="BUMM">BUMM</option>
+                  <option value="CHHG">CHHG</option>
+                  <option value="UTA">UTA</option>
+                  <option value="소속1">소속1</option>
+                  <option value="소속2">소속2</option>
+                  <option value="소속3">소속3</option>
+                  <option value="소속4">소속4</option>
+                  <option value="KOR">KOR</option>
+                  <option value="123">123</option>
+                </select>
+              </div>
+              <div class="defaultSelectBox">
+                <select title="성별" name="coach_gender">
+                  <option value="non" hidden="">성별</option>
+                  <option value="non">전체</option>
+                  <option value="m">남성</option>
+                  <option value="f">여성</option>
+                </select>
+              </div>
+              <div class="defaultSelectBox">
+                <select title="직무" name="coach_duty">
+                  <option value="non" hidden="">직무</option>
+                  <option value="non">전체</option>
+                  <option value="track">track</option>
+                  <option value="field">field</option>
+                </select>
+              </div>
+              <div class="search">
+
+                <input type="hidden" name="page_size" value="10">
+                <!-- +)검색할 때도 페이지 사이즈 유지하기 위해서 위에 추가해야 됨. -->
+                <input type="text" id="search" class="defaultSearchInput" name="coach_name" placeholder="이름을 입력해주세요"
+                  maxlength="30" value="">
+                <button class="defaultSearchBth" type="submit"><i class="xi-search"></i></button>
+
+              </div>
+            </div>
+          </form>
+
+        </div>
+        <table class="box_table">
+          <!-- 코치 테이블 -->
+          <colgroup>
+            <col width="4%">
+            <col width="4%">
+            <col width="4%">
+            <col width="16%">
+            <col width="7%">
+            <col width="10%">
+            <col width="8%">
+            <col width="4%">
+            <col width="11%">
+            <col width="4%">
+            <col width="13%">
+            <col width="5%">
+            <col width="5%">
+            <col width="5%">
+          </colgroup>
+          <thead class="table_head entry_table">
+            <tr>
+              <th scope="col" colspan="1"><input type="checkbox" name="checkAll" onclick="selectAll(this)">
+              </th>
+              <th scope="col" colspan="1">AD카드</th>
+              <th scope="col" colspan="1">번호</th>
+              <th scope="col" colspan="1">이름</th>
+              <th scope="col" colspan="1">국가</th>
+              <th scope="col" colspan="1">지역</th>
+              <th scope="col" colspan="1">소속</th>
+              <th scope="col" colspan="1">성별</th>
+              <th scope="col" colspan="1">생년월일</th>
+              <th scope="col" colspan="1">나이</th>
+              <th scope="col" colspan="1">직무</th>
+              <th scope="col" colspan="1">보기</th>
+              <th scope="col" colspan="1">수정</th>
+              <th scope="col" colspan="1">삭제</th>
+            </tr>
+          </thead>
+          <tbody class="table_tbody entry_table">
+            <tr>
+              <td scope="col"><input type="checkbox" name="checklist"></td>
+              <td scope="col">Y</td>
+              <td scope="col">1</td>
+              <td scope="col">Amir Shaker</td>
+              <td scope="col">KOR</td>
+              <td scope="col">Seoul</td>
+              <td scope="col">JBFC</td>
+              <td scope="col">남</td>
+              <td scope="col">남</td>
+              <td scope="col">남</td>
+              <td scope="col">남</td>
+              <td scope="col"><button type="button" class="BTN_DarkBlue defaultBtn"
+                  onclick="window.open('/athlete_list_info.html', 'window_name', 'width=1280, height=1300, location=no, status=no, scrollbars=yes')">보기</button>
+              </td>
+              <td scope="col"><button type="button" class="BTN_Blue defaultBtn"
+                  onclick="window.open('/athlete_list_modify.html', 'window_name', 'width=1280, height=1300, location=no, status=no, scrollbars=yes')">수정</button>
+              </td>
+              <td scope="col"><button type="button" class="BTN_Red defaultBtn">삭제</button></td>
+            </tr>
+            <tr class="Ranklist_Background">
+              <td scope="col"><input type="checkbox" name="checklist"></td>
+              <td scope="col">Y</td>
+              <td scope="col">1</td>
+              <td scope="col">Amir Shaker</td>
+              <td scope="col">KOR</td>
+              <td scope="col">Seoul</td>
+              <td scope="col">JBFC</td>
+              <td scope="col">남</td>
+              <td scope="col">남</td>
+              <td scope="col">남</td>
+              <td scope="col">남</td>
+              <td scope="col"><button type="button" class="BTN_DarkBlue defaultBtn"
+                  onclick="window.open('/athlete_list_info.html', 'window_name', 'width=1280, height=1300, location=no, status=no, scrollbars=yes')">보기</button>
+              </td>
+              <td scope="col"><button type="button" class="BTN_Blue defaultBtn"
+                  onclick="window.open('/athlete_list_modify.html', 'window_name', 'width=1280, height=1300, location=no, status=no, scrollbars=yes')">수정</button>
+              </td>
+              <td scope="col"><button type="button" class="BTN_Red defaultBtn">삭제</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="playerRegistrationBtnArea">
+          <div class="ExcelBtn IDBtn">
+            <button type="button" class="defaultBtn BIG_btn2 ID_Print">ID발급</button>
+            <button type="button" class="defaultBtn BIG_btn2 excel_Print">엑셀 출력</button>
+            <button type="button" class="defaultBtn BIG_btn2 excel_input">엑셀 입력</button>
+            <button type="button" class="defaultBtn excel_form BIG_btn2">엑셀 양식</button>
+          </div>
+          <div class="registrationBtn">
+            <button type="button" class="defaultBtn BIG_btn BTN_Blue"
+              onclick="window.open('/coach_list_input.html', 'window_name', 'width=1280, height=1300, location=no, status=no, scrollbars=yes')">등록</button>
+          </div>
+        </div>
+        <div class="page">
+          <ul class="pagination">
+            <li class="page_item"><a href="#"><i class="xi-angle-left-min xi-2x"></i></a></li>
+            <li class="page_item page_number"><a href="#" data-dt-idx="1"><em class="page_link clicked">1</em></a></li>
+            <li class="page_item page_number"><a href="#" data-dt-idx="2"><em class="page_link">2</em></a>
+            </li>
+            <li class="page_item page_number"><a href="#" data-dt-idx="3"><em class="page_link">3</em></a>
+            </li>
+            <li class="page_item page_number"><a href="#" data-dt-idx="4"><em class="page_link">4</em></a>
+            </li>
+            <li class="page_item page_number"><a href="#" data-dt-idx="5"><em class="page_link">5</em></a>
+            </li>
+            <li class="page_item"><a href="#"><i class="xi-angle-right-min xi-2x"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/main_dh.js"></script>
+</body>
+
+</html>

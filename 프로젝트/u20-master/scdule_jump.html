@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/xeicon.min.css">
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>멀리뛰기</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="athlete">
+      <div class="profile_logo">
+        <img src="./assets/images/logo.png">
+      </div>
+      <div class="UserProfile">
+        <p class="UserProfile_tit tit_left_blue">
+          멀리뛰기
+        </p>
+        <form action="">
+          <div class="UserProfile_modify UserProfile_input thorw_main">
+            <div>
+              <ul class="UserDesc throwDesc">
+                <li class="row input_row throw_row">
+                  <span>경기 이름</span>
+                  <input type="text" placeholder="경기 종목 코드를 입력해주세요" value="멀리뛰기">
+                </li>
+                <li class="row input_row throw_row">
+                  <span>라운드</span>
+                  <input type="text" placeholder="경기 이름을 입력해주세요" value="예선">
+                </li>
+                <li class="row input_row ">
+                  <span>권산</span>
+                  <input type="text" placeholder="심판 이름를 입력해주세요" value="멀리뛰기">
+                </li>
+                <li class="row input_row  time_row">
+                  <span>경기 시작 시간</span>
+                  <div>
+                    <input type="text" name="coach_birth_year" placeholder="연" required="" value="">
+                    <span>:</span>
+                    <input type="text" name="coach_birth_month" placeholder="월" required="" value="">
+                    <span>:</span>
+                    <input type="text" name="coach_birth_day" placeholder="일" required="" value="">
+                    <input type="text" name="coach_birth_clock" placeholder="시" required="" value="">
+                    <span>:</span>
+                    <input type="text" name="coach_birth_min" placeholder="분" required="" value="">
+                    <span>:</span>
+                    <input type="text" name="coach_birth_second" placeholder="초" required="" value="">
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="Thorw_result">
+            <div>
+              <h1 class="throw_tit tit_left_green">결과</h1>
+            </div>
+            <!-- List와 Item을 삭제해주신 다음 table을 넣으시면 됩니다. -->
+            <table class="box_table">
+              <!-- 멀리뛰기 테이블  -->
+              <colgroup>
+                <col width="4%">
+                <col width="4%">
+                <col width="20%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+                <col width="7%">
+                <col width="16%">
+              </colgroup>
+              <thead class=" result_table entry_table">
+                <tr>
+                  <th scope="col" rowspan="2">등수</th>
+                  <th scope="col" rowspan="2">순서</th>
+                  <th scope="col" rowspan="2">이름</th>
+                  <th scope="col">1차시기</th>
+                  <th scope="col">2차시기</th>
+                  <th scope="col">3차시기</th>
+                  <th scope="col">4차시기</th>
+                  <th scope="col">5차시기</th>
+                  <th scope="col">6차시기</th>
+                  <th scope="col" rowspan="2">기록</th>
+                  <th scope="col" rowspan="2">비고</th>
+                  <th scope="col" rowspan="2">신기록</th>
+                </tr>
+                <tr>
+                  <th scope="col">풍속</th>
+                  <th scope="col">풍속</th>
+                  <th scope="col">풍속</th>
+                  <th scope="col">풍속</th>
+                  <th scope="col">풍속</th>
+                  <th scope="col">풍속</th>
+                </tr>
+                <tr class="filed2_bottom">
+                </tr>
+              </thead>
+              <tbody class=" table_tbody De_tbody entry_table">
+                <tr>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder="등수"></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder="순서"></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder="이름을 입력하세요"></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder=""></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder=""></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder=""></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder=""></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder=""></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder=""></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder="기록"></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder="비고"></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder="신기록"></td>
+                </tr>
+                <tr class="Ranklist_Background">
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder="등수"></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder="순서"></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder="이름을 입력하세요"></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder=""></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder=""></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder=""></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder=""></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder=""></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder=""></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder="기록"></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder="비고"></td>
+                  <td rowspan="1" scope="col"><input type="text" value="" placeholder="신기록"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="modify_Btn input_Btn result_Btn">
+            <button class=" BTN_Red" type="submit">순서 재 정렬</button>
+            <button class=" BTN_Blue" type="submit">등록하기</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
